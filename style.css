@@ -6,7 +6,8 @@
     --hed-font-serif: 'Faustina', serif;
     /* Default font for body text */
     --body-font: 'PT Serif', serif;
-    --masthead-blue: #6F9DCF
+    --masthead-blue: #6F9DCF;
+    --theme-dark-blue: #213d6e;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -27,12 +28,16 @@
     background: #555; 
   }
 body{
-    background-color: black;
+    background-color: #Cfe9d7;
 }
 .loader{
-    position: absolute;
-    width: 20%;
-    margin: 5% 40%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 100;
   
 }
 @keyframes loading-spin{
@@ -47,17 +52,15 @@ body{
     text-align: center;
     font-family: var(--hed-font-default);
     color: white;
+    font-size: 3em;
 }
 .loader-path{
     fill: white;
 }
 .loader-logo{
-    width: 100%;
+    width: 20%;
+    margin: 5% 40% 0 40%;
     animation: loading-spin 40s infinite;
-}
-.page-content{
-    opacity: 0;
-    display: none;
 }
 .top-logo{
     /* width: 20%; */
@@ -87,9 +90,15 @@ font-family: var(--hed-font-default);
     padding-top: 2em;
     width: 70%;
     margin: auto;
-    height: 100vh;
-    border: 20px solid #Bf3f22;
     background-color: white;
+}
+#pregame-container{
+    border-top: 20px solid #Bf3f22;
+    border-right: 20px solid #Bf3f22;
+    border-left: 20px solid #Bf3f22;
+}
+#df-container{
+    border: 20px solid var(--theme-dark-blue);
 }
 .mag-intro{
     font-family: var(--hed-font-default);
@@ -112,27 +121,75 @@ font-family: var(--hed-font-default);
 .intro-link:hover{
     text-decoration: underline;
 }
-.section-title{
-    font-weight: 500;
+.mag-section{
+    padding: 1em;
     width: 100%;
-    display: inline;
-    text-align: center;
+}
+.section-article{
+    width: 90%;
+    margin: auto;
+    padding-bottom: 1em;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+}
+.article-link{
+    text-decoration: none;
+    color: black;
+}
+.article-link:hover{
+    color: var(--theme-dark-blue);
+}
+.section-left{
+    text-align: left;
+}
+.section-right{
+    text-align: right;
+}
+.section-title{
+    width: 90%;
+    margin: auto;
+    user-select: none;
+    font-weight: 500;
+    color: #Bf3f22;
+    text-shadow: -6px 2px var(--masthead-blue);
+    margin: 0;
+    text-align: left;
     font-size: 5em;
     font-family: var(--hed-font-default);
-    padding: 1em;
+
+}
+#dancefloor .section-title{
+    text-align: right;
+}
+.section-article-hed{
+    font-family: var(--hed-font-default);
+    font-size: 3em;
+    margin-bottom: 0;
+}
+.section-article-dek{
+    margin: 0;
+    font-family: var(--hed-font-default);
+    font-size: 2em;
+    font-weight: 300;
+}
+.section-author{
+    margin-top: 0;
+    font-size: 1.5em;
+    font-family: var(--hed-font-serif);
 }
 .masthead{
     border-left: 20px solid var(--masthead-blue);
     border-right: 20px solid var(--masthead-blue);
+    border-top: 20px solid var(--masthead-blue);
     position: fixed;
     width: 80vw;
     height: 100vh;
     margin: 0 10vw;
-    bottom: -100vh;
+    bottom: -200vh;
     background-color: white;
     box-shadow: 2px 2px 2px;
     z-index: 10;
-    transition: bottom 1s ease;
+    transition: bottom 2s ease;
     overflow-y: scroll;
     
 }

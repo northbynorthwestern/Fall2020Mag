@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Faustina:ital,wght@0,600;0,700;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="loader">
+    <!-- <div class="loader">
         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="loader-logo" viewBox="0 0 1024.000000 1024.000000" preserveAspectRatio="xMidYMid meet"><g class="svg-path loader-path" transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M4940 9953 c-891 -34 -1755 -309 -2480 -788 -714 -472 -1315 -1155        -1690 -1920 -256 -524 -403 -1040 -472 -1665 -20 -181 -17 -778 5 -965 138        -1165 628 -2168 1439 -2950 979 -943 2278 -1447 3551 -1377 361 20 653 64        1008 153 1403 350 2469 1207 3139 2524 267 524 425 1046 497 1635 25 207 25        772 0 985 -156 1312 -712 2376 -1662 3179 -147 125 -295 240 -300 234 -2 -2        155 -307 350 -678 195 -371 355 -678 355 -682 0 -5 -128 -8 -285 -8 l-285 0 0        -2690 0 -2690 -472 2 -471 3 -835 1877 c-459 1033 -838 1875 -843 1872 -5 -3        -9 -795 -9 -1885 l0 -1879 -490 0 -490 0 0 2695 0 2695 676 0 676 0 25 -27        c14 -16 49 -84 80 -153 296 -676 1177 -2651 1184 -2656 5 -3 9 582 9 1415 l0        1421 -255 0 c-140 0 -255 3 -255 6 0 3 194 374 431 825 237 451 433 828 436        838 4 15 -14 29 -84 69 -610 343 -1327 544 -2084 582 -186 9 -229 10 -399 3z"></path></g></svg>
         <h2 class="loader-text">loading...</h2>
-    </div>
+    </div> -->
 <main class="page-content">
     <div class="top-logo">
         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="nbn-logo" viewBox="0 0 1024.000000 1024.000000" preserveAspectRatio="xMidYMid meet"><g class="svg-path nbn-path" transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M4940 9953 c-891 -34 -1755 -309 -2480 -788 -714 -472 -1315 -1155        -1690 -1920 -256 -524 -403 -1040 -472 -1665 -20 -181 -17 -778 5 -965 138        -1165 628 -2168 1439 -2950 979 -943 2278 -1447 3551 -1377 361 20 653 64        1008 153 1403 350 2469 1207 3139 2524 267 524 425 1046 497 1635 25 207 25        772 0 985 -156 1312 -712 2376 -1662 3179 -147 125 -295 240 -300 234 -2 -2        155 -307 350 -678 195 -371 355 -678 355 -682 0 -5 -128 -8 -285 -8 l-285 0 0        -2690 0 -2690 -472 2 -471 3 -835 1877 c-459 1033 -838 1875 -843 1872 -5 -3        -9 -795 -9 -1885 l0 -1879 -490 0 -490 0 0 2695 0 2695 676 0 676 0 25 -27        c14 -16 49 -84 80 -153 296 -676 1177 -2651 1184 -2656 5 -3 9 582 9 1415 l0        1421 -255 0 c-140 0 -255 3 -255 6 0 3 194 374 431 825 237 451 433 828 436        838 4 15 -14 29 -84 69 -610 343 -1327 544 -2084 582 -186 9 -229 10 -399 3z"></path></g></svg>
@@ -133,14 +134,129 @@
 <h2 class="lfe-heading">MICHAEL KORSH</h2>
 </article>
     </div>
-    <main class="article-container">
+    <main class="article-container" id="pregame-container">
         <section class="mag-section" id="pregame">
-          
+        
             <h1 class="section-title">
                 PREGAME
             </h1>
+            <a href="#" class="article-link">
+            <article class="section-article section-left">
+            <h2 class="section-article-hed">YOU MIGHT WANT TO SIT DOWN FOR THIS ONE</h2>
+            <h3 class="section-article-dek">The chair-itable cause that brought the Class of 2024 together</h3>
+            <h3 class="section-author">By Emma Chiu</h3>
+        </article>
+    </a>
+    <a href="#" class="article-link">
+        <article class="section-article section-right">
+            <h2 class="section-article-hed">2020 VISION</h2>
+            <h3 class="section-article-dek">Revisiting a former dean's plan for the future</h3>
+            <h3 class="section-author">By Rayna Song</h3>
+        </article>
+    </a>
+    <a href="#" class="article-link">
+        <article class="section-article section-left">
+        <h2 class="section-article-hed">CASTAWAYS ON CAMPUS</h2>
+        <h3 class="section-article-dek">Eighteen contestants. One sole survivor.</h3>
+        <h3 class="section-author">By Rachel Schonberger</h3>
+    </article>
+</a>
+<a href="#" class="article-link">
+    <article class="section-article section-right">
+        <h2 class="section-article-hed">A PAIR OF PANDEMICS</h2>
+        <h3 class="section-article-dek">How Northwestern dealt with health crises, a century apart.</h3>
+        <h3 class="section-author">By Karen Reyes</h3>
+    </article>
+</a>
+    <a href="#" class="article-link">
+        <article class="section-article section-left">
+        <h2 class="section-article-hed">AUDIENCE OF NONE</h2>
+        <h3 class="section-article-dek">Students in performing arts are making the most of their socially distanced spaces.</h3>
+        <h3 class="section-author">By Olivia Alexander</h3>
+    </article>
+
+</a>
+<a href="#" class="article-link">
+    <article class="section-article section-right">
+        <h2 class="section-article-hed">OR BEST OFFER</h2>
+        <h3 class="section-article-dek">Northwestern's Free and For Sale Facebook page has become more than a marketplace.</h3>
+        <h3 class="section-author">By Ilana Arougheti</h3>
+    </article>
+</a>
          </section>
+         
     </main>
+    <main class="article-container" id="df-container">
+        <section class="mag-section" id="dancefloor">
+        
+            <h1 class="section-title">
+                DANCE FLOOR
+            </h1>
+            <a href="#" class="article-link">
+            <article class="section-article section-left">
+            <h2 class="section-article-hed">BLACK JOY</h2>
+            <h3 class="section-article-dek">The chair-itable cause that brought the Class of 2024 together</h3>
+            <h3 class="section-author">By Emma Chiu</h3>
+        </article>
+    </a>
+    <a href="#" class="article-link">
+        <article class="section-article section-right">
+            <h2 class="section-article-hed">TALK DATA TO ME</h2>
+            <h3 class="section-article-dek">Revisiting a former dean's plan for the future</h3>
+            <h3 class="section-author">By Rayna Song</h3>
+        </article>
+    </a>
+    <a href="#" class="article-link">
+        <article class="section-article section-left">
+        <h2 class="section-article-hed">A POLL NEW WORLD</h2>
+        <h3 class="section-article-dek">Eighteen contestants. One sole survivor.</h3>
+        <h3 class="section-author">By Rachel Schonberger</h3>
+    </article>
+</a>
+<a href="#" class="article-link">
+    <article class="section-article section-right">
+        <h2 class="section-article-hed">UPROOTED</h2>
+        <h3 class="section-article-dek">How Northwestern dealt with health crises, a century apart.</h3>
+        <h3 class="section-author">By Karen Reyes</h3>
+    </article>
+</a>
+    <a href="#" class="article-link">
+        <article class="section-article section-left">
+        <h2 class="section-article-hed">UP TO PAR?</h2>
+        <h3 class="section-article-dek">Students in performing arts are making the most of their socially distanced spaces.</h3>
+        <h3 class="section-author">By Olivia Alexander</h3>
+    </article>
+
+</a>
+<a href="#" class="article-link">
+    <article class="section-article section-right">
+        <h2 class="section-article-hed">SMILE, YOU'RE ON CAMERA</h2>
+        <h3 class="section-article-dek">Northwestern's Free and For Sale Facebook page has become more than a marketplace.</h3>
+        <h3 class="section-author">By Ilana Arougheti</h3>
+    </article>
+</a>
+<a href="#" class="article-link">
+    <article class="section-article section-left">
+    <h2 class="section-article-hed">RE: SILVER LININGS</h2>
+    <h3 class="section-article-dek">Students in performing arts are making the most of their socially distanced spaces.</h3>
+    <h3 class="section-author">By Olivia Alexander</h3>
+</article>
+
+</a>
+<a href="#" class="article-link">
+    <article class="section-article section-right">
+        <h2 class="section-article-hed">PHYSICALLY SAFE, INTELECTUALLY DANGEROUS</h2>
+        <h3 class="section-article-dek">Northwestern's Free and For Sale Facebook page has become more than a marketplace.</h3>
+        <h3 class="section-author">By Ilana Arougheti</h3>
+    </article>
+</a>
+         </section>
+         
+    </main>
+<main class="features-container">
+    <h1 class="features-heading">FEATURES</h1>
+
+</main>
 </main>
     </body>
 <script src="main.js"></script>

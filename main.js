@@ -1,9 +1,7 @@
-window.onload = (event) => {
+// window.onload = (event) => {
    
-    gsap.to(".loader",{opacity: 0, display: 'none'}, 2)
-    gsap.to("body", {backgroundColor: "#Cfe9d7"}, 2)
-    gsap.to(".page-content", {opacity: 1, display: 'block'}, 3);
-  };
+//     gsap.to(".loader",{opacity: 0, display: 'none'}, 2)
+//   };
 
 let masthead = document.querySelector(".masthead");
 let lfe = document.querySelector(".LFE-container");
@@ -73,7 +71,7 @@ const staffLists = [{title: "PRINT STAFF", staffList: `<h2 class="staff-subtitle
 <h3 class="staff-position">EXECUTIVE EDITOR</h3>
 <h3 class="staff-name">Giovana Gelhoren</h3>
 <h3 class="staff-position">MANAGING EDITORS</h3>
-<h3 class="staff-name">EUGENIA CARDINALE, SOPHIA LO, AMY OUYANG</h3>
+<h3 class="staff-name">Eugenia Cardinale, Sophia Lo, Amy Ouyang</h3>
 <h3 class="staff-position">ASSISTANT MANAGING EDITORS</h3>
 <h3 class="staff-name">Olivia Lloyd, Madison Smith, Gia Yetikyel, Grace Deng</h3>
 <h2 class="staff-subtitle">SECTION EDITORS</h2>
@@ -149,3 +147,10 @@ document.querySelector(".arrow-right").onclick = function(){
     document.querySelector(".staff-title").innerHTML = staffLists[currentStaff].title;
     document.querySelector(".staff-list").innerHTML = staffLists[currentStaff].staffList;
 }
+
+var dancefloor = new Waypoint({
+    element: document.getElementById('df-container'),
+    handler: function(direction) {
+     gsap.to("body", {backgroundColor: "#5aa6a0"})
+    }
+  })
