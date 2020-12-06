@@ -1,6 +1,8 @@
 window.onload = (event) => {
-    gsap.to(".loader",{opacity: 0, display: 'none'})
-    gsap.to(".page-content", {opacity: 1, display: 'block'}, 1);
+   
+    gsap.to(".loader",{opacity: 0, display: 'none'}, 2)
+    gsap.to("body", {backgroundColor: "#Cfe9d7"}, 2)
+    gsap.to(".page-content", {opacity: 1, display: 'block'}, 3);
   };
 
 let masthead = document.querySelector(".masthead");

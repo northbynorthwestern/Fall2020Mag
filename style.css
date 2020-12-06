@@ -27,7 +27,7 @@
     background: #555; 
   }
 body{
-    background-color: #Cfe9d7;
+    background-color: black;
 }
 .loader{
     position: absolute;
@@ -46,6 +46,10 @@ body{
 .loader-text{
     text-align: center;
     font-family: var(--hed-font-default);
+    color: white;
+}
+.loader-path{
+    fill: white;
 }
 .loader-logo{
     width: 100%;
