@@ -152,5 +152,51 @@ var dancefloor = new Waypoint({
     element: document.getElementById('df-container'),
     handler: function(direction) {
      gsap.to("body", {backgroundColor: "#5aa6a0"})
+     gsap.to(".nbn-path", {fill:"#Cfe9d7"});
+     gsap.to(".nbn-title", {color: "#Cfe9d7"});
+    }
+  })
+  var dancefloorBottom = new Waypoint({
+    element: document.getElementById('df-bottom'),
+    handler: function(direction) {
+     gsap.to("body", {backgroundColor: "#5aa6a0"})
+     gsap.to(".nbn-path", {fill:"#Cfe9d7"});
+     gsap.to(".nbn-title", {color: "#Cfe9d7"});
+     gsap.to(".features-heading", {color: "black"})
+    }
+  })
+  var pregame = new Waypoint({
+    element: document.getElementById('pregame-end'),
+    handler: function(direction) {
+     gsap.to("body", {backgroundColor: "#Cfe9d7"})
+     gsap.to(".nbn-path", {fill:"black"});
+     gsap.to(".nbn-title", {color: "black"});
+    }
+  })
+  var features = new Waypoint({
+    element: document.getElementById("df-end"),
+    handler: function(direction) {
+     gsap.to("body", {backgroundColor: "black"})
+     gsap.to(".nbn-path", {fill:"white"});
+     gsap.to(".nbn-title", {color: "white"});
+     gsap.to(".features-heading", {color: "white"})
+    }
+  })
+  var featuresBottom = new Waypoint({
+    element: document.getElementById("features-bottom"),
+    handler: function(direction) {
+     gsap.to("body", {backgroundColor: "black"})
+     gsap.to(".nbn-path", {fill:"white"});
+     gsap.to(".nbn-title", {color: "white"});
+     gsap.to(".features-heading", {color: "white"})
+    }
+  })
+  var photo = new Waypoint({
+    element: document.getElementById("features-end"),
+    handler: function(direction) {
+     gsap.to("body", {backgroundColor: "#cee8d7"})
+     gsap.to(".nbn-path", {fill:"#0d5382"});
+     gsap.to(".nbn-title", {color: "#0d5382"});
+     gsap.to(".features-heading", {color: "#0d5382"})
     }
   })

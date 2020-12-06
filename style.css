@@ -150,26 +150,31 @@ font-family: var(--hed-font-default);
     margin: auto;
     user-select: none;
     font-weight: 500;
-    color: #Bf3f22;
-    text-shadow: -6px 2px var(--masthead-blue);
+ 
     margin: 0;
     text-align: left;
     font-size: 5em;
     font-family: var(--hed-font-default);
 
 }
+#pregame .section-title{
+    color: #Bf3f22;
+    text-shadow: -1px 2px black;
+}
 #dancefloor .section-title{
     text-align: right;
+    color: var(--theme-dark-blue);
+    text-shadow: 1px 2px black;
 }
 .section-article-hed{
     font-family: var(--hed-font-default);
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 0;
 }
 .section-article-dek{
     margin: 0;
     font-family: var(--hed-font-default);
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 300;
 }
 .section-author{
@@ -177,6 +182,133 @@ font-family: var(--hed-font-default);
     font-size: 1.5em;
     font-family: var(--hed-font-serif);
 }
+
+.features-container{
+
+
+}
+.features-heading{
+    font-size: 5em;
+    text-align: center;
+    font-family: var(--hed-font-default);
+    user-select: none;
+}
+.features-article{
+    position: relative;
+    margin: auto auto 5vh auto;
+    width: 70%;
+    height: 40vh;
+    box-shadow: 2px 2px 2px black;
+    user-select: none;
+    transition: transform 1s ease;
+    transform: scale(1);
+    
+}
+.features-article:hover, .photo-story-article:hover{
+    transform: scale(1.1);
+}
+.photo-story-article{
+    position: relative;
+    margin: auto auto 5vh auto;
+    width: 70%;
+    height: 70vh;
+    box-shadow: 2px 2px 2px black;
+    user-select: none;
+    transition: transform 1s ease;
+    transform: scale(1);
+    background-image: url(https://northbynorthwestern.com/content/images/2020/12/picnic.jpg);
+    background-size: cover;
+    border: 10px solid #f9b9b7;
+}
+.photo-hed{
+    font-size: 4em;
+    color:#cee8d7;
+    font-family: var(--hed-font-serif);
+    text-align: center;
+    margin-bottom: 0;
+    text-shadow: 2px 2px black;
+}
+.photo-hed-span{
+color: #8cb2d0;
+font-style: italic;
+}
+.photo-dek, .photo-byline{
+    color: white;
+    font-family: var(--hed-font-default);
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 1px 1px black;
+}
+#anonymity{
+    background-color: #213d6e;
+    border: 10px solid #Cfe9d7;
+}
+#policing{
+    background-color: white;
+    border: 10px solid #9E322F;
+}
+#two-nu{
+    background-color: #F1EFED;
+    border: 10px solid darkgray;
+}
+.policing-hed-span{
+    color: #9E322F;
+}
+.features-illo{
+    height: 40vh;
+    position: absolute;
+    right: 0;
+}
+.anon-hed{
+    text-shadow: 2px 2px black;
+    width: 80%;
+    margin: 2.5% 0 0 5%;
+    font-size: 4em;
+    color: white;
+    font-family: var(--hed-font-serif);
+}
+.anon-dek, .anon-byline{
+    width: 60%;
+    color: white;
+    font-family: var(--hed-font-default);
+    font-weight: 400;
+    margin-top: 0;
+    margin-left: 5%;
+}
+.policing-hed{
+    width: 80%;
+    margin: 2.5% 0 0 5%;
+    font-size: 4em;
+    color: black;
+    font-family: var(--hed-font-default);
+}
+.policing-dek, .policing-byline{
+    width: 60%;
+    color: black;
+    font-family: var(--hed-font-default);
+    font-weight: 400;
+    margin-top: 0;
+    margin-left: 5%;
+}
+.two-nu-hed{
+    width: 80%;
+    margin: 2.5% 0 0 5%;
+    font-size: 3em;
+    color: black;
+    font-family: var(--hed-font-default);
+}
+.two-nu-dek, .two-nu-byline{
+    width: 60%;
+    color: black;
+    font-family: var(--hed-font-default);
+    font-weight: 400;
+    margin-top: 0;
+    margin-left: 5%;
+}
+.features-author-span{
+    font-weight: 600;
+}
+
 .masthead{
     border-left: 20px solid var(--masthead-blue);
     border-right: 20px solid var(--masthead-blue);
@@ -215,7 +347,8 @@ font-family: var(--hed-font-default);
     font-family: var(--hed-font-default);
     font-size: 2.5em;
     text-align: center;
-    color: var(--masthead-blue)
+    color: var(--masthead-blue);
+    user-select: none;
 }
 .staff-title{
     user-select: none;
@@ -266,6 +399,9 @@ font-family: var(--hed-font-default);
 .masthead-arrow:hover{
     transform: scale(1.2);
     fill: var(--masthead-blue);
+}
+.masthead-arrow:active{
+    transform: scale(1.0);
 }
 .masthead-exit, .lfe-exit{
     cursor: pointer;
