@@ -1,0 +1,249 @@
+
+:root{
+    /* Default font for headlines, headings, bylines, etc. */
+    --hed-font-default: 'Barlow', sans-serif; 
+    /* Font used for headlines if print design uses serif font */
+    --hed-font-serif: 'Faustina', serif;
+    /* Default font for body text */
+    --body-font: 'PT Serif', serif;
+    --masthead-blue: #6F9DCF
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+body{
+    background-color: #Cfe9d7;
+}
+.loader{
+    position: absolute;
+    width: 20%;
+    margin: 5% 40%;
+  
+}
+@keyframes loading-spin{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(3590deg);
+    }
+}
+.loader-text{
+    text-align: center;
+    font-family: var(--hed-font-default);
+}
+.loader-logo{
+    width: 100%;
+    animation: loading-spin 40s infinite;
+}
+.page-content{
+    opacity: 0;
+    display: none;
+}
+.top-logo{
+    /* width: 20%; */
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    z-index: 5;
+}
+.nbn-logo{
+    width: 2.5em;
+    margin-right: .5em;
+
+
+}
+.nbn-path{
+    fill: black;
+}
+.nbn-title{
+color: black;
+font-size: 2em;
+font-family: var(--hed-font-default);
+}
+.article-container{
+    box-shadow: 2px 2px 2px black;
+    padding-top: 2em;
+    width: 70%;
+    margin: auto;
+    height: 100vh;
+    border: 20px solid #Bf3f22;
+    background-color: white;
+}
+.mag-intro{
+    font-family: var(--hed-font-default);
+    font-size: 1.3em;
+    /* position: absolute; */
+    width: 50%;
+    top: 0;
+    display: flex;
+    margin: auto;;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.intro-link{
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+
+}
+.intro-link:hover{
+    text-decoration: underline;
+}
+.section-title{
+    font-weight: 500;
+    width: 100%;
+    display: inline;
+    text-align: center;
+    font-size: 5em;
+    font-family: var(--hed-font-default);
+    padding: 1em;
+}
+.masthead{
+    border-left: 20px solid var(--masthead-blue);
+    border-right: 20px solid var(--masthead-blue);
+    position: fixed;
+    width: 80vw;
+    height: 100vh;
+    margin: 0 10vw;
+    bottom: -100vh;
+    background-color: white;
+    box-shadow: 2px 2px 2px;
+    z-index: 10;
+    transition: bottom 1s ease;
+    overflow-y: scroll;
+    
+}
+.mast-active{
+    bottom: 0;
+}
+.mast-clickout,.LFE-clickout{
+    display: none;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: black;
+    opacity: .6;
+}
+.clickout-active{
+    display: block;
+}
+.masthead-heading{
+    font-weight: 400;
+    font-family: var(--hed-font-default);
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--masthead-blue)
+}
+.staff-title{
+    user-select: none;
+    font-family: var(--hed-font-default);
+    background-color: var(--masthead-blue);
+    color: white;
+    padding: .5em 1em;
+    text-align: center;
+    width: 8em;
+    margin: 0 1em;
+}
+.staff-subtitle{
+    user-select: none;
+    color: var(--masthead-blue);
+    font-size: 2em;
+    font-weight: 400;
+    font-family: var(--hed-font-default);
+    text-align: center;
+}
+.staff-position{
+    user-select: none;
+    text-align: center;
+    font-weight: 500;
+    font-family: var(--hed-font-default);
+}
+.staff-name{
+    width: 60%;
+    margin: auto;
+    user-select: none;
+    text-align: center;
+    font-weight: 400;
+    font-family: var(--hed-font-default);
+}
+.staff-list{
+    margin-bottom: 10vh;
+}
+.masthead-flip{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+}
+.masthead-arrow{
+    cursor: pointer;
+    width: 3em;
+    transform: scale(1);
+    transition: all .5s ease;
+}
+.masthead-arrow:hover{
+    transform: scale(1.2);
+    fill: var(--masthead-blue);
+}
+.masthead-exit, .lfe-exit{
+    cursor: pointer;
+    width: 3em;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    transition: all .5s ease;
+    transform: scale(1);
+}
+.masthead-exit:hover, .lfe-exit:hover{
+    transform: scale(1.2);
+    fill: var(--masthead-blue);
+}
+.LFE-container{
+    position: fixed;
+    border-right: 20px solid var(--masthead-blue);
+    width: 40%;
+    left: -100vw;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    box-shadow: 2px 2px 2px;
+    z-index: 10;
+    transition: left 1.5s ease;
+    overflow-y: scroll;
+}
+.lfe-active{
+    left: 0;
+}
+.lfe-text{
+    width: 70%;
+    margin: 10vh auto;
+}
+.lfe-heading{
+    font-family: var(--hed-font-default);
+    color: var(--masthead-blue);
+}
+.lfe-text p{
+    font-family: var(--body-font);
+    font-size: 1.3em;
+}
