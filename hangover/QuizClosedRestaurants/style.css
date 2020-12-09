@@ -108,9 +108,14 @@
     font-family: var(--hed-font-default);
     font-weight: 500;
     border: 2px solid white;
+    transition: all .5s ease;
 }
 .quiz-button:hover{
     border: 2px solid black;
+}
+.quiz-button:active{
+    background-color: black !important;
+    color: white !important;
 }
 #quiz-enter, #restart-button{
     background-color: var(--quiz-lightblue);
