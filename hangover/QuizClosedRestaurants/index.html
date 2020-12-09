@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Faustina:ital,wght@0,600;0,700;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <title>Article Title Here</title>
+    <title>"Sorry, we're closed."</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 </head>
 <body>
 
@@ -17,28 +18,89 @@
         </a>
     </nav>
     <header class="article-top-content">
-        <h1 class="article-hed">Article Hed</h1>
-        <h2 class="article-dek">This is the article dek</h2>
-        <h3 class="article-byline">Written by <a class= "byline-link" href="#"><strong>Author Name</strong></a></h3>
+        <h1 class="article-hed">"Sorry, we're <span class="quiz-hed-yellow">closed</span>."</h1>
+        <h2 class="article-dek">What recently shuttered Evanston restaurant are you?</h2>
+        <h3 class="article-byline">WRITTEN BY <a class= "byline-link" href="#"><strong>CHRISTINE POTERMIN</strong></a></h3>
 
     </header>
     <article class="article-body">
 
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur minima eius alias modi fugiat quibusdam tenetur reprehenderit ipsam dolor ab esse quas rem facilis praesentium, nesciunt illum nam sunt animi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quos officiis vero iure voluptatem obcaecati, a incidunt adipisci pariatur atque dolorum tempore aspernatur, fugiat corrupti accusamus quam nostrum harum sed.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur minima eius alias modi fugiat quibusdam tenetur reprehenderit ipsam dolor ab esse quas rem facilis praesentium, nesciunt illum nam sunt animi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quos officiis vero iure voluptatem obcaecati, a incidunt adipisci pariatur atque dolorum tempore aspernatur, fugiat corrupti accusamus quam nostrum harum sed.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur minima eius alias modi fugiat quibusdam tenetur reprehenderit ipsam dolor ab esse quas rem facilis praesentium, nesciunt illum nam sunt animi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quos officiis vero iure voluptatem obcaecati, a incidunt adipisci pariatur atque dolorum tempore aspernatur, fugiat corrupti accusamus quam nostrum harum sed.</p>
+        <p id="introGraf">The pandmeic has taken away many of the hallmarks of college life. Some, for better or worse, will eventually return. Others are gone for good. One of these lasting changes is the loss of some of our favorite Evanston haunts: Never again will you be able to stop by Andy's on a weeknight after a particularly bad midterm or make a Saturday morning run to Unicorn cafe for a chai latte. So, one last time, take a trip with us and find out what recently closed Evanston restaurant you are.</p>
+        <div class="quiz-button" id="quiz-enter" data-option="Q1">Take Quiz</div>    
+        <div class="quiz-question question-green" id="Q1">
+            <h1 class="question-heading">What's the most haunted place on campus?</h1>
+            <div class="quiz-button" data-option="Q2">The basement of Deering — those flickering lights and scary archives get me every time.</div>
+            <div class="quiz-button" data-option="Q3">University Hall — there's definitely a ghost in that attic.</div>
+            <div class="quiz-button" data-option="Q4">The steam tunnels — legend has it a first-year wandered down there and was never seen again.</div>
+        </div>
+        <div class="quiz-question question-yellow" id="Q2">
+            <h1 class="question-heading">How've you been doing this quarter?</h1>
+            <div class="quiz-button" data-option="Q5">There are dumpster fires more successful than me</div>
+            <div class="quiz-button" data-option="R1">I'm probably the only person thriving, and I'm a little scared to admit it.</div>
+            <div class="quiz-button" data-option="Q4">Eh, I'm doing decently mediocre — Zoom fatigue is real</div>
+        </div>
+        <div class="quiz-question question-blue" id="Q3">
+            <h1 class="question-heading">Lesser of dining hall evils?</h1>
+            <div class="quiz-button" data-option="Q2">Allison (Do you... do you have taste buds?)</div>
+            <div class="quiz-button" data-option="Q5">Sargent (Who hurt you?)</div>
+            <div class="quiz-button" data-option="Q4">Plex (Are you alright?)</div>
+        </div>
+        <div class="quiz-question question-lightblue" id="Q4">
+            <h1 class="question-heading">Your Zoom background?</h1>
+            <div class="quiz-button" data-option="Q6">"This is fine." meme</div>
+            <div class="quiz-button" data-option="Q7">Just my bedroom wall.</div>
+            <div class="quiz-button" data-option="R4">The Arch or other NU landmark</div>
+        </div>
+        <div class="quiz-question question-green" id="Q5">
+            <h1 class="question-heading">How are you trying to recreate the on-campus experience?</h1>
+            <div class="quiz-button" data-option="Q6">Harassing everyone to register for NUDM</div>
+            <div class="quiz-button" data-option="Q7">Oversleeping and then rolling over in bed to log in late to your 9:40 a.m.</div>
+            <div class="quiz-button" data-option="R3">Drinking shitty beer in your basement with the thermostat too high to get that frat party feeling</div>
+        </div>
+        <div class="quiz-question question-blue" id="Q6">
+            <h1 class="question-heading">Which student org do you most frequently mock?</h1>
+            <div class="quiz-button" data-option="R1">Greek life — the parties are obnoxious, and don't even get me started on the inherent discrimination.</div>
+            <div class="quiz-button" data-option="R4"><em>The Daily</em> — <em>NBN is life bb</em></div>
+            <div class="quiz-button" data-option="R2">Theatre bords — how do they manage to do pub pushes in a pandemic?</div>
+        </div>
+        <div class="quiz-question question-yellow" id="Q7">
+            <h1 class="question-heading">Your Norbucks order of pre-COVID times?</h1>
+            <div class="quiz-button" data-option="R2">Three straight shots of espresso</div>
+            <div class="quiz-button" data-option="R3">Iced caramel macchiato</div>
+            <div class="quiz-button" data-option="R4">Dragonfruit refresher</div>
+        </div>
+        <div class="quiz-result" id="R1">
+            <h1 class="result-name">FURIOUS SPOON</h1>
+            <p class="result-text">You love the chase of becoming as quirky as possible. In quarantine, you probably perfected your baking skills, made roller skating TikToks and started a side hustle. You have far too sophisticated taste to ever touch 99-cent ramen.</p>
+            <div class="quiz-button" id = "restart-button" data-option="Q1">PLAY AGAIN?</div>
+        </div>
+        <div class="quiz-result" id="R2">
+            <h1 class="result-name">PANERA</h1>
+            <p class="result-text">You are #NotThriving. Life sucks, Zoom sucks, the world sucks and you spend most of the day in bed. You live for bread bowls and giant cookies to numb the pain with a carb-induced insulin rush. Netflix is the only thing you chill with as deadlines fly by because time has no meaning and life is pointless anyway.</p>
+            <div class="quiz-button" id = "restart-button" data-option="Q1">PLAY AGAIN?</div>
+        </div>
+        <div class="quiz-result" id="R3">
+            <h1 class="result-name">ANDY'S</h1>
+            <p class="result-text">You're like those giant sundaes: beautiful, but overhyped. You're an extrovert with wild memories from North Campus dorms, and there's a good chance you put the wasted in Northwasted.</p>
+            <div class="quiz-button" id = "restart-button" data-option="Q1">PLAY AGAIN?</div>
+        </div>
+        <div class="quiz-result" id="R4">
+            <h1 class="result-name">UNICORN CAFE</h1>
+            <p class="result-text">Caffeine addiction is your main personality trait. Your notes are probably color-coded and hyper-organized to hide your paralyzing fear of failure beneath pastel highligher. You're a coffee snob and have quite possibly been considered a snob in general.</p>
+            <div class="quiz-button" id = "restart-button" data-option="Q1">PLAY AGAIN?</div>
+        </div>
     </article>
 
     <footer class="article-credits">
         <h3 class="credits-heading">Credits</h3>
         <h2 class="credits-subhed">Writing</h2>
-        <h3 class="credits-item">Writer Name</h3>
+        <h3 class="credits-item">Christine Potermin</h3>
         <h2 class="credits-subhed">Editing</h2>
-        <h3 class="credits-item">Editor Name</h3>
+        <h3 class="credits-item">Teresa Nowakowski</h3>
         <h2 class="credits-subhed">Print Design</h2>
-        <h3 class="credits-item">Designer Name</h3>
+        <h3 class="credits-item">Cynthia Zhang</h3>
         <h2 class="credits-subhed">Web Design & Development</h2>
-        <h3 class="credits-item">Your Name!</h3>
+        <h3 class="credits-item">David Deloso</h3>
         <h2 class="credits-link"><a href="https://northbynorthwestern.com/magazine-current/">Back to Magazine Homepage</a></h2>
     </footer>
 

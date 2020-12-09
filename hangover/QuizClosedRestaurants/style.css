@@ -9,6 +9,10 @@
     --hed-font-serif: 'Faustina', serif;
     /* Default font for body text */
     --body-font: 'PT Serif', serif;
+    --quiz-yellow: #Fad462;
+    --quiz-green: #70a883;
+    --quiz-blue: #79c7c5;
+    --quiz-lightblue: #Afdfe3;
 }
 
 .mag-navbar{
@@ -45,23 +49,34 @@
     font-family: var(--hed-font-default);
     font-size: 4em;
     margin-bottom: 0;
+    background-color: black;
+    color: white;
+    width: 60vw;
+    margin: auto;
+    padding: .5em 1em;
     
+}
+.quiz-hed-yellow{
+    color: #Fad462;
 }
 .article-dek{
     font-family: var(--hed-font-default);
-    margin-top: 0;
+    margin: 0 auto 0 auto;
     font-size: 2em;
-    margin-bottom: 0;
-    font-weight: 500;
+    font-weight: 400;
+    background-color: var(--quiz-lightblue);
+    width: 60vw;
+    padding: .5em 2em;
 }
 .article-byline{
     font-family: var(--hed-font-default);
     font-weight: 400;
     margin-top: .5em;
     font-size: 1.5em;
+    color: var(--quiz-green);
 }
 .byline-link{
-    color: black;
+    color: var(--quiz-green);
     transition: color 1s ease;
 }
 .byline-link:hover{
@@ -81,8 +96,70 @@
 .article-body p{
     margin-bottom: 2em;
 }
+.quiz-button{
+    box-sizing: border-box;
+    user-select: none;
+    cursor: pointer;
+    width: 40vw;
+    margin: 0 auto 1em auto;
+    text-align: center;
+    padding: 1em;
+    border-radius: 10px;
+    font-family: var(--hed-font-default);
+    font-weight: 500;
+    border: 2px solid white;
+}
+.quiz-button:hover{
+    border: 2px solid black;
+}
+#quiz-enter, #restart-button{
+    background-color: var(--quiz-lightblue);
+    color: black;
+}
+.quiz-question{
+    font-family: var(--hed-font-default);
+    display: none;
+    opacity: 0;
+}
+.question-heading{
+    text-align: center;
+    font-weight: 600;
+}
+.question-green .question-heading{
+    color: var(--quiz-green);
+}
+.question-green .quiz-button{
+    background-color: var(--quiz-green);
+    color: white;
+}
+.question-blue .question-heading{
+    color: var(--quiz-blue);
+}
+.question-blue .quiz-button{
+    background-color: var(--quiz-blue);
+    color: white;
+}
+.question-yellow .question-heading, .question-lightblue .question-heading{
+    color: black
+}
+.question-yellow .quiz-button{
+    background-color: var(--quiz-yellow);
+    color: black;
+}
 
+.question-lightblue .quiz-button{
+    background-color: var(--quiz-lightblue);
+    color: black;
+}
 
+.quiz-result{
+    display: none;
+    opacity: 0;
+}
+.result-name{
+    font-family: var(--hed-font-default);
+    font-weight: 400;
+}
 /* CREDITS - shouldn't need to change anything! */
 
 .article-credits{
@@ -132,5 +209,7 @@
     .article-body{
         width: 90vw;
     }
-
+    .quiz-button{
+        width: 90vw;
+    }
 }
