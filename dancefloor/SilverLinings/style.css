@@ -45,12 +45,14 @@
     font-family: var(--hed-font-default);
     font-size: 4em;
     margin-bottom: 0;
-    
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
 }
 .article-dek{
     font-family: var(--hed-font-default);
     margin-top: 0;
-    font-size: 2em;
+    font-size: 1.2em;
     margin-bottom: 0;
     font-weight: 500;
 }
@@ -61,7 +63,7 @@
     font-size: 1.5em;
 }
 .byline-link{
-    color: black;
+    color: white;
     transition: color 1s ease;
 }
 .byline-link:hover{
@@ -71,10 +73,9 @@
 
 /* ARTICLE BODY - customize however you want! */
 
-
 .article-body{
     font-family: var(--body-font);
-    width: 40vw;
+    width: 60vw;
     margin: auto;
     font-size: 1.2em;
 }
@@ -106,14 +107,57 @@
     margin-top: 1.5em;
 }
 .credits-link a{
-    color: black;
+    color: white;
     transition: color 1s ease;
 }
 .credits-link a:hover{
     color: #4E2A84;
 }
 
+body {
+    background: -webkit-linear-gradient(#58a3b1, #f9cb87);
+    color:white;
+}
+.first-letter {
+    font-size: 3em;
+    font-family: var(--hed-font-default);
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+  }
+.author {
+    font-family: var(--hed-font-default);
+    text-align:right;
+}
+img {
+    opacity:50%;
+}
+.img1 {
+    width:30%;
+    float:left;
+}
+.img2 {
+    width:30%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    float:right;
+}
+.img3 {
+    width:35%;
+    float:left;
+}
+.img4 {
+    width:30%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    float:right;
+}
 
+.story{
+    border:1px solid #D3D3D3;
+    margin-top:20px;
+    padding:0px 20px 0px 20px;
+}
 /* MOBILE STYLING - add any mobile specific CSS here but please leave navbar styling as is!*/
 
 @media screen and (max-width: 700px){
