@@ -9,9 +9,12 @@
     --hed-font-serif: 'Faustina', serif;
     /* Default font for body text */
     --body-font: 'PT Serif', serif;
+    --theme-purple: #945fb0;
+    --theme-yellow:#fad462;
 }
 
 .mag-navbar{
+    z-index: 100;
     position: fixed;
     left: 0;
     right: 0;
@@ -42,9 +45,10 @@
 }
 .article-hed{
     /* replace "default" with "serif" if article uses a serif font in the hed */
-    font-family: var(--hed-font-default);
+    font-family: var(--hed-font-serif);
     font-size: 4em;
     margin-bottom: 0;
+    color: var(--theme-purple);
     
 }
 .article-dek{
@@ -52,7 +56,7 @@
     margin-top: 0;
     font-size: 2em;
     margin-bottom: 0;
-    font-weight: 500;
+    font-weight: 300;
 }
 .article-byline{
     font-family: var(--hed-font-default);
@@ -79,10 +83,42 @@
     font-size: 1.2em;
 }
 .article-body p{
+    z-index: 1 !important;
     margin-bottom: 2em;
+    /* position: relative; */
+}
+.article-section-title{
+    position: relative;
+    color: var(--theme-purple);
+    font-family: var(--hed-font-serif);
 }
 
-
+.section-img{
+    width: 15vw;
+}
+.img-right{
+    float: right;
+}
+.img-left{
+    float: left;
+}
+.section-right{
+    text-align: right;
+}
+.section-number{
+    position: absolute;
+    user-select: none;
+    /* top: 1em; */
+    color: var(--theme-yellow);
+    font-family: var(--hed-font-serif);
+    font-size: 10em;
+}
+.section-number-left{
+    left: 20vw;
+}
+.section-number-right{
+    right: 20vw;
+}
 /* CREDITS - shouldn't need to change anything! */
 
 .article-credits{
@@ -132,5 +168,10 @@
     .article-body{
         width: 90vw;
     }
-
+    .section-number{
+        display: none;
+    }
+    .section-img{
+        width: 50vw;
+    }
 }
