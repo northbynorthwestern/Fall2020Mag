@@ -9,6 +9,9 @@
     --hed-font-serif: 'Faustina', serif;
     /* Default font for body text */
     --body-font: 'PT Serif', serif;
+    --fb-lightblue: #6d84b4;
+    --fb-darkblue:#4267b2 ;
+    --text-gray: #898f9c;
 }
 
 .mag-navbar{
@@ -20,6 +23,7 @@
     background-color: #342F2E;
     padding: 1vh 0;
     box-shadow: 1px 2px 1px;
+    z-index: 10;
 }
 .nbn-logo-nav{
     margin-left: 1vw;
@@ -44,8 +48,16 @@
     /* replace "default" with "serif" if article uses a serif font in the hed */
     font-family: var(--hed-font-default);
     font-size: 4em;
-    margin-bottom: 0;
+    margin: 0 auto 0 auto;
+    color: var(--fb-lightblue);
+    position: relative;
+    width: fit-content;
+    z-index: 1;
     
+}
+
+.fb-blue{
+    color: var(--fb-darkblue);
 }
 .article-dek{
     font-family: var(--hed-font-default);
@@ -53,15 +65,37 @@
     font-size: 2em;
     margin-bottom: 0;
     font-weight: 500;
+    color: var(--text-gray);
+    z-index: 1 !important;
+    position: relative;
+}
+.fb-tag{
+    position: absolute;
+    right: -1.75em;
+    top: .7em;
+    z-index: 0 !important;
+    animation: sway 3s ease-in-out infinite alternate;
+    transform-origin: top left;
+}
+@keyframes sway{
+    from{
+        transform: rotate(-10deg);
+    }
+    to{
+        transform: rotate(30deg);
+    }
 }
 .article-byline{
     font-family: var(--hed-font-default);
     font-weight: 400;
     margin-top: .5em;
     font-size: 1.5em;
+    color: var(--text-gray);
+    z-index: 1 !important;
+    position: relative;
 }
 .byline-link{
-    color: black;
+    color: var(--fb-darkblue);
     transition: color 1s ease;
 }
 .byline-link:hover{
@@ -81,7 +115,26 @@
 .article-body p{
     margin-bottom: 2em;
 }
-
+.sidebar-image{
+    position: absolute;
+    width: 20vw;
+    text-align: center;
+    font-family: var(--hed-font-default);
+    color: var(--text-gray);
+}
+.sidebar-left{
+    left: 5vw;
+}
+.sidebar-right{
+    right: 5vw;
+}
+.sidebar-image img{
+    width: 100%;
+    /* animation: sway 4s ease-in-out infinite alternate; */
+}
+#washer{
+    width: 50%;
+}
 
 /* CREDITS - shouldn't need to change anything! */
 
@@ -132,5 +185,9 @@
     .article-body{
         width: 90vw;
     }
-
+    .sidebar-image{
+        position: static;
+        font-size: 1em;
+        width: 100%;
+    }
 }
