@@ -9,8 +9,35 @@
     --hed-font-serif: 'Faustina', serif;
     /* Default font for body text */
     --body-font: 'PT Serif', serif;
+    --anon-darkblue: #213d6e;
+    --anon-red: #Bf3f22;
+    --anon-darkred: #9c3018;
+    --anon-brightred: #De4400;
+    --anon-lightblue: #749ecc;
+    --anon-darkturq: #5aa6a0;
 }
-
+body{
+    background-color: var(--anon-darkblue);
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 .mag-navbar{
     position: fixed;
     left: 0;
@@ -20,6 +47,7 @@
     background-color: #342F2E;
     padding: 1vh 0;
     box-shadow: 1px 2px 1px;
+    z-index: 10;
 }
 .nbn-logo-nav{
     margin-left: 1vw;
@@ -37,22 +65,58 @@
 /* HED, DEK, BYLINE - feel free to play with this! */
 
 .article-top-content{
+    color: white;
     margin-top: 15vh;
     text-align: center;
 }
 .article-hed{
     /* replace "default" with "serif" if article uses a serif font in the hed */
-    font-family: var(--hed-font-default);
+    font-family: var(--hed-font-serif);
     font-size: 4em;
     margin-bottom: 0;
+    text-shadow: 2px 2px black;
     
 }
+.anon-illo{
+    position: absolute;
+    top: 7vh;
+    right: -1em;
+    width: 20vw;
+    border-radius: 20px;
+    box-shadow: -3px 3px 2px;
+}
+.accent-box{
+    rgba(255, 0, 0, 0, 0);
+    border-radius: 10px;
+    position: absolute;
+   
+}
+.accent-container{
+    position: absolute;
+}
+.accent-left{
+    left: 0;
+}
+#lb-l1{
+    border: 6px solid var(--anon-lightblue);
+    width: 10vw;
+    height: 30vh;
+    left: -1em;
+}
+#turq-l1{
+    border: 6px solid var(--anon-darkturq);
+    width: 20vw;
+    height: 20vh;
+    left: -5em;
+    top: 5em;
+}
 .article-dek{
+    width: 50vw;
     font-family: var(--hed-font-default);
-    margin-top: 0;
-    font-size: 2em;
-    margin-bottom: 0;
-    font-weight: 500;
+    margin: 0 auto 0 auto;
+    font-size: 1.5em;
+
+    font-weight: 400;
 }
 .article-byline{
     font-family: var(--hed-font-default);
@@ -61,18 +125,28 @@
     font-size: 1.5em;
 }
 .byline-link{
-    color: black;
+    color: white;
     transition: color 1s ease;
 }
 .byline-link:hover{
-    color: #4E2A84;
+    color: #749ecc;
 }
 
 
 /* ARTICLE BODY - customize however you want! */
 
-
+.content-warning{
+    font-style: italic;
+    font-weight: 600;
+    font-family: var(--hed-font-serif);
+}
+.anon-divider{
+    width: 30%;
+    margin: 0 30%;
+    user-select: none;
+}
 .article-body{
+    color: white;
     font-family: var(--body-font);
     width: 40vw;
     margin: auto;
@@ -81,11 +155,34 @@
 .article-body p{
     margin-bottom: 2em;
 }
+.anon-pull{
+    font-family: var(--hed-font-serif);
+    font-weight: 300;
+    font-style: italic;
+    background-color: var(--anon-darkred);
+    border-radius: 10px;
+    padding: .5em 1em;
+    box-shadow: -3px 3px 3px black;
+    text-shadow: 1px 2px black;
+    position: relative;
 
+}
+.pull-text{
+    margin-bottom: 0;
+
+}
+
+.pull-attribution{
+    margin-bottom: 0;
+    text-align: right;
+}
+.pull-mark-top{
+}
 
 /* CREDITS - shouldn't need to change anything! */
 
 .article-credits{
+    color: white;
     text-align: center;
     font-family: var(--hed-font-default);
 }
@@ -106,11 +203,11 @@
     margin-top: 1.5em;
 }
 .credits-link a{
-    color: black;
+    color: white;
     transition: color 1s ease;
 }
 .credits-link a:hover{
-    color: #4E2A84;
+    color:  #749ecc;
 }
 
 
