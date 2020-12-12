@@ -200,3 +200,20 @@ var dancefloor = new Waypoint({
      gsap.to(".features-heading", {color: "#0d5382"})
     }
   })
+  var photoBottom = new Waypoint({
+    element: document.getElementById("photo-end"),
+    handler: function(direction) {
+     gsap.to("body", {backgroundColor: "#cee8d7"})
+     gsap.to(".nbn-path", {fill:"#0d5382"});
+     gsap.to(".nbn-title", {color: "#0d5382"});
+     gsap.to(".features-heading", {color: "#0d5382"})
+    }
+  })
+  var hangover = new Waypoint({
+    element: document.getElementById('hangover-container'),
+    handler: function(direction) {
+     gsap.to("body", {backgroundColor: "#afd688"})
+     gsap.to(".nbn-path", {fill:"#914654"});
+     gsap.to(".nbn-title", {color: "#914654"});
+    }
+  })

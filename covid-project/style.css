@@ -9,36 +9,16 @@
     --hed-font-serif: 'Faustina', serif;
     /* Default font for body text */
     --body-font: 'PT Serif', serif;
-    --anon-darkblue: #213d6e;
-    --anon-red: #Bf3f22;
-    --anon-darkred: #9c3018;
-    --anon-brightred: #De4400;
-    --anon-lightblue: #749ecc;
-    --anon-darkturq: #5aa6a0;
+    --covid-purple: #7666ad;
+    --covid-yellow: #efe93a;
 }
 body{
-    background-color: var(--anon-darkblue);
+    background-color: #330000;
     overflow-x: hidden;
+    /* overflow-y: hidden; */
 }
-::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
 .mag-navbar{
+    z-index: 10;
     position: fixed;
     left: 0;
     right: 0;
@@ -47,7 +27,6 @@ body{
     background-color: #342F2E;
     padding: 1vh 0;
     box-shadow: 1px 2px 1px;
-    z-index: 10;
 }
 .nbn-logo-nav{
     margin-left: 1vw;
@@ -65,33 +44,49 @@ body{
 /* HED, DEK, BYLINE - feel free to play with this! */
 
 .article-top-content{
-    color: white;
     margin-top: 15vh;
     text-align: center;
 }
 .article-hed{
+    user-select: none;
     /* replace "default" with "serif" if article uses a serif font in the hed */
-    font-family: var(--hed-font-serif);
-    font-size: 4em;
+    font-family: var(--hed-font-default);
+    font-size: 8em;
     margin-bottom: 0;
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 2px 1px var(--covid-yellow);
+    /* -webkit-text-stroke: 1px var(--covid-yellow); */
+    color: var(--covid-purple);
+    /* transition: all 1s ease; */
     
 }
-.anon-illo{
-    position: absolute;
-    top: 7vh;
-    right: -1em;
-    width: 20vw;
-    border-radius: 20px;
-    box-shadow: -3px 3px 2px;
-}
 .article-dek{
-    width: 50vw;
     font-family: var(--hed-font-default);
-    margin: 0 auto 0 auto;
-    font-size: 1.5em;
-
-    font-weight: 400;
+    margin-top: 0;
+    font-size: 2em;
+    margin-bottom: 0;
+    font-weight: 300;
+    color: white;
+}
+.article-enter{
+    opacity: 0;
+    border: 1px solid white;
+    color: white;
+    font-family: var(--hed-font-default);
+    width: fit-content;
+    margin: auto;
+    padding: 1em;
+    margin-top: 1em;
+    user-select: none;
+    cursor: pointer;
+    /* transition: all 1s ease; */
+}
+.article-enter:hover{
+    color: black;
+    background-color: white;
+}
+.article-enter:active{
+    color: white;
+    background-color: black;
 }
 .article-byline{
     font-family: var(--hed-font-default);
@@ -99,66 +94,55 @@ body{
     margin-top: .5em;
     font-size: 1.5em;
 }
-.byline-link{
-    color: white;
-    transition: color 1s ease;
-}
-.byline-link:hover{
-    color: #749ecc;
-}
-
 
 /* ARTICLE BODY - customize however you want! */
-
-.content-warning{
-    font-style: italic;
-    font-weight: 600;
-    font-family: var(--hed-font-serif);
-}
-.anon-divider{
-    width: 30%;
-    margin: 0 30%;
-    user-select: none;
-}
-.article-body{
-    color: white;
-    font-family: var(--body-font);
-    width: 40vw;
+.article-links{
+    width: 70vw;
     margin: auto;
-    font-size: 1.2em;
 }
-.article-body p{
-    margin-bottom: 2em;
+.section-article-hed{
+    font-family: var(--hed-font-default);
+    font-size: 2em;
+    margin-bottom: 0;
 }
-.anon-pull{
-    user-select: none;
-    font-family: var(--hed-font-serif);
+.section-article{
+    border-bottom: 1px solid gray;
+}
+.section-article-dek{
+    margin: 0;
+    font-family: var(--hed-font-default);
+    font-size: 1.5em;
     font-weight: 300;
-    font-style: italic;
-    background-color: var(--anon-darkred);
-    border-radius: 10px;
-    padding: .5em 1em;
-    box-shadow: -3px 3px 3px black;
-    text-shadow: 1px 2px black;
+}
+.section-author{
+    margin-top: 0;
+    font-size: 1.5em;
+    font-family: var(--hed-font-serif);
+}
+.article-link{
+    user-select: none;
+    text-decoration: none;
+    color: white;
+    transition: color .5s ease;
+}
+.article-link:hover{
+    color: #E4E0EE;
+  
+}
+.section-left{
     position: relative;
-
+    right: 100vw;
+    text-align: left;
 }
-.pull-text{
-    margin-bottom: 0;
-
-}
-
-.pull-attribution{
-    margin-bottom: 0;
+.section-right{
+    position: relative;
+    left: 100vw;
     text-align: right;
-}
-.pull-mark-top{
 }
 
 /* CREDITS - shouldn't need to change anything! */
 
 .article-credits{
-    color: white;
     text-align: center;
     font-family: var(--hed-font-default);
 }
@@ -179,11 +163,11 @@ body{
     margin-top: 1.5em;
 }
 .credits-link a{
-    color: white;
+    color: black;
     transition: color 1s ease;
 }
 .credits-link a:hover{
-    color:  #749ecc;
+    color: #4E2A84;
 }
 
 

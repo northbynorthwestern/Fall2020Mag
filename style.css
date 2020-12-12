@@ -29,6 +29,7 @@
   }
 body{
     background-color: #Cfe9d7;
+    overflow-x: hidden;
 }
 .loader{
     position: fixed;
@@ -100,6 +101,9 @@ font-family: var(--hed-font-default);
 #df-container{
     border: 20px solid var(--theme-dark-blue);
 }
+#hangover-container{
+    border: 20px solid #e6b45f;
+}
 .mag-intro{
     font-family: var(--hed-font-default);
     font-size: 1.3em;
@@ -140,6 +144,7 @@ font-family: var(--hed-font-default);
     color: var(--theme-dark-blue);
 }
 .section-left{
+
     text-align: left;
 }
 .section-right{
@@ -165,6 +170,10 @@ font-family: var(--hed-font-default);
     text-align: right;
     color: var(--theme-dark-blue);
     text-shadow: 1px 2px black;
+}
+#hangover .section-title{
+    color: #e6b45f;
+    text-shadow: -1px 2px black;
 }
 .section-article-hed{
     font-family: var(--hed-font-default);
@@ -321,7 +330,7 @@ font-style: italic;
     background-color: white;
     box-shadow: 2px 2px 2px;
     z-index: 10;
-    transition: bottom 2s ease;
+    transition: bottom 1s ease;
     overflow-y: scroll;
     
 }
@@ -426,7 +435,7 @@ font-style: italic;
     background-color: white;
     box-shadow: 2px 2px 2px;
     z-index: 10;
-    transition: left 1.5s ease;
+    transition: left 1s ease;
     overflow-y: scroll;
 }
 .lfe-active{
