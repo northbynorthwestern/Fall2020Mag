@@ -12,6 +12,7 @@
 }
 
 .mag-navbar{
+    z-index: 100;
     position: fixed;
     left: 0;
     right: 0;
@@ -40,19 +41,20 @@
     margin-top: 15vh;
     text-align: center;
 }
-.article-hed{
-    /* replace "default" with "serif" if article uses a serif font in the hed */
-    font-family: var(--hed-font-default);
-    font-size: 4em;
-    margin-bottom: 0;
+.img-hed{
+width: 40vw;
+user-select: none;
+margin: auto;
     
 }
 .article-dek{
+    width: 40vw;
+    margin: auto;
     font-family: var(--hed-font-default);
     margin-top: 0;
     font-size: 2em;
     margin-bottom: 0;
-    font-weight: 500;
+    font-weight: 300;
 }
 .article-byline{
     font-family: var(--hed-font-default);
@@ -112,7 +114,15 @@
 .credits-link a:hover{
     color: #4E2A84;
 }
-
+.club-left{
+    position: absolute;
+    width: 20vw;
+    left: 5vw;
+}.club-right{
+    position: absolute;
+    width: 20vw;
+    right: 5vw;
+}
 
 /* MOBILE STYLING - add any mobile specific CSS here but please leave navbar styling as is!*/
 
@@ -123,7 +133,11 @@
     .article-hed{
         font-size: 3em;
     }
+    .img-hed{
+        width: 90vw;
+    }
     .article-dek{
+        width: 90vw;
         font-size: 1.5em;
     }
     .article-byline{
@@ -132,5 +146,14 @@
     .article-body{
         width: 90vw;
     }
-
+    .article-body p{
+        z-index: 5;
+        position: relative;
+    }
+    .club-left, .club-right{
+        /* display: none; */
+        width: 50vw;
+        z-index: 0;
+        opacity: .4;
+    }
 }
