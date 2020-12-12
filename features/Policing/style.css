@@ -36,6 +36,49 @@
 
 /* HED, DEK, BYLINE - feel free to play with this! */
 
+.stamp {
+    color: #9d332f;
+    border: 1rem double #9d332f;
+    -webkit-mask-position: 2rem 3rem;
+    -webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
+    -webkit-mask-size: 944px 604px;
+    font-size: 11vw;  
+    font-weight: 700;
+	display: inline-block;
+	padding: 0.25rem 1rem;
+	text-transform: uppercase;
+	border-radius: 1rem;
+	font-family: 'Courier';
+    mix-blend-mode: multiply;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    opacity: 0;
+    -webkit-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+  }
+
+  @-webkit-keyframes pulse{
+    0%{
+      opacity: 0;
+    }
+    10%{
+      opacity:.50;
+      transform-origin: 50% 50%;
+      transform: rotate(0deg) scale(5);
+      transition: all .3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    }
+    100%{
+      opacity:1;
+      transform: rotate(3deg) scale(1);
+    }
+  }
+
 .article-top-content{
     margin-top: 15vh;
     text-align: center;
@@ -50,15 +93,16 @@
 .article-dek{
     font-family: var(--hed-font-default);
     margin-top: 0;
-    font-size: 2em;
-    margin-bottom: 0;
+    font-size: 22px;
+    margin-bottom: 15px;
     font-weight: 500;
 }
 .article-byline{
     font-family: var(--hed-font-default);
     font-weight: 400;
     margin-top: .5em;
-    font-size: 1.5em;
+    margin-bottom: 25px;
+    font-size: 18px;
 }
 .byline-link{
     color: black;
@@ -68,13 +112,12 @@
     color: #4E2A84;
 }
 
-
 /* ARTICLE BODY - customize however you want! */
 
 
 .article-body{
     font-family: var(--body-font);
-    width: 40vw;
+    width: 50%;
     margin: auto;
     font-size: 1.2em;
 }
@@ -82,6 +125,33 @@
     margin-bottom: 2em;
 }
 
+.section-divider {
+    color: #9d332f;
+    font-family: 'Barlow';
+}
+
+.budget {
+    width: 100%;
+}
+
+.complaints {
+    width: 100%; 
+    margin-bottom: 50px;
+}
+
+.lines {
+    float:left;
+    width: 50%;
+    height: 50%;
+    margin-left: -350px;
+}
+
+#line {
+    float:right;
+    width: 50%;
+    height: 50%;
+    margin-right: -350px;
+}
 
 /* CREDITS - shouldn't need to change anything! */
 
