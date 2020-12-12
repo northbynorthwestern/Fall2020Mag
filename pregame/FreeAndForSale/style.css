@@ -95,7 +95,7 @@
     position: relative;
 }
 .byline-link{
-    color: var(--fb-darkblue);
+    color: var(--fb-lightblue);
     transition: color 1s ease;
 }
 .byline-link:hover{
