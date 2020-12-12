@@ -1,0 +1,66 @@
+body {
+  margin: 0px;
+}
+
+.parallax {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  background-image: url(hed.png);
+  min-height: 100vh;
+  width: 100%;
+  background-size: contain;
+}
+
+.byline {
+  font-size: 25px;
+}
+
+.part1 {
+  background-image: url(https://news.northwestern.edu/assets/Stories/2020/09/evanston640.jpg);
+  min-height: 100vh;
+}
+
+.part2 {
+  background-image: url(three_animals_horizontal.jpg);
+  height: fit-content;
+}
+
+.part3 {
+  background-image: url(shark_holding_hands.jpg);
+  height: fit-content;
+  background-size: cover;
+}
+
+.part4 {
+  background-image: url(picnic.jpg);
+  height: fit-content;
+  background-size: cover;
+}
+
+.part5 {
+  background-image: url(cow.jpg);
+  height: fit-content;
+  background-size: cover;
+}
+
+.text {
+  position: relative;
+  padding: 15px;
+  width: 35%;
+  margin: auto;
+  margin-left: 5%;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+
+  opacity: 0.75;
+}
+.text p{
+  background-color: white;
+  padding: 1em;
+}
