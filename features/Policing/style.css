@@ -202,5 +202,8 @@
     .article-body{
         width: 90vw;
     }
+    body{
+        overflow-x: hidden;
+    }
 
 }
