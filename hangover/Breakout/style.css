@@ -9,9 +9,15 @@
     --hed-font-serif: 'Faustina', serif;
     /* Default font for body text */
     --body-font: 'PT Serif', serif;
+    --breakout-red: #CC2735;
 }
-
+body{
+    background-image: url("https://northbynorthwestern.com/content/images/2020/12/pexels-fwstudio-172276.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
 .mag-navbar{
+    z-index: 100;
     position: fixed;
     left: 0;
     right: 0;
@@ -40,28 +46,29 @@
     margin-top: 15vh;
     text-align: center;
 }
-.article-hed{
-    /* replace "default" with "serif" if article uses a serif font in the hed */
-    font-family: var(--hed-font-default);
-    font-size: 4em;
-    margin-bottom: 0;
-    
+.img-hed{
+    width: 100%;
 }
 .article-dek{
     font-family: var(--hed-font-default);
-    margin-top: 0;
-    font-size: 2em;
-    margin-bottom: 0;
-    font-weight: 500;
+    margin: 0 auto 0 auto;
+    font-size: 1.3em;
+    font-weight: 300;
+    width: 90%;
+    text-align: center;
+    color: var(--breakout-red);
 }
 .article-byline{
     font-family: var(--hed-font-default);
     font-weight: 400;
     margin-top: .5em;
-    font-size: 1.5em;
+    font-size: 1.3em;
+    font-weight: 300;
+    text-align: center;
+    color: var(--breakout-red);
 }
 .byline-link{
-    color: black;
+    color: var(--breakout-red);
     transition: color 1s ease;
 }
 .byline-link:hover{
@@ -71,17 +78,82 @@
 
 /* ARTICLE BODY - customize however you want! */
 
+#tape-top-right{
+    position: absolute;
+    top: -1em;
+    right: -1em;
+    width: 4em;
+}
+#tape-top-left{
+    position: absolute;
+    top: -1em;
+    left: -1em;
+    width: 4em;
+}
+#tape-bot-right{
+    position: absolute;
+    bottom: -1em;
+    right: -1em;
+    width: 4em;
+}
+#tape-bot-left{
+    position: absolute;
+    bottom: -1em;
+    left: -1em;
+    width: 4em;
+}
+.section-head{
 
+}
+.situation-text{
+    width: 30%;
+    height: auto;
+    /* display: inline; */
+    margin-bottom: 0;
+}
+.situation-heading{
+    text-align: center;
+    font-family: var(--hed-font-default);
+    color: var(--breakout-red);
+    font-weight: 300;
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: rgba(251, 212, 99, 0.45);
+    border-radius: 30px;
+    /* display: inline; */
+    /* width: 60%; */
+    /* margin-left: 10%; */
+}
+.situation-subhed{
+    font-weight: 400;
+    font-style: italic;
+    font-family: var(--hed-font-default);
+}
 .article-body{
+    background-image: url("https://northbynorthwestern.com/content/images/2020/12/paper.png");
+    background-size: contain;
     font-family: var(--body-font);
     width: 40vw;
-    margin: auto;
+    margin: 15vh auto 0 auto;
     font-size: 1.2em;
+    padding: 2em;
+    /* box-shadow: -5px 5px 5px black; */
+    position: relative;
 }
 .article-body p{
     margin-bottom: 2em;
 }
-
+.breakout-illo{
+    width: 30%;
+    float: right;
+}
+.text-subhead{
+    color: var(--breakout-red);
+    font-family: var(--hed-font-default);
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
 
 /* CREDITS - shouldn't need to change anything! */
 
@@ -130,7 +202,13 @@
         font-size: 1em;
     }
     .article-body{
+        padding: .2em;
         width: 90vw;
     }
-
+    .breakout-illo{
+        width: 50%;
+    }
+    .situation-heading{
+        font-size: 1.3em;
+    }
 }
