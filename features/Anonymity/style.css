@@ -85,6 +85,9 @@ body{
     border-radius: 20px;
     box-shadow: -3px 3px 2px;
 }
+.anon-illo-mobile{
+    display: none;
+}
 .article-dek{
     width: 50vw;
     font-family: var(--hed-font-default);
@@ -186,6 +189,10 @@ body{
     color:  #749ecc;
 }
 
+.nbn-kicker{
+    width: 20%;
+    margin: 0 40%;
+}
 
 /* MOBILE STYLING - add any mobile specific CSS here but please leave navbar styling as is!*/
 
@@ -198,12 +205,22 @@ body{
     }
     .article-dek{
         font-size: 1.5em;
+        width: 95vw;
     }
     .article-byline{
         font-size: 1em;
     }
     .article-body{
         width: 90vw;
+    }
+    .anon-illo{
+        display: none;
+    }
+    .anon-illo-mobile{
+        display: block;
+        width: 100%;
+        border-radius: 20px;
+    box-shadow: -3px 3px 2px;
     }
 
 }
