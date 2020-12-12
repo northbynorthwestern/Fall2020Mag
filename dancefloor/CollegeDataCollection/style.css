@@ -20,6 +20,7 @@
     background-color: #342F2E;
     padding: 1vh 0;
     box-shadow: 1px 2px 1px;
+    z-index: 100;
 }
 .nbn-logo-nav{
     margin-left: 1vw;
@@ -42,23 +43,24 @@
 }
 .article-hed{
     /* replace "default" with "serif" if article uses a serif font in the hed */
-    font-family: var(--hed-font-default);
+    font-family: var(--hed-font-serif);
     font-size: 4em;
-    margin-bottom: 0;
-    
+    margin-bottom: .2em;   
 }
 .article-dek{
     font-family: var(--hed-font-default);
-    margin-top: 0;
-    font-size: 2em;
+    margin-top: 1em;
+    font-size: 1.5em;
     margin-bottom: 0;
     font-weight: 500;
+    color: #6f9bb7;
 }
 .article-byline{
     font-family: var(--hed-font-default);
     font-weight: 400;
     margin-top: .5em;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    margin-bottom: 3em;
 }
 .byline-link{
     color: black;
@@ -71,15 +73,32 @@
 
 /* ARTICLE BODY - customize however you want! */
 
-
 .article-body{
     font-family: var(--body-font);
-    width: 40vw;
+    width: 50%;
     margin: auto;
     font-size: 1.2em;
 }
 .article-body p{
     margin-bottom: 2em;
+}
+
+.img {
+    width: 50%;
+    height: 50%;
+    padding-right: 30px;
+    margin-left: -40px;
+    float: left;
+}
+
+.img2 {
+    width: 100%;
+    height: 100%;
+    margin-top: 2vh;
+}
+
+.p1 {
+    margin-top: -10vh;
 }
 
 
@@ -131,6 +150,10 @@
     }
     .article-body{
         width: 90vw;
+    }
+
+    .img {
+        margin-left: 0;
     }
 
 }
