@@ -1,47 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Faustina:ital,wght@0,600;0,700;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <title>Article Title Here</title>
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Faustina:ital,wght@0,600;0,700;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Imagining a Better Yesterday</title>
+  </head>
+  <body data-spy="scroll" data-target="#timeinenav">
     <!-- Please don't touch anything in this nav tag! -->
     <nav class="mag-navbar">
-        <a class = "homepage-link" href="https://northbynorthwestern.com/magazine-current/">
-         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="nbn-logo-nav" viewBox="0 0 1024.000000 1024.000000" preserveAspectRatio="xMidYMid meet"><g class="svg-path nbn-path" transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M4940 9953 c-891 -34 -1755 -309 -2480 -788 -714 -472 -1315 -1155        -1690 -1920 -256 -524 -403 -1040 -472 -1665 -20 -181 -17 -778 5 -965 138        -1165 628 -2168 1439 -2950 979 -943 2278 -1447 3551 -1377 361 20 653 64        1008 153 1403 350 2469 1207 3139 2524 267 524 425 1046 497 1635 25 207 25        772 0 985 -156 1312 -712 2376 -1662 3179 -147 125 -295 240 -300 234 -2 -2        155 -307 350 -678 195 -371 355 -678 355 -682 0 -5 -128 -8 -285 -8 l-285 0 0        -2690 0 -2690 -472 2 -471 3 -835 1877 c-459 1033 -838 1875 -843 1872 -5 -3        -9 -795 -9 -1885 l0 -1879 -490 0 -490 0 0 2695 0 2695 676 0 676 0 25 -27        c14 -16 49 -84 80 -153 296 -676 1177 -2651 1184 -2656 5 -3 9 582 9 1415 l0        1421 -255 0 c-140 0 -255 3 -255 6 0 3 194 374 431 825 237 451 433 828 436        838 4 15 -14 29 -84 69 -610 343 -1327 544 -2084 582 -186 9 -229 10 -399 3z"></path></g></svg>
-        </a>
+      <a
+        class="homepage-link"
+        href="https://northbynorthwestern.com/magazine-current/"
+      >
+        <svg
+          version="1.0"
+          xmlns="http://www.w3.org/2000/svg"
+          class="nbn-logo-nav"
+          viewBox="0 0 1024.000000 1024.000000"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <g
+            class="svg-path nbn-path"
+            transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)"
+            fill="currentColor"
+            stroke="none"
+          >
+            <path
+              d="M4940 9953 c-891 -34 -1755 -309 -2480 -788 -714 -472 -1315 -1155        -1690 -1920 -256 -524 -403 -1040 -472 -1665 -20 -181 -17 -778 5 -965 138        -1165 628 -2168 1439 -2950 979 -943 2278 -1447 3551 -1377 361 20 653 64        1008 153 1403 350 2469 1207 3139 2524 267 524 425 1046 497 1635 25 207 25        772 0 985 -156 1312 -712 2376 -1662 3179 -147 125 -295 240 -300 234 -2 -2        155 -307 350 -678 195 -371 355 -678 355 -682 0 -5 -128 -8 -285 -8 l-285 0 0        -2690 0 -2690 -472 2 -471 3 -835 1877 c-459 1033 -838 1875 -843 1872 -5 -3        -9 -795 -9 -1885 l0 -1879 -490 0 -490 0 0 2695 0 2695 676 0 676 0 25 -27        c14 -16 49 -84 80 -153 296 -676 1177 -2651 1184 -2656 5 -3 9 582 9 1415 l0        1421 -255 0 c-140 0 -255 3 -255 6 0 3 194 374 431 825 237 451 433 828 436        838 4 15 -14 29 -84 69 -610 343 -1327 544 -2084 582 -186 9 -229 10 -399 3z"
+            ></path>
+          </g>
+        </svg>
+      </a>
     </nav>
     <header class="article-top-content">
-        <h1 class="article-hed">Article Hed</h1>
-        <h2 class="article-dek">This is the article dek</h2>
-        <h3 class="article-byline">Written by <a class= "byline-link" href="#"><strong>Author Name</strong></a></h3>
-
+      <h1 class="article-hed">
+        IMAGINING A BETTER <span class="hedbold">YESTERDAY</span>
+      </h1>
+      <h2 class="article-dek">What if 2020 wasn't a living nightmare?</h2>
+      <h3 class="article-byline">
+        Written by
+        <a class="byline-link" href="https://northbynorthwestern.com/author/teresa/" target="_blank"><strong>Teresa Nowakowski </strong></a>
+      </h3>
     </header>
     <article class="article-body">
-
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur minima eius alias modi fugiat quibusdam tenetur reprehenderit ipsam dolor ab esse quas rem facilis praesentium, nesciunt illum nam sunt animi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quos officiis vero iure voluptatem obcaecati, a incidunt adipisci pariatur atque dolorum tempore aspernatur, fugiat corrupti accusamus quam nostrum harum sed.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur minima eius alias modi fugiat quibusdam tenetur reprehenderit ipsam dolor ab esse quas rem facilis praesentium, nesciunt illum nam sunt animi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quos officiis vero iure voluptatem obcaecati, a incidunt adipisci pariatur atque dolorum tempore aspernatur, fugiat corrupti accusamus quam nostrum harum sed.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur minima eius alias modi fugiat quibusdam tenetur reprehenderit ipsam dolor ab esse quas rem facilis praesentium, nesciunt illum nam sunt animi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quos officiis vero iure voluptatem obcaecati, a incidunt adipisci pariatur atque dolorum tempore aspernatur, fugiat corrupti accusamus quam nostrum harum sed.</p>
+      <p>
+        <span class="firstletter">W</span>e’ve all joked that 2020 seems like
+        the apocalypse, but what happened in the parallel universe where instead
+        of sliding toward a dystopia straight out of a teen novel, society
+        became a utopia? Take a trip through the 2020 that isn’t The Darkest
+        Timeline.
+      </p>
+      <hr class="divider" />
     </article>
 
-    <footer class="article-credits">
-        <h3 class="credits-heading">Credits</h3>
-        <h2 class="credits-subhed">Writing</h2>
-        <h3 class="credits-item">Writer Name</h3>
-        <h2 class="credits-subhed">Editing</h2>
-        <h3 class="credits-item">Editor Name</h3>
-        <h2 class="credits-subhed">Print Design</h2>
-        <h3 class="credits-item">Designer Name</h3>
-        <h2 class="credits-subhed">Web Design & Development</h2>
-        <h3 class="credits-item">Your Name!</h3>
-        <h2 class="credits-link"><a href="https://northbynorthwestern.com/magazine-current/">Back to Magazine Homepage</a></h2>
-    </footer>
+    <!-- start of timeline -->
+    <!-- timeline template from https://www.w3schools.com/howto/howto_css_timeline.asp-->
+    <div class="timeline">
+      <!--JANUARY 2020-->
+      <div class="container left">
+        <div class="content" id="content1" style="position: relative">
+          <h2 class="month">JAN 2020</h2>
+          <p>
+            <span class="header">
+              YOUR SOCIAL MEDIA IS FREE OF PUB PUSHES FOR A WHOLE WEEK </span
+            >For the first time since Wildcat Welcome, you see the faces of
+            fellow students as you scroll, instead of gaudy graphics with too
+            many exclamation points.
+          </p>
+          <br /><br />
+          <img
+            src="https://northbynorthwestern.com/content/images/2020/12/pub_push.png"
+            style="float: right; position: relative; top: -70px"
+          />
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content" id="content2">
+          <p>
+            <span class="header"
+              >ALLISON SERVES FOOD THAT ISN’T RICE Students arrive at
+              Allison</span
+            >
+            Dining Hall during dinner hours to find a wide array of flavorful
+            entrées, none of which involve any sort of rice or squash. “The food
+            ... it tasted like something,” says a shocked second-year,
+            bewildered but satisfied.
+          </p>
+          <img src="https://northbynorthwestern.com/content/images/2020/12/allison.png" style="width: 80%" />
+        </div>
+      </div>
 
-</body>
-<script src="main.js"></script>
+      <!--FEBRUARY 2020-->
+      <div class="container left">
+        <div class="content" id="content3">
+          <h2 class="month">FEB</h2>
+          <p>
+            <span class="header"
+              >BOBB-McCULLOCH FINALLY TORN DOWN All residents are
+              temporarily</span
+            >
+            housed at local bars or abandoned warehouses, which they describe as
+            “too clean” and “too quiet.”
+          </p>
+          <img src="https://northbynorthwestern.com/content/images/2020/12/bobb.png" style="width: 80%" />
+        </div>
+      </div>
+
+      <!--MARCH 2020-->
+      <div class="container right">
+        <div class="content" id="content4">
+          <h2 class="month">MARCH</h2>
+          <p>
+            <span class="header">EVERYONE IN ORGANIC CHEMISTRY GETS AN A</span>
+            The event will later be dramatized by an RTVF student in a
+            feature-length film, entitled “Mayday to A-Day: The Story of One
+            Class and Their Mission to Understand Organic Chemistry (Based on a
+            True Story).”
+          </p>
+          <img src="https://northbynorthwestern.com/content/images/2020/12/orgo.png" style="width: 80%" />
+        </div>
+      </div>
+
+      <!--APRIL 2020-->
+      <div class="container left">
+        <div class="content" id="content5">
+          <h2 class="month">APRIL</h2>
+          <p>
+            <span class="header">MEDILL SCRAPS PERSON ON THE STREET</span>
+            Evanston residents and students alike breathe a sigh of relief.
+            Local businesses turn their greatest profits ever, since residents
+            are no longer afraid to walk the streets.
+          </p>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content" id="content6">
+          <h2 class="month"></h2>
+          <p>
+            <span class="header"
+              >CHICAGOLAND ANIMAL SHELTERS CLEARED IN MASS ADOPTIONS BY
+              RESIDENTIAL COLLEGES</span
+            >
+            Seeing a paw print inside the dorm no longer means fears of rogue
+            skunks that have somehow obtained Wildcards.
+          </p>
+          <img src="https://northbynorthwestern.com/content/images/2020/12/animal_shelters.png" />
+        </div>
+      </div>
+
+      <!--MAY 2020-->
+      <div class="container left">
+        <div class="content" id="content7">
+          <h2 class="month">MAY</h2>
+          <p>
+            <span class="header"
+              >THERE’S A GREAT LINE-UP AND PERFECT WEATHER FOR DILLO</span
+            >
+            The right mix of well-liked and up-and coming musicians pleases
+            music snobs and casual listeners alike, and the emergency room sees
+            only light traffic.
+          </p>
+        </div>
+      </div>
+
+      <!--JUNE 2020-->
+      <div class="container right">
+        <div class="content" id="content8">
+          <h2 class="month">JUNE</h2>
+          <p>
+            <span class="header"
+              >THE DAILY NORTHWESTERN GETS RID OF ITS OPINION PAGE</span
+            >
+            A much-needed exorcism of devil’s advocate.
+          </p>
+        </div>
+      </div>
+
+      <!--JULY 2020-->
+      <div class="container left">
+        <div class="content" id="content9">
+          <h2 class="month">JULY</h2>
+        </div>
+      </div>
+
+      <!--AUGUST 2020-->
+      <div class="container right">
+        <div class="content" id="content10">
+          <h2 class="month">AUGUST</h2>
+          <p>
+            <span class="header"
+              >FIVE McCORMICK STUDENTS CURE CANCER OVER SUMMER BREAK</span
+            >
+            The group says they were “bored” and needed “something to put on the
+            résumé for grad school.”
+          </p>
+          <img src="https://northbynorthwestern.com/content/images/2020/12/mccormick.png" />
+        </div>
+      </div>
+
+      <!--SEPTEMBER 2020-->
+      <div class="container left">
+        <div class="content" id="content11">
+          <h2 class="month">SEPTEMBER</h2>
+          <p>
+            <span class="header"
+              >WILDCAT WELCOME PLAYS A VARIETY OF MUSIC, PROTECTING FIRST-YEARS
+              FROM HAVING AN ENTIRE ARTIST’S CATALOG RUINED FOR THEM</span
+            >
+            Pour one out for anyone who still can’t listen to Lizzo’s “Truth
+            Hurts.”
+          </p>
+          <img src="https://northbynorthwestern.com/content/images/2020/12/wildcat_welcome.png" style="width: 40%" />
+        </div>
+      </div>
+
+      <!--OCTOBER 2020-->
+      <div class="container right">
+        <div class="content" id="content12">
+          <h2 class="month">OCTOBER</h2>
+          <p>
+            <span class="header"
+              >DANCE MARATHON AMBASSADORS GIVE UP AFTER POLITELY ASKING ONE
+              STUDENT TO JOIN</span
+            >
+            Students are seen walking around campus just for fun, basking in
+            their newfound freedom from jump-scare interactions with
+            registration hawks.
+          </p>
+          <img src="https://northbynorthwestern.com/content/images/2020/12/dance_marathon.png" />
+        </div>
+      </div>
+
+      <!--NOVEMBER 2020-->
+      <div class="container left">
+        <div class="content" id="content13">
+          <h2 class="month">NOVEMBER</h2>
+          <p>
+            <span class="header"
+              >CAESAR FINALLY GETS A USABLE CLASS REGISTRATION INTERFACE</span
+            >
+            Who knew planning your quarter didn’t have to be an intricate web of
+            stress, spreadsheet skills and data science? Certainly not the
+            Registrar’s office.
+          </p>
+          <br /><br />
+          <img
+            src="https://northbynorthwestern.com/content/images/2020/12/caesar.png"
+            style="float: right; position: relative; top: -60px"
+          />
+        </div>
+      </div>
+
+      <div class="container right">
+        <div class="content" id="content14">
+          <p>
+            <span class="header"
+              >EVERLASTING WORLD PEACE NEGOTIATED BY A SESP CAPSTONE CLASS</span
+            >
+          </p>
+          <img src="https://northbynorthwestern.com/content/images/2020/12/world_peace.png" />
+        </div>
+      </div>
+
+      <!--DECEMBER 2020-->
+      <div class="container left">
+        <div class="content" id="content15">
+          <h2 class="month">DECEMBER</h2>
+          <p>
+            <span class="header">‘CATS WIN THE B1G 10 CHAMPIONSHIP</span> Suck
+            it, Ohio State.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rosebowl">
+      <div class="content" id="content16">
+        <h2 class="month">JAN 2021</h2>
+        <p>
+          <span class="header">‘CATS WIN THE ROSE BOWL</span>
+          Hey, if we can have world peace, the ‘Cats can have the Rose Bowl.
+        </p>
+        <img src="https://northbynorthwestern.com/content/images/2020/12/ryan_stadium.png" style="width: 90%" />
+      </div>
+    </div>
+
+    <footer class="article-credits">
+      <h3 class="credits-heading">Credits</h3>
+      <h2 class="credits-subhed">Writing</h2>
+      <h3 class="credits-item">Teresa Nowakowski</h3>
+      <h2 class="credits-subhed">Editing</h2>
+      <h3 class="credits-item">Grace Snelling</h3>
+      <h2 class="credits-subhed">Print Design</h2>
+      <h3 class="credits-item">Maren Kranking</h3>
+      <h2 class="credits-subhed">Web Design & Development</h2>
+      <h3 class="credits-item">Amy Guo</h3>
+      <h2 class="credits-link">
+        <a href="https://northbynorthwestern.com/magazine-current/"
+          >Back to Magazine Homepage</a
+        >
+      </h2>
+    </footer>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+  <script src="main.js"></script>
 </html>

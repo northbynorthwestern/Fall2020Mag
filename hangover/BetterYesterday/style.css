@@ -1,136 +1,227 @@
-
 /* DEFAULT FONTS - feel free to add any other variables you need here */
 
-:root{
-
-    /* Default font for headlines, headings, bylines, etc. */
-    --hed-font-default: 'Barlow', sans-serif; 
-    /* Font used for headlines if print design uses serif font */
-    --hed-font-serif: 'Faustina', serif;
-    /* Default font for body text */
-    --body-font: 'PT Serif', serif;
+:root {
+  /* Default font for headlines, headings, bylines, etc. */
+  --hed-font-default: "Barlow", sans-serif;
+  /* Font used for headlines if print design uses serif font */
+  --hed-font-serif: "Faustina", serif;
+  /* Default font for body text */
+  --body-font: "PT Serif", serif;
 }
 
-.mag-navbar{
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 7vh;
-    background-color: #342F2E;
-    padding: 1vh 0;
-    box-shadow: 1px 2px 1px;
+.mag-navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 7vh;
+  background-color: #342f2e;
+  padding: 1vh 0;
+  box-shadow: 1px 2px 1px;
+  z-index: 2;
 }
-.nbn-logo-nav{
-    margin-left: 1vw;
-    height: 100%;
-   
+.nbn-logo-nav {
+  margin-left: 1vw;
+  height: 100%;
 }
-.nbn-path{
-    fill: white;
-    transition: fill 1s ease;
+.nbn-path {
+  fill: white;
+  transition: fill 1s ease;
 }
-.homepage-link:hover .nbn-path{
-    fill: #B6ACD1
+.homepage-link:hover .nbn-path {
+  fill: #b6acd1;
 }
 
 /* HED, DEK, BYLINE - feel free to play with this! */
 
-.article-top-content{
-    margin-top: 15vh;
-    text-align: center;
+.article-top-content {
+  margin-top: 15vh;
+  text-align: center;
 }
-.article-hed{
-    /* replace "default" with "serif" if article uses a serif font in the hed */
-    font-family: var(--hed-font-default);
-    font-size: 4em;
-    margin-bottom: 0;
-    
+.article-hed {
+  /* replace "default" with "serif" if article uses a serif font in the hed */
+  font-family: var(--hed-font-default);
+  font-size: 5em;
+  margin-bottom: 0;
+  font-weight: 300;
 }
-.article-dek{
-    font-family: var(--hed-font-default);
-    margin-top: 0;
-    font-size: 2em;
-    margin-bottom: 0;
-    font-weight: 500;
+.hedbold {
+  font-weight: 800;
+  color: #fad462;
 }
-.article-byline{
-    font-family: var(--hed-font-default);
-    font-weight: 400;
-    margin-top: .5em;
-    font-size: 1.5em;
+.article-dek {
+  font-family: var(--hed-font-default);
+  margin-top: 0;
+  font-size: 1.6em;
+  margin-bottom: 0;
+  font-weight: 500;
 }
-.byline-link{
-    color: black;
-    transition: color 1s ease;
+.article-byline {
+  font-family: var(--hed-font-default);
+  font-weight: 400;
+  margin-top: 0.5em;
+  font-size: 1.5em;
 }
-.byline-link:hover{
-    color: #4E2A84;
+.byline-link {
+  color: black;
+  transition: color 1s ease;
 }
-
+.byline-link:hover {
+  color: #4e2a84;
+}
 
 /* ARTICLE BODY - customize however you want! */
 
-
-.article-body{
-    font-family: var(--body-font);
-    width: 40vw;
-    margin: auto;
-    font-size: 1.2em;
+.article-body {
+  font-family: var(--body-font);
+  width: 40vw;
+  margin: auto;
+  font-size: 1.2em;
 }
-.article-body p{
-    margin-bottom: 2em;
+.article-body p {
+  margin-bottom: 2em;
 }
-
 
 /* CREDITS - shouldn't need to change anything! */
 
-.article-credits{
-    text-align: center;
-    font-family: var(--hed-font-default);
+.article-credits {
+  text-align: center;
+  font-family: var(--hed-font-default);
 }
-.credits-heading{
-    font-size: 2em;
-    margin-bottom: .5em;
+.credits-heading {
+  font-size: 2em;
+  margin-bottom: 0.5em;
 }
-.credits-subhed{
-    margin-top: 0;
-    margin-bottom: 0;
+.credits-subhed {
+  margin-top: 0;
+  margin-bottom: 0;
 }
-.credits-item{
-    margin-top: .5em;
-    margin-bottom: 1em;
-    font-weight: 400;
+.credits-item {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  font-weight: 400;
 }
-.credits-link{
-    margin-top: 1.5em;
+.credits-link {
+  margin-top: 1.5em;
 }
-.credits-link a{
-    color: black;
-    transition: color 1s ease;
+.credits-link a {
+  color: black;
+  transition: color 1s ease;
 }
-.credits-link a:hover{
-    color: #4E2A84;
+.credits-link a:hover {
+  color: #4e2a84;
 }
 
+body {
+  background-color: #fff8e5;
+  font-family: var(--hed-font-default);
+}
+.header {
+  font-weight: 600;
+}
+.firstletter {
+  color: #fad462;
+  font-size: 2em;
+  font-family: var(--hed-font-default);
+}
+hr {
+  height: 2px;
+  border: none;
+  background-color: #fad462;
+}
+.month {
+  color: #fad462;
+  font-size: 2em;
+}
+* {
+  box-sizing: border-box;
+}
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+}
 
+#content15 {
+  margin-bottom: 40px;
+}
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #fad462;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px;
+  position: relative;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: "";
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  right: -15px;
+  background-color: #fad462;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -15px;
+}
+
+/* The actual content */
+.content {
+  padding: 5px;
+  border-bottom: 4px solid #fad462;
+  position: relative;
+  opacity: 0;
+}
+
+.rosebowl {
+  text-align: center;
+  width: 50%;
+  display: block;
+  margin: auto;
+}
 /* MOBILE STYLING - add any mobile specific CSS here but please leave navbar styling as is!*/
 
-@media screen and (max-width: 700px){
-    .mag-navbar{
-        height: 5vh;
-    }
-    .article-hed{
-        font-size: 3em;
-    }
-    .article-dek{
-        font-size: 1.5em;
-    }
-    .article-byline{
-        font-size: 1em;
-    }
-    .article-body{
-        width: 90vw;
-    }
-
+@media screen and (max-width: 700px) {
+  .mag-navbar {
+    height: 5vh;
+  }
+  .article-hed {
+    font-size: 3em;
+  }
+  .article-dek {
+    font-size: 1.5em;
+  }
+  .article-byline {
+    font-size: 1em;
+  }
+  .article-body {
+    width: 90vw;
+  }
 }
