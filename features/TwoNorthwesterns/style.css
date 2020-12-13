@@ -10,8 +10,11 @@
     /* Default font for body text */
     --body-font: 'PT Serif', serif;
 }
-
+body{
+  overflow-x: hidden;
+}
 .mag-navbar{
+  z-index: 100;
     position: fixed;
     left: 0;
     right: 0;
@@ -44,24 +47,31 @@
     /* replace "default" with "serif" if article uses a serif font in the hed */
     font-family: var(--hed-font-default);
     font-size: 4em;
-    margin-bottom: 0;
-    
+    background-color: #e6e6e6;
+    margin-top: -40px;
+    margin-left: -10px;
+    width: 102%;
+    height: 100vh;   
 }
+
 .article-dek{
     font-family: var(--hed-font-default);
-    margin-top: 0;
-    font-size: 2em;
+    margin-top: 2em;
+    font-size: 1.5em;
     margin-bottom: 0;
-    font-weight: 500;
+    font-weight: 400;
+    color: white;
 }
 .article-byline{
     font-family: var(--hed-font-default);
     font-weight: 400;
     margin-top: .5em;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 50px;
 }
 .byline-link{
-    color: black;
+    color: white;
     transition: color 1s ease;
 }
 .byline-link:hover{
@@ -70,17 +80,152 @@
 
 
 /* ARTICLE BODY - customize however you want! */
+.img {
+    width: 50vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn ease 5s;
+    -webkit-animation: fadeIn ease 5s;
+    -moz-animation: fadeIn ease 5s;
+    -o-animation: fadeIn ease 5s;
+    -ms-animation: fadeIn ease 5s;
+}
 
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
 
+.img2 {
+    width: 50vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+body {
+    background-color: #292929;
+}
 .article-body{
     font-family: var(--body-font);
-    width: 40vw;
+    width: 50%;
     margin: auto;
     font-size: 1.2em;
+    color: white;
 }
 .article-body p{
     margin-bottom: 2em;
 }
+
+.quote {
+    border: 1px solid white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.pull-quote {
+    font-family: 'Barlow';
+    font-size: 1.75em;
+    font-weight: 500;
+    text-align: center;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.attribution {
+    font-family: 'Barlow';
+    font-weight: 300;
+    text-align: center;
+    display: block;
+    margin-top: -20px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.article-hed-image{
+    animation: glitch 1s linear infinite;
+  }
+  
+  @keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+  }
+  
+  div:before,
+  div:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+  }
+  
+  div:before{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+  
+  @keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-13deg); 
+    }
+  }
+  
+  div:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+  
+  @keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+    }
+    4%,60%{
+      transform: translate(-2px,0);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(21deg); 
+    }
+  }
 
 
 /* CREDITS - shouldn't need to change anything! */
@@ -88,6 +233,7 @@
 .article-credits{
     text-align: center;
     font-family: var(--hed-font-default);
+    color: white;
 }
 .credits-heading{
     font-size: 2em;
@@ -106,7 +252,7 @@
     margin-top: 1.5em;
 }
 .credits-link a{
-    color: black;
+    color: white;
     transition: color 1s ease;
 }
 .credits-link a:hover{
@@ -121,9 +267,14 @@
         height: 5vh;
     }
     .article-hed{
-        font-size: 3em;
+        position: absolute;
+        top: 7vh;
+        left: 0;
+        right: 0;
+        height: 100vh;
     }
     .article-dek{
+      margin-top: 107vh;
         font-size: 1.5em;
     }
     .article-byline{
@@ -132,5 +283,7 @@
     .article-body{
         width: 90vw;
     }
-
+    .article-hed-image{
+      width: 100%;
+    }
 }
