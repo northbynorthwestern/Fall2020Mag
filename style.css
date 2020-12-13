@@ -453,3 +453,60 @@ font-style: italic;
     font-family: var(--body-font);
     font-size: 1.3em;
 }
+@media screen and (max-width: 700px){
+    body{
+        overflow-x: hidden;
+    }
+    .article-container{
+        width: 90%;
+        height: fit-content;
+    }
+    .section-title{
+        font-size: 3em;
+    }
+    .section-article-hed{
+        font-size: 1.5em;
+    }
+    .section-right{
+        padding-right: 5%;
+    }
+    .section-article-dek, .section-author{
+        font-size: 1.3em;
+    }
+    .top-logo{
+        position: absolute;
+        top: 0;
+    }
+    .features-article, .photo-story-article{
+        width: 90%;
+    }
+    .anon-hed, .policing-hed, .two-nu-hed{
+        font-size: 2em;
+    }
+    .features-illo{
+        display: none;
+    }
+    .anon-dek, .anon-byline, .policing-dek,.policing-byline, .two-nu-dek, .two-nu-byline{
+        width: 90%;
+    }
+    .masthead{
+        width: unset;
+        left: 0;
+        right: 0;
+    }
+    .staff-title{
+        width: fit-content;
+        margin: 0;
+        font-size: 1.2em;
+    }
+    .staff-name{
+        width: 80%;
+    }
+    .LFE-container{
+        width: 90%;
+    }
+    .mag-intro{
+        display: block;
+        margin-top: 10vh;
+    }
+}
