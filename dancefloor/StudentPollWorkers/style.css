@@ -129,11 +129,11 @@
     font-weight: 400;
 }
 .ballot-pull h3::before{
-    content: url("start_quote.png");
+    content: url("https://northbynorthwestern.com/content/images/2020/12/start_quote.png");
     margin-right: 1em;
 }
 .ballot-pull h3::after{
-    content: url("end_quote.png");
+    content: url("https://northbynorthwestern.com/content/images/2020/12/end_quote.png");
     margin-left: .5em;
 }
 .ballot-pull h4{
