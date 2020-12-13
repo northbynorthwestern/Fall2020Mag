@@ -493,6 +493,8 @@ font-style: italic;
         width: unset;
         left: 0;
         right: 0;
+        height: 90vh;
+        
     }
     .staff-title{
         width: fit-content;
