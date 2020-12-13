@@ -9,9 +9,12 @@
     --hed-font-serif: 'Faustina', serif;
     /* Default font for body text */
     --body-font: 'PT Serif', serif;
+    --theme-blue: #07aab9;
+
 }
 
 .mag-navbar{
+    z-index: 100;
     position: fixed;
     left: 0;
     right: 0;
@@ -37,14 +40,37 @@
 /* HED, DEK, BYLINE - feel free to play with this! */
 
 .article-top-content{
-    margin-top: 15vh;
-    text-align: center;
+    z-index: 5;
+    position: absolute;
+    /* height: 100vh; */
+    top: 10vh;
+right: 10vw;
+    /* background-color: whitesmoke; */
+    width: 50%;
+    text-align: right;
+    margin-right: 0;
+}
+.tree-illo{
+    top: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    opacity: 1;
+}
+.tree-illo-mobile{
+    display: none;
 }
 .article-hed{
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 2px var(--theme-blue);
+    text-shadow: 2px 2px black;
+    margin-top: 15%;
     /* replace "default" with "serif" if article uses a serif font in the hed */
-    font-family: var(--hed-font-default);
+    font-family: var(--hed-font-serif);
     font-size: 4em;
     margin-bottom: 0;
+    text-align: right;
     
 }
 .article-dek{
@@ -52,7 +78,9 @@
     margin-top: 0;
     font-size: 2em;
     margin-bottom: 0;
-    font-weight: 500;
+    font-weight: 300;
+    /* width: 50%; */
+    /* text-align: right; */
 }
 .article-byline{
     font-family: var(--hed-font-default);
@@ -67,7 +95,12 @@
 .byline-link:hover{
     color: #4E2A84;
 }
-
+.content-warning{
+    font-family: var(--body-font);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.3em;
+}
 
 /* ARTICLE BODY - customize however you want! */
 
@@ -75,8 +108,10 @@
 .article-body{
     font-family: var(--body-font);
     width: 40vw;
-    margin: auto;
+    margin: 100vh auto auto auto;
     font-size: 1.2em;
+    position: relative;
+    z-index: 10;
 }
 .article-body p{
     margin-bottom: 2em;
@@ -120,6 +155,9 @@
     .mag-navbar{
         height: 5vh;
     }
+    .article-top-content{
+        width: 60%;
+    }
     .article-hed{
         font-size: 3em;
     }
@@ -131,6 +169,18 @@
     }
     .article-body{
         width: 90vw;
+    }
+    .tree-illo{
+      display: none;
+    }
+    .tree-illo-mobile{
+        display: unset;
+        top: 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 100vh;
+        opacity: .3;
     }
 
 }
