@@ -9,9 +9,13 @@
     --hed-font-serif: 'Faustina', serif;
     /* Default font for body text */
     --body-font: 'PT Serif', serif;
+    --theme-orange: #EE7F57;
 }
-
+body{
+    overflow-x: hidden;
+}
 .mag-navbar{
+    z-index: 100;
     position: fixed;
     left: 0;
     right: 0;
@@ -20,6 +24,12 @@
     background-color: #342F2E;
     padding: 1vh 0;
     box-shadow: 1px 2px 1px;
+}
+.plug-illo{
+    top: 10vh;
+    left: 0;
+    position: absolute;
+    width: 10vw;
 }
 .nbn-logo-nav{
     margin-left: 1vw;
@@ -37,6 +47,8 @@
 /* HED, DEK, BYLINE - feel free to play with this! */
 
 .article-top-content{
+    position: relative;
+    z-index: 10;
     margin-top: 15vh;
     text-align: center;
 }
@@ -45,14 +57,20 @@
     font-family: var(--hed-font-default);
     font-size: 4em;
     margin-bottom: 0;
+    color: var(--theme-orange);
+    font-weight: 500;
     
+}
+.hed-span{
+    font-weight: 700;
+    font-style: italic;
 }
 .article-dek{
     font-family: var(--hed-font-default);
     margin-top: 0;
     font-size: 2em;
     margin-bottom: 0;
-    font-weight: 500;
+    font-weight: 400;
 }
 .article-byline{
     font-family: var(--hed-font-default);
@@ -79,10 +97,17 @@
     font-size: 1.2em;
 }
 .article-body p{
+    position: relative;
+    z-index: 5;
     margin-bottom: 2em;
 }
 
-
+.laptop-illo{
+    position: absolute;
+    right: 0;
+    width: 20vw;
+    z-index: 3;
+}
 /* CREDITS - shouldn't need to change anything! */
 
 .article-credits{
@@ -132,5 +157,12 @@
     .article-body{
         width: 90vw;
     }
-
+    .laptop-illo{
+        width: 50vw;
+        opacity: .1;
+    }
+    .plug-illo{
+        width: 50vw;
+        opacity: .2;
+    }
 }
