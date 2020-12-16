@@ -1,136 +1,172 @@
-
 /* DEFAULT FONTS - feel free to add any other variables you need here */
 
-:root{
-
-    /* Default font for headlines, headings, bylines, etc. */
-    --hed-font-default: 'Barlow', sans-serif; 
-    /* Font used for headlines if print design uses serif font */
-    --hed-font-serif: 'Faustina', serif;
-    /* Default font for body text */
-    --body-font: 'PT Serif', serif;
+:root {
+  /* Default font for headlines, headings, bylines, etc. */
+  --hed-font-default: "Faustina", sans-serif;
+  /* Font used for headlines if print design uses serif font */
+  --hed-font-serif: "Faustina", serif;
+  /* Default font for body text */
+  --body-font: "PT Serif", serif;
 }
-
-.mag-navbar{
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 7vh;
-    background-color: #342F2E;
-    padding: 1vh 0;
-    box-shadow: 1px 2px 1px;
+body{
+  overflow-x: hidden;
 }
-.nbn-logo-nav{
-    margin-left: 1vw;
-    height: 100%;
-   
+.mag-navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 7vh;
+  background-color: #342f2e;
+  padding: 1vh 0;
+  box-shadow: 1px 2px 1px;
+  z-index: 1;
 }
-.nbn-path{
-    fill: white;
-    transition: fill 1s ease;
+.nbn-logo-nav {
+  margin-left: 1vw;
+  height: 100%;
 }
-.homepage-link:hover .nbn-path{
-    fill: #B6ACD1
+.nbn-path {
+  fill: white;
+  transition: fill 1s ease;
+}
+.homepage-link:hover .nbn-path {
+  fill: #b6acd1;
 }
 
 /* HED, DEK, BYLINE - feel free to play with this! */
-
-.article-top-content{
-    margin-top: 15vh;
-    text-align: center;
+body {
+  background-color: #232323;
+  color: white;
 }
-.article-hed{
-    /* replace "default" with "serif" if article uses a serif font in the hed */
-    font-family: var(--hed-font-default);
-    font-size: 4em;
-    margin-bottom: 0;
-    
+.article-top-content {
+  text-align: center;
+  position: relative;
 }
-.article-dek{
-    font-family: var(--hed-font-default);
-    margin-top: 0;
-    font-size: 2em;
-    margin-bottom: 0;
-    font-weight: 500;
+.article-hed {
+  /* replace "default" with "serif" if article uses a serif font in the hed */
+  font-family: var(--hed-font-default);
+  font-size: 6em;
+  margin-bottom: 0;
+  margin-top: 15vh;
 }
-.article-byline{
-    font-family: var(--hed-font-default);
-    font-weight: 400;
-    margin-top: .5em;
-    font-size: 1.5em;
+.article-dek {
+  font-family: var(--hed-font-default);
+  margin-top: 0;
+  font-size: 1.5em;
+  margin-bottom: 0;
+  font-weight: 500;
 }
-.byline-link{
-    color: black;
-    transition: color 1s ease;
+.article-byline {
+  font-family: var(--hed-font-default);
+  font-weight: 400;
+  margin-top: 0.5em;
+  font-size: 1.5em;
 }
-.byline-link:hover{
-    color: #4E2A84;
+.byline-link {
+  color: white;
+  transition: color 1s ease;
 }
-
+.byline-link:hover {
+  color: #4e2a84;
+}
 
 /* ARTICLE BODY - customize however you want! */
-
-
-.article-body{
-    font-family: var(--body-font);
-    width: 40vw;
-    margin: auto;
-    font-size: 1.2em;
+.computer {
+  position: relative;
+  float: right;
+  width: 300px;
 }
-.article-body p{
-    margin-bottom: 2em;
+.article-body {
+  font-family: var(--body-font);
+  width: 50vw;
+  margin: auto;
+  font-size: 1.2em;
 }
-
-
+.camera {
+  width: 150px;
+  position: relative;
+  float: left;
+  transform: rotate(270deg);
+}
+.cameradiv {
+  display: block;
+  margin: auto;
+}
+.spotlight {
+  transform: rotate(90deg);
+  width: 400px;
+  position: absolute;
+  opacity: 40%;
+  left: 300px;
+  top: -320px;
+  z-index: -1;
+}
+.blockquote {
+  text-align: center;
+  float: right;
+  width: 15%;
+  margin-right: 5%;
+  color: #0087cd;
+  font-family: var(--hed-font-default);
+}
+.computer {
+  width: 80%;
+}
+.firstletter {
+  font-size: 3.2em;
+  color: #0087cd;
+}
 /* CREDITS - shouldn't need to change anything! */
 
-.article-credits{
-    text-align: center;
-    font-family: var(--hed-font-default);
+.article-credits {
+  text-align: center;
+  font-family: var(--hed-font-default);
 }
-.credits-heading{
-    font-size: 2em;
-    margin-bottom: .5em;
+.credits-heading {
+  font-size: 2em;
+  margin-bottom: 0.5em;
 }
-.credits-subhed{
-    margin-top: 0;
-    margin-bottom: 0;
+.credits-subhed {
+  margin-top: 0;
+  margin-bottom: 0;
 }
-.credits-item{
-    margin-top: .5em;
-    margin-bottom: 1em;
-    font-weight: 400;
+.credits-item {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  font-weight: 400;
 }
-.credits-link{
-    margin-top: 1.5em;
+.credits-link {
+  margin-top: 1.5em;
 }
-.credits-link a{
-    color: black;
-    transition: color 1s ease;
+.credits-link a {
+  color: white;
+  transition: color 1s ease;
 }
-.credits-link a:hover{
-    color: #4E2A84;
+.credits-link a:hover {
+  color: #4e2a84;
 }
-
 
 /* MOBILE STYLING - add any mobile specific CSS here but please leave navbar styling as is!*/
 
-@media screen and (max-width: 700px){
-    .mag-navbar{
-        height: 5vh;
-    }
-    .article-hed{
-        font-size: 3em;
-    }
-    .article-dek{
-        font-size: 1.5em;
-    }
-    .article-byline{
-        font-size: 1em;
-    }
-    .article-body{
-        width: 90vw;
-    }
-
+@media screen and (max-width: 700px) {
+  .mag-navbar {
+    height: 5vh;
+  }
+  .article-hed {
+    font-size: 3em;
+  }
+  .article-dek {
+    font-size: 1.5em;
+  }
+  .article-byline {
+    font-size: 1em;
+  }
+  .article-body {
+    width: 90vw;
+  }
+  .blockquote{
+    float: unset;
+    width: 90vw;
+  }
 }
