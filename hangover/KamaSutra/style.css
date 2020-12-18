@@ -15,6 +15,7 @@ body{
     background-color: #D96262;
 }
 .mag-navbar{
+    z-index: 100;
     position: fixed;
     left: 0;
     right: 0;
@@ -91,7 +92,24 @@ body{
     font-family: var(--hed-font-sutra);
     font-weight: 300;
 }
-
+img{
+    position: absolute;
+    opacity: .7;
+}
+.img-left{
+    left: 10vw;
+    width: 10vw;
+}
+.img-right{
+    right: 10vw;
+    width: 10vw;
+}
+#dildo1{
+    transform: rotate(-30deg);
+}
+#buttplug, #vibrator{
+    transform: rotate(30deg);
+}
 /* CREDITS - shouldn't need to change anything! */
 
 .article-credits{
@@ -142,5 +160,15 @@ body{
     .article-body{
         width: 90vw;
     }
-
+    img{
+        opacity: .3;
+    }
+    .img-left{
+        width: 50vw;
+        left: 0;
+    }
+    .img-right{
+        width: 50vw;
+        right: 0;
+    }
 }
