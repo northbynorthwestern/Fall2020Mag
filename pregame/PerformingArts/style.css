@@ -11,6 +11,10 @@
     --body-font: 'PT Serif', serif;
 }
 
+body{
+    background-color: #d7ecef;
+}
+
 .mag-navbar{
     position: fixed;
     left: 0;
@@ -20,6 +24,7 @@
     background-color: #342F2E;
     padding: 1vh 0;
     box-shadow: 1px 2px 1px;
+    z-index: 100;
 }
 .nbn-logo-nav{
     margin-left: 1vw;
@@ -40,11 +45,17 @@
     margin-top: 15vh;
     text-align: center;
 }
+.title{ 
+    border-color: #0087cd;
+    border-style: solid;
+    background-color: #ffe6c4;
+}
 .article-hed{
     /* replace "default" with "serif" if article uses a serif font in the hed */
     font-family: var(--hed-font-default);
     font-size: 4em;
     margin-bottom: 0;
+    color: #ec7f5d
     
 }
 .article-dek{
@@ -113,6 +124,44 @@
     color: #4E2A84;
 }
 
+/*art*/
+
+.mainart{
+    width: 700px;
+    height: 500px;
+    object-fit: cover;
+  }
+  .secondart{
+      width: 600px;
+      height: 400px;
+      object-fit: cover;
+      float: right;
+  }
+  .blockquote {
+      text-align: center;
+      float: left;
+      width: 20%;
+      margin-left: 5%;
+      color:#0087cd;
+      font-family: var(--hed-font-default);
+      font-size: 1.5em;
+      border-style: solid;
+      background-color: #ffe6c4
+    }
+  .blockquote2 {
+      text-align: center;
+      float: right;
+      width: 20%;
+      margin-right: 5%;
+      color: #0087cd;
+      font-family: var(--hed-font-default);
+      font-size: 1.2em;
+      padding-left: 10px; 
+      padding-right: 10px;
+      border-style: solid;
+      background-color:  #ffe6c4
+    }
+  
 
 /* MOBILE STYLING - add any mobile specific CSS here but please leave navbar styling as is!*/
 
@@ -132,5 +181,13 @@
     .article-body{
         width: 90vw;
     }
-
+    .mainart, .secondart{
+        width: 100%;
+        height: auto;
+    }
+    .blockquote, .blockquote2{
+        width: 90%;
+        margin: auto;
+        float: unset;
+    }
 }
