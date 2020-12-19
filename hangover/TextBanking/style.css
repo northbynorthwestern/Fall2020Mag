@@ -20,6 +20,7 @@
     background-color: #342F2E;
     padding: 1vh 0;
     box-shadow: 1px 2px 1px;
+    z-index: 100;
 }
 .nbn-logo-nav{
     margin-left: 1vw;
@@ -45,6 +46,7 @@
     font-family: var(--hed-font-default);
     font-size: 4em;
     margin-bottom: 0;
+    font-weight: 500;
     
 }
 .article-dek{
@@ -52,7 +54,7 @@
     margin-top: 0;
     font-size: 2em;
     margin-bottom: 0;
-    font-weight: 500;
+    font-weight: 400;
 }
 .article-byline{
     font-family: var(--hed-font-default);
@@ -70,8 +72,104 @@
 
 
 /* ARTICLE BODY - customize however you want! */
+.article-active{
+    display: block;
+}
+.article-inactive{
+display: none;
+}
 
+.article-main-content{
+    margin-top: 15vh;
+}
+.text-container{
+    width: 40%;
+    margin: auto;
+    /* border: 1px solid black; */
+    padding-bottom: 1em;
+    /* border-bottom: 1px solid lightgray; */
+}
+.sent-text, .recieved-text{
+    width: 80%;
+    /* border: 1px solid black; */
+    font-family: var(--hed-font-default);
+    font-weight: 400;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 1px 1px 2px gray;
+    margin: 1em auto;
+    user-select: none;
+}
+.sent-text{
+    background-color: rgb(228, 228, 228);
+    text-align: right;
+    /* float: right; */
+}
+.recieved-text{
+    border: 1px solid lightgray;
+    text-align: left;
+    /* float: left; */
+}
 
+.typing-bubble{
+    width: 60px;
+    padding: 1em .5em;
+    display: flex;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin: auto;
+    justify-content: space-around;
+    display: none;
+}
+.typing-circle{
+    border-radius: 50%;
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    position: relative;
+}
+@keyframes type{
+    from{
+        bottom: 0px;
+        background-color: lightgray;
+    }
+    to{
+        bottom: 10px;
+        background-color: white;
+    }
+}
+.circle1{
+    animation: type ease-in-out .5s infinite alternate;
+}
+.circle2{
+    animation: type ease-in-out .5s .25s infinite alternate;
+}
+.circle3{
+    animation: type ease-in-out .5s .5s infinite alternate;
+}
+#text2C::before, #text2C::after{
+    content: "✨";
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#text8C::after{
+    content: "😡😡";
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#text9C::after{
+    content: "😂😂😂";
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.text-intro{
+    font-family: var(--hed-font-default);
+    width: 40vw;
+    margin: auto auto 2em auto;
+    font-size: 1.2em;
+}
+.section-heading{
+    font-family: var(--hed-font-default);
+    text-align: center;
+    font-size: 2em;
+}
 .article-body{
     font-family: var(--body-font);
     width: 40vw;
@@ -81,8 +179,26 @@
 .article-body p{
     margin-bottom: 2em;
 }
+.article-button{
+    border: 1px solid black;
+    background-color: white;
+    padding: 1em;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    font-family: var(--hed-font-default);
+    font-weight: 400;
+    user-select: none;
+    cursor: pointer;
+}
+.article-button:hover{
+    background-color: black;
+    color: white;
+}
 
-
+#text3-container, #text6-container, #text9-container, #text11-container{
+    border-bottom: none !important;
+}
 /* CREDITS - shouldn't need to change anything! */
 
 .article-credits{
@@ -132,5 +248,10 @@
     .article-body{
         width: 90vw;
     }
-
+    .text-intro{
+        width: 80vw;
+    }
+    .text-container{
+        width: 80vw;
+    }
 }
