@@ -10,7 +10,9 @@
     /* Default font for body text */
     --body-font: 'PT Serif', serif;
 }
-
+body{
+    background-color: #C7a7cf;
+}
 .mag-navbar{
     position: fixed;
     left: 0;
@@ -20,6 +22,7 @@
     background-color: #342F2E;
     padding: 1vh 0;
     box-shadow: 1px 2px 1px;
+    z-index: 100;
 }
 .nbn-logo-nav{
     margin-left: 1vw;
@@ -39,49 +42,79 @@
 .article-top-content{
     margin-top: 15vh;
     text-align: center;
+    position: relative;
+    z-index: 5;
 }
 .article-hed{
     /* replace "default" with "serif" if article uses a serif font in the hed */
     font-family: var(--hed-font-default);
     font-size: 4em;
     margin-bottom: 0;
+    color: white;
+  
     
+}
+.hed-outline{
+    -webkit-text-fill-color: #C7a7cf; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
 }
 .article-dek{
     font-family: var(--hed-font-default);
     margin-top: 0;
     font-size: 2em;
     margin-bottom: 0;
-    font-weight: 500;
+    font-weight: 300;
 }
 .article-byline{
     font-family: var(--hed-font-default);
     font-weight: 400;
     margin-top: .5em;
     font-size: 1.5em;
+    color: #885fa8;
 }
 .byline-link{
-    color: black;
-    transition: color 1s ease;
+    color: #885fa8;
+    transition: color .25s ease;
 }
 .byline-link:hover{
-    color: #4E2A84;
+    color: white;
 }
 
 
 /* ARTICLE BODY - customize however you want! */
 
-
+.figure-1, .figure-2{
+    height: 30vh;
+    position: absolute;
+    top: -30vh;
+}
+.figure-2{
+    left: 30vh;
+    z-index: -1;
+}
 .article-body{
+    position: relative;
+    background-color: white;
+    padding: 1em 3em;
     font-family: var(--body-font);
     width: 40vw;
-    margin: auto;
+    margin: 30vh auto auto auto;
     font-size: 1.2em;
 }
 .article-body p{
     margin-bottom: 2em;
 }
-
+.section-subhed{
+    color: #885fa8;
+    font-family: var(--hed-font-default);
+    font-weight: 600;
+}
+.newspaper-image{
+    position: absolute;
+    right: -25vw;
+    width: 20vw;
+}
 
 /* CREDITS - shouldn't need to change anything! */
 
@@ -131,6 +164,22 @@
     }
     .article-body{
         width: 90vw;
+        padding: 1em 0;
     }
-
+    
+    .article-body p, .section-subhed{
+        margin: 1em;
+        z-index: 5;
+        position: relative;
+    }
+    .newspaper-image{
+        left: 0;
+        right: 0;
+        position: relative;
+        width: 100%;
+        opacity: 1;
+    }
+    .figure-2{
+        left: 15vh;
+    }
 }
