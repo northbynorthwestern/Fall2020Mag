@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* DEFAULT FONTS - feel free to add any other variables you need here */
+        
+        :root{
+        
+            /* Default font for headlines, headings, bylines, etc. */
+            --hed-font-default: 'Barlow', sans-serif; 
+            /* Font used for headlines if print design uses serif font */
+            --hed-font-serif: 'Faustina', serif;
+            /* Default font for body text */
+            --body-font: 'PT Serif', serif;
+        }
+        body{
+          overflow-x: hidden;
+        }
+        .mag-navbar{
+          z-index: 100;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 7vh;
+            background-color: #342F2E;
+            padding: 1vh 0;
+            box-shadow: 1px 2px 1px;
+        }
+        .nbn-logo-nav{
+            margin-left: 1vw;
+            height: 100%;
+           
+        }
+        .nbn-path{
+            fill: white;
+            transition: fill 1s ease;
+        }
+        .homepage-link:hover .nbn-path{
+            fill: #B6ACD1
+        }
+        
+        /* HED, DEK, BYLINE - feel free to play with this! */
+        
+        .article-top-content{
+            margin-top: 15vh;
+            text-align: center;
+        }
+        .article-hed{
+            /* replace "default" with "serif" if article uses a serif font in the hed */
+            font-family: var(--hed-font-default);
+            font-size: 4em;
+            background-color: #e6e6e6;
+            margin-top: -40px;
+            margin-left: -10px;
+            width: 102%;
+            height: 100vh;   
+        }
+        
+        .article-dek{
+            font-family: var(--hed-font-default);
+            margin-top: 2em;
+            font-size: 1.5em;
+            margin-bottom: 0;
+            font-weight: 400;
+            color: white;
+        }
+        .article-byline{
+            font-family: var(--hed-font-default);
+            font-weight: 400;
+            margin-top: .5em;
+            font-size: 1.2em;
+            color: white;
+            margin-bottom: 50px;
+        }
+        .byline-link{
+            color: white;
+            transition: color 1s ease;
+        }
+        .byline-link:hover{
+            color: #4E2A84;
+        }
+        
+        
+        /* ARTICLE BODY - customize however you want! */
+        .img {
+            width: 50vw;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeIn ease 5s;
+            -webkit-animation: fadeIn ease 5s;
+            -moz-animation: fadeIn ease 5s;
+            -o-animation: fadeIn ease 5s;
+            -ms-animation: fadeIn ease 5s;
+        }
+        
+          @keyframes fadeIn {
+            0% {opacity:0;}
+            100% {opacity:1;}
+          }
+          
+          @-moz-keyframes fadeIn {
+            0% {opacity:0;}
+            100% {opacity:1;}
+          }
+          
+          @-webkit-keyframes fadeIn {
+            0% {opacity:0;}
+            100% {opacity:1;}
+          }
+          
+          @-o-keyframes fadeIn {
+            0% {opacity:0;}
+            100% {opacity:1;}
+          }
+          
+          @-ms-keyframes fadeIn {
+            0% {opacity:0;}
+            100% {opacity:1;}
+          }
+        
+        .img2 {
+            width: 50vw;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        
+        body {
+            background-color: #292929;
+        }
+        .article-body{
+            font-family: var(--body-font);
+            width: 50%;
+            margin: auto;
+            font-size: 1.2em;
+            color: white;
+        }
+        .article-body p{
+            margin-bottom: 2em;
+        }
+        
+        .quote {
+            border: 1px solid white;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .pull-quote {
+            font-family: 'Barlow';
+            font-size: 1.75em;
+            font-weight: 500;
+            text-align: center;
+            display: block;
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        .attribution {
+            font-family: 'Barlow';
+            font-weight: 300;
+            text-align: center;
+            display: block;
+            margin-top: -20px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        .article-hed-image{
+            animation: glitch 1s linear infinite;
+          }
+          
+          @keyframes glitch{
+            2%,64%{
+              transform: translate(2px,0) skew(0deg);
+            }
+            4%,60%{
+              transform: translate(-2px,0) skew(0deg);
+            }
+            62%{
+              transform: translate(0,0) skew(5deg); 
+            }
+          }
+          
+          div:before,
+          div:after{
+            content: attr(title);
+            position: absolute;
+            left: 0;
+          }
+          
+          div:before{
+            animation: glitchTop 1s linear infinite;
+            clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+          }
+          
+          @keyframes glitchTop{
+            2%,64%{
+              transform: translate(2px,-2px);
+            }
+            4%,60%{
+              transform: translate(-2px,2px);
+            }
+            62%{
+              transform: translate(13px,-1px) skew(-13deg); 
+            }
+          }
+          
+          div:after{
+            animation: glitchBotom 1.5s linear infinite;
+            clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+            -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+          }
+          
+          @keyframes glitchBotom{
+            2%,64%{
+              transform: translate(-2px,0);
+            }
+            4%,60%{
+              transform: translate(-2px,0);
+            }
+            62%{
+              transform: translate(-22px,5px) skew(21deg); 
+            }
+          }
+        
+        
+        /* CREDITS - shouldn't need to change anything! */
+        
+        .article-credits{
+            text-align: center;
+            font-family: var(--hed-font-default);
+            color: white;
+        }
+        .credits-heading{
+            font-size: 2em;
+            margin-bottom: .5em;
+        }
+        .credits-subhed{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .credits-item{
+            margin-top: .5em;
+            margin-bottom: 1em;
+            font-weight: 400;
+        }
+        .credits-link{
+            margin-top: 1.5em;
+        }
+        .credits-link a{
+            color: white;
+            transition: color 1s ease;
+        }
+        .credits-link a:hover{
+            color: #4E2A84;
+        }
+        
+        
+        /* MOBILE STYLING - add any mobile specific CSS here but please leave navbar styling as is!*/
+        
+        @media screen and (max-width: 700px){
+            .mag-navbar{
+                height: 5vh;
+            }
+            .article-hed{
+                position: absolute;
+                top: 7vh;
+                left: 0;
+                right: 0;
+                height: 100vh;
+            }
+            .article-dek{
+              margin-top: 107vh;
+                font-size: 1.5em;
+            }
+            .article-byline{
+                font-size: 1em;
+            }
+            .article-body{
+                width: 90vw;
+            }
+            .article-hed-image{
+              width: 100%;
+            }
+        }</style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Faustina:ital,wght@0,600;0,700;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>A Tale of Two Northwesterns</title>
+</head>
+<body>
+
+    <!-- Please don't touch anything in this nav tag! -->
+    <nav class="mag-navbar">
+        <a class = "homepage-link" href="https://northbynorthwestern.com/magazine-current/">
+         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="nbn-logo-nav" viewBox="0 0 1024.000000 1024.000000" preserveAspectRatio="xMidYMid meet"><g class="svg-path nbn-path" transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M4940 9953 c-891 -34 -1755 -309 -2480 -788 -714 -472 -1315 -1155        -1690 -1920 -256 -524 -403 -1040 -472 -1665 -20 -181 -17 -778 5 -965 138        -1165 628 -2168 1439 -2950 979 -943 2278 -1447 3551 -1377 361 20 653 64        1008 153 1403 350 2469 1207 3139 2524 267 524 425 1046 497 1635 25 207 25        772 0 985 -156 1312 -712 2376 -1662 3179 -147 125 -295 240 -300 234 -2 -2        155 -307 350 -678 195 -371 355 -678 355 -682 0 -5 -128 -8 -285 -8 l-285 0 0        -2690 0 -2690 -472 2 -471 3 -835 1877 c-459 1033 -838 1875 -843 1872 -5 -3        -9 -795 -9 -1885 l0 -1879 -490 0 -490 0 0 2695 0 2695 676 0 676 0 25 -27        c14 -16 49 -84 80 -153 296 -676 1177 -2651 1184 -2656 5 -3 9 582 9 1415 l0        1421 -255 0 c-140 0 -255 3 -255 6 0 3 194 374 431 825 237 451 433 828 436        838 4 15 -14 29 -84 69 -610 343 -1327 544 -2084 582 -186 9 -229 10 -399 3z"></path></g></svg>
+        </a>
+    </nav>
+    <header class="article-top-content">
+        <div class = "article-hed">
+            <img class= "article-hed-image" src="https://northbynorthwestern.com/content/images/2020/12/brokenn.png" alt = "A Tale of Two Northwesterns">
+        </div>
+        <h2 class="article-dek">The sudden decision to send half of Northwestern’s student body home created a socioeconomic rift on campus.</h2>
+        <h3 class="article-byline">Written by <a class= "byline-link" href="https://www.northbynorthwestern.com/author/olivia-evans/" target = "_blank"><strong>Olivia Evans</strong></a></h3>
+
+    </header>
+    <article class="article-body">
+
+        <img class = "img" src = "https://northbynorthwestern.com/content/images/2020/12/chicagowhite.png">
+        <p>On Aug. 28, Weinberg first year Allison Brook was eating out with her parents for the first time in months at her favorite, newly reopened New York restaurant, Nippon Cha. It was a celebratory send-off meal days before she planned to move into her Allison Hall dorm room. As her family waited for the bill, Brook checked her phone to see a new text from her roommate-to-be, Weinberg first-year Anna Westfall:</p>
+        <p>“It’s not happening. We’re not going.”</p>
+        <p>Brook’s heart sank. Her shaky hands quickly opened her phone’s email app to reveal the upsetting news: Northwestern University would not allow first-year or second-year students to reside on campus in the fall, with very limited exceptions. After a disappointing end to her senior year of high school and a quarantined summer, Brook felt her last hope of normalcy disappear.</p>
+        <p>“It felt very apocalyptic,” Brook says. “Everything this year has just been very disheartening.”</p>
+        <p>Following the last-minute announcement, first- and second-year students scrambled to make new plans for fall quarter. Although Northwestern’s email urged students to stay home unless they qualified for a housing exemption to live on campus (based on hardship, safety concerns or specific academic needs), many students ignored this request, desperate to make a return to Evanston.</p>
+        <h2 class = "section-divider">The Suite Life</h2>
+        <img class = "img2" src = "https://northbynorthwestern.com/content/images/2020/12/hiltonwhite.png">
+        <p>The Hilton Garden Inn, where Westfall is currently living, now hosts 30 other students on her floor. The Hilton Orrington has also converted itself into a quasi-dorm for Northwestern students. Both hotels pandered to students’ desperate need for secure housing, offering more amenities and fewer restrictions than residence halls for around $50 per night (paid upfront each month).</p>
+        <p>At the Orrington, students brought their own linens and cleaning supplies to upkeep their already furnished rooms. Garden Inn residents, on the other hand, live more similarly to hotel guests: They can even request for hotel staff to clean their room on a weekly basis. The Garden Inn also converted a conference room into a designated study space, exclusively for Northwestern students.</p>
+        <p>Students at the Orrington can sign up for a laundry service through LazyBones at a discounted rate offered through the hotel. The hotel also offers an optional “grab & go” food plan through a catering service — with extravagant meals like lemongrass and basil stir fry potstickers and cucumber and cilantro salad. The full plan, including 168 meals for the quarter, is $1680 before tax, slightly less than Northwestern’s usual all-access meal plan.</p>
+        <p>While the Orrington required students to sign a waiver affirming that they would conduct daily self-checks for COVID-19 symptoms, they do not have to get tested for COVID-19 on a weekly basis (unlike those in dorms). Residents of the Garden Inn are required to be tested weekly (either at the Jacobs Center or external facilities), which students keep track of through a group chat, allowing them to interact with less worry of infection.</p>
+        <p>Through living in the hotel, Westfall has been able to make connections without relying on online interactions. During her first few weeks in Evanston, she was able to meet in-person with people in her PA group, go for runs around campus with other students and even receive a campus tour from a professor. With the assurance weekly testing provides, she has been able to interact with other students living in the hotel through late-night study sessions or spending time together in each other’s rooms.</p>
+        <div class = "quote">
+            <h3 class = "pull-quote"> "It’s hard seeing that other people were able to leave their homes and move on, and I feel like I’m still slightly held back from that.”</h3>
+            <h4 class = "attribution"> – Michelle Hong, Medill first-year </h4>
+        </div>
+        <p>“I am very privileged and grateful to be able to have this experience in the first place,” Westfall says.</p>
+        <p> Hotel stays are not the only luxurious option for students in Evanston right now. Medill second-year Ben Chasen says looking for a place off-campus was a “mad dash” after the sudden announcement. Chasen’s options were scarce and expensive because most off-campus apartments were claimed by the time he began looking. Desperate to make a return to the college lifestyle, he and his friends even considered getting an Airbnb in Chicago or elsewhere.</p>
+        <p>After a few days of weighing his options and searching for places, Chasen worried he would have to spend another quarter at his home in Los Angeles. Then, a friend offered him a spot in a two-bedroom apartment in Albion, a luxury apartment complex on Sherman Avenue that finished construction in February. Though it wasn’t his first choice, Chasen accepted the offer almost immediately and began filing the paperwork to move in.</p>
+        <p>“It’s outrageous. I never imagined living anywhere like [Albion] until well into a professional career at the very least,” Chasen says.</p>
+        <p> While he and his roommates have agreed to follow COVID-19 guidelines at Albion, they’ve been able to host small groups at their apartment and meet up with people around Evanston.</p>
+        <p> However, this freedom comes at a cost. Chasen is planning to become a part-time student at some point this year in order to afford the rent he and his family are paying at Albion. Still, he feels fortunate to be able to be in Evanston at all.</p>
+        <p> “There are a lot of people that should have been back in Evanston, and that should have been an opportunity for everyone that was not reliant on income,” Chasen says.</p>
+        <h2 class = "section-divider">Stuck at Home</h2>
+        <img class = "img2" src= "https://northbynorthwestern.com/content/images/2020/12/laptopwhite.png">
+        <p>Brook’s major (Voice and Opera Performance) and consequent need for a piano at her disposal was one of the sole reasons she didn’t seek off-campus housing. She decided it would be best for her to stay at her home in New York. With a dual degree in economics, she is currently balancing 5 1/2 credits with a part-time job in hopes of saving money for when she can eventually move onto campus.</p>
+        <div class = "quote">
+            <h3 class = "pull-quote"> I wish we could just go and see each other and have it be a five-minute walk instead of a commute or a Zoom call.”</h3>
+            <h4 class = "attribution"> - Allison Brook, Weinberg first-year</h4>
+        </div>
+        <p>Sometimes she receives noise complaints from neighbors when she practices for the Northwestern Opera, causing her to limit her practicing hours. Although she’s tried to make connections with other Northwestern students via Instagram, a membership in Hillel and a meet-up in Central Park over the summer, she still feels isolated.</p>
+        <p>“I wish we could just go and see each other and have it be a five-minute walk instead of a commute or a Zoom call,” Brook says.</p>
+        <p>Weinberg first-year Ruba Memon, a Chicago native, had just convinced her skeptical parents to let her live on campus for the fall when the updated plans for Fall Quarter were announced. Because of the financial burden of finding a place to live off campus, Memon chose to spend Fall Quarter at home.</p>
+        <p>With her rigorous course load, she says she barely has time to interact with her own family. She hasn’t been able to make any friends in-person, and she considers virtual Wildcat Welcome programming, online study groups and Instagram her only means of forming friendships. She made her closest Northwestern friend, Medill first-year Michelle Hong (who’s spending fall quarter at home in Indiana), through an Instagram direct message.</p>
+        <p>“It’s like shooting your friend shot,” Memon says.</p>
+        <p>While creating and maintaining friendships from a distance is difficult due to the awkwardness of digital interaction, the girls have been able to bond over weekly movie nights and are making their way through the “Harry Potter” series.</p>
+        <div class = "quote">
+            <h3 class = "pull-quote">It’s been quite surreal frankly. I was expecting to embark on this wonderful journey — the best four years of my life — and I never ended up leaving my house.”</h3>
+            <h4 class = "attribution"> - Ethan Voskoff, Weinberg first-year</h4>
+        </div>
+        <p>“I know there’s not a lot of freshmen on campus right now, but you still see it on social media, and it kind of pinches you in the wrong ways,” Hong says. “It’s hard seeing that other people were able to leave their homes and move on, and I feel like I’m still slightly held back from that.”</p>
+        <p>Weinberg first-year Ethan Voskoff is currently living in his home just outside of New Rochelle, New York — the first epicenter of the pandemic in the United States. A Type 1 diabetic, Voskoff doesn’t plan to come to campus until a vaccine for the virus is widely available.</p>
+        <p>“It’s been quite surreal frankly. I was expecting to embark on this wonderful journey — the best four years of my life — and I never ended up leaving my house,” Voskoff says.</p>
+        <p> He’s made friends through his classes, with the help of the private message feature on Zoom. He is also thankful for the network he has been able to build by finding other Northwestern first-years via Instagram; whenever he’s on, almost anyone with “NU ‘24” in their bio gets a follow.</p>
+        <p> “If I were there, I would definitely have more of a social life,” Voskoff says.</p>
+        <h2 class = "section-divider"> Looking Ahead</h2>
+        <p> While the university allotted housing exemptions for firstand second-year students in dire circumstances, many students chose not to live in dorms because of the social constriction residence hall life has this year. Students in dorms aren’t permitted to have guests over from outside the building or allow anyone other than themselves into their rooms.</p>
+        <p> Mike Masters, an assistant director for Student Enrichment Services, worked on the committee to approve students’ requests to return to campus. He says some students withdrew their requests after hearing what life back on campus was going to look like.</p>
+        <p>Medill second-year Jude Cramer, the vice president of the Communications Residential College, chose not to apply for a housing exemption, instead spending most of Fall Quarter at his home in Wisconsin before moving in with a friend in Evanston at the beginning of November.</p>
+        <p>“My home life is pretty okay. I’m close to my family, so I didn’t want to go through the hassle [of applying for a housing exemption] only to end up living in a dorm without any of my friends,” Cramer says.</p>
+        <p>Cramer attempted to find an off-campus apartment with friends at the beginning of the quarter, but the available options were simply too expensive for his family to afford. He considers himself luckier than most staying at home during this time, due to his tight-knit family and solid friend circle, who communicate via group chats and the occasional Zoom call. Although he was forced to leave campus just two quarters into his first year, he had already created a solid group of friends and never felt too lonely — but he still faces struggles socially.</p>
+        <p>“When you’re living next to each other it’s so much more natural to just start a conversation and an impromptu hang out. Over Zoom it’s a whole production. You have to find a time that fits into everyone’s schedules, and Zoom fatigue makes it less appealing,” Cramer says.</p>
+        <p>Cramer plans to find an affordable off-campus apartment with friends for winter quarter. However, as a low-income student, his budget is tight: Even with his refund from the University, he’ll most likely have to dip into his personal savings or take out loans.</p>
+        <p>“I think it’s worth it to reclaim what little experience of college that I can,” Cramer says.</p>
+        <p>As winter quarter approaches and COVID-19 cases continue to rise in Illinois, students like Hong and Voskoff, who worry about their personal safety, will most likely have to remain at home. The University recently announced that it will allow students to return to living on campus in the winter, but some students like Chasen have already signed year-long leases in their expensive apartments. Although Brook plans to return to campus in the winter, she doesn’t let herself get too excited about the prospect of life on campus.</p>
+        <p>“I just don’t have any more expectations for the winter. I’m just preparing for the worst but hoping for the best,” Brook says.</p>
+
+    </article>
+
+    <footer class="article-credits">
+        <h3 class="credits-heading">Credits</h3>
+        <h2 class="credits-subhed">Writing</h2>
+        <h3 class="credits-item">Olivia Evans</h3>
+        <h2 class="credits-subhed">Editing</h2>
+        <h3 class="credits-item">Isaac Sultan</h3>
+        <h2 class="credits-subhed">Print Design</h2>
+        <h3 class="credits-item">Sooim Kang</h3>
+        <h2 class="credits-subhed">Web Design & Development</h2>
+        <h3 class="credits-item">Stephanie Zhu</h3>
+        <h2 class="credits-link"><a href="https://northbynorthwestern.com/magazine-current/">Back to Magazine Homepage</a></h2>
+    </footer>
+
+</body>
+</html>

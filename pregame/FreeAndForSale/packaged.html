@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+/* DEFAULT FONTS - feel free to add any other variables you need here */
+
+:root{
+
+/* Default font for headlines, headings, bylines, etc. */
+--hed-font-default: 'Barlow', sans-serif; 
+/* Font used for headlines if print design uses serif font */
+--hed-font-serif: 'Faustina', serif;
+/* Default font for body text */
+--body-font: 'PT Serif', serif;
+--fb-lightblue: #6d84b4;
+--fb-darkblue:#4267b2 ;
+--text-gray: #898f9c;
+}
+
+.mag-navbar{
+position: fixed;
+left: 0;
+right: 0;
+top: 0;
+height: 7vh;
+background-color: #342F2E;
+padding: 1vh 0;
+box-shadow: 1px 2px 1px;
+z-index: 10;
+}
+.nbn-logo-nav{
+margin-left: 1vw;
+height: 100%;
+
+}
+.nbn-path{
+fill: white;
+transition: fill 1s ease;
+}
+.homepage-link:hover .nbn-path{
+fill: #B6ACD1
+}
+
+/* HED, DEK, BYLINE - feel free to play with this! */
+
+.article-top-content{
+margin-top: 15vh;
+text-align: center;
+}
+.article-hed{
+/* replace "default" with "serif" if article uses a serif font in the hed */
+font-family: var(--hed-font-default);
+font-size: 4em;
+margin: 0 auto 0 auto;
+color: var(--fb-lightblue);
+position: relative;
+width: fit-content;
+z-index: 1;
+
+}
+
+.fb-blue{
+color: var(--fb-darkblue);
+}
+.article-dek{
+font-family: var(--hed-font-default);
+margin-top: 0;
+font-size: 2em;
+margin-bottom: 0;
+font-weight: 500;
+color: var(--text-gray);
+z-index: 1 !important;
+position: relative;
+}
+.fb-tag{
+position: absolute;
+right: -1.75em;
+top: .7em;
+z-index: 0 !important;
+animation: sway 3s ease-in-out infinite alternate;
+transform-origin: top left;
+}
+@keyframes sway{
+from{
+    transform: rotate(-10deg);
+}
+to{
+    transform: rotate(30deg);
+}
+}
+.article-byline{
+font-family: var(--hed-font-default);
+font-weight: 400;
+margin-top: .5em;
+font-size: 1.5em;
+color: var(--text-gray);
+z-index: 1 !important;
+position: relative;
+}
+.byline-link{
+color: var(--fb-lightblue);
+transition: color 1s ease;
+}
+.byline-link:hover{
+color: #4E2A84;
+}
+
+
+/* ARTICLE BODY - customize however you want! */
+
+
+.article-body{
+font-family: var(--body-font);
+width: 40vw;
+margin: auto;
+font-size: 1.2em;
+}
+.article-body p{
+margin-bottom: 2em;
+}
+.sidebar-image{
+position: absolute;
+width: 20vw;
+text-align: center;
+font-family: var(--hed-font-default);
+color: var(--text-gray);
+}
+.sidebar-left{
+left: 5vw;
+}
+.sidebar-right{
+right: 5vw;
+}
+.sidebar-image img{
+width: 100%;
+/* animation: sway 4s ease-in-out infinite alternate; */
+}
+#washer{
+width: 50%;
+}
+
+/* CREDITS - shouldn't need to change anything! */
+
+.article-credits{
+text-align: center;
+font-family: var(--hed-font-default);
+}
+.credits-heading{
+font-size: 2em;
+margin-bottom: .5em;
+}
+.credits-subhed{
+margin-top: 0;
+margin-bottom: 0;
+}
+.credits-item{
+margin-top: .5em;
+margin-bottom: 1em;
+font-weight: 400;
+}
+.credits-link{
+margin-top: 1.5em;
+}
+.credits-link a{
+color: black;
+transition: color 1s ease;
+}
+.credits-link a:hover{
+color: #4E2A84;
+}
+
+
+/* MOBILE STYLING - add any mobile specific CSS here but please leave navbar styling as is!*/
+
+@media screen and (max-width: 700px){
+.mag-navbar{
+    height: 5vh;
+}
+.article-hed{
+    font-size: 3em;
+}
+.article-dek{
+    font-size: 1.5em;
+}
+.article-byline{
+    font-size: 1em;
+}
+.article-body{
+    width: 90vw;
+}
+.sidebar-image{
+    position: static;
+    font-size: 1em;
+    width: 100%;
+}
+}
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Faustina:ital,wght@0,600;0,700;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Or best offer</title>
+</head>
+<body>
+
+    <!-- Please don't touch anything in this nav tag! -->
+    <nav class="mag-navbar">
+        <a class = "homepage-link" href="https://northbynorthwestern.com/magazine-current/">
+         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="nbn-logo-nav" viewBox="0 0 1024.000000 1024.000000" preserveAspectRatio="xMidYMid meet"><g class="svg-path nbn-path" transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M4940 9953 c-891 -34 -1755 -309 -2480 -788 -714 -472 -1315 -1155        -1690 -1920 -256 -524 -403 -1040 -472 -1665 -20 -181 -17 -778 5 -965 138        -1165 628 -2168 1439 -2950 979 -943 2278 -1447 3551 -1377 361 20 653 64        1008 153 1403 350 2469 1207 3139 2524 267 524 425 1046 497 1635 25 207 25        772 0 985 -156 1312 -712 2376 -1662 3179 -147 125 -295 240 -300 234 -2 -2        155 -307 350 -678 195 -371 355 -678 355 -682 0 -5 -128 -8 -285 -8 l-285 0 0        -2690 0 -2690 -472 2 -471 3 -835 1877 c-459 1033 -838 1875 -843 1872 -5 -3        -9 -795 -9 -1885 l0 -1879 -490 0 -490 0 0 2695 0 2695 676 0 676 0 25 -27        c14 -16 49 -84 80 -153 296 -676 1177 -2651 1184 -2656 5 -3 9 582 9 1415 l0        1421 -255 0 c-140 0 -255 3 -255 6 0 3 194 374 431 825 237 451 433 828 436        838 4 15 -14 29 -84 69 -610 343 -1327 544 -2084 582 -186 9 -229 10 -399 3z"></path></g></svg>
+        </a>
+    </nav>
+    <header class="article-top-content">
+        <h1 class="article-hed">Or best o<span class="fb-blue">ff</span>er<img src="https://northbynorthwestern.com/content/images/2020/12/tag.png" class="fb-tag" alt=""></h1>
+        <h2 class="article-dek">Northwestern's Free and For Sale Facebook page has become more than a marketplace.</h2>
+        <h3 class="article-byline">WRITTEN BY <a class= "byline-link" href="https://northbynorthwestern.com/author/ilana/" target="_blank"><strong>ILANA AROUGHETI</strong></a></h3>
+
+    </header>
+    <article class="article-body">
+        <img src="https://northbynorthwestern.com/content/images/2020/12/fbmain.jpg" style="width: 100%;">
+        <p>The Northwestern Free and For Sale Facebook group is self-described in its bio as a place to “post shit to buy and sell.” When she joined the page this summer, Weinberg second-year Natalie Simbolon only used it to search for cheap used textbooks. However, months after purchasing an MCAT prep book for her boyfriend, Simbolon still entertains herself daily by scrolling through the page.</p>
+        <div class="sidebar-image sidebar-left"><img src="https://northbynorthwestern.com/content/images/2020/12/car.png" alt=""><h3 class="sidebar-text">1999 Porsche Boxter: $11,000</h3></div>
+        <p>“I enjoyed the fact that this isn't just like any other Free and For Sale page on Facebook,” says Simbolon. “Facebook is kind of a drag, so I appreciate the fact that because it was Northwestern students. People are funny and interesting.”</p>
+        <p>Mark Schmid, John Albers and Eric Rubenstein founded the Northwestern Free and For Sale group as Northwestern undergraduates in April 2012. For the lucky 18,600 members who managed to get a friend to add them, a virtual flea market of used furniture, resold freebies and, increasingly, apartment sublets now lives rent-free on their social media feed.
+        </p>
+        <div class="sidebar-image sidebar-right"><img src="https://northbynorthwestern.com/content/images/2020/12/Bike.png" alt=""><h3 class="sidebar-text">Child's bike with training wheels: $50</h3></div>
+        <p>Some members take advantage of the group’s large audience to plug events or strange personal projects. (One recent post even invited female users to burp on camera for a stipend.) However, it’s much more typical to come across a post for an uncommon item: dusty Wii discs, designer clothes, a climbing tower for cats. 
+        </p>
+        <p>SESP third-year Glory Aliu used the group to furnish almost her entire apartment and snag a summer sublet. Between the end of Spring Quarter and the beginning of Fall Quarter, Aliu purchased a $100 bed frame with a headboard, a $20 desk chair and a shower curtain, along with a free mattress and some fake plants. She also sold a coffee table. By comparison, the top-rated headboard bed frame on Amazon currently costs $300, and the current top-rated desk chair costs $80.
+        </p>
+        <div class="sidebar-image sidebar-left"><img src="https://northbynorthwestern.com/content/images/2020/12/clock.png" alt=""><h3 class="sidebar-text">Clocks made out of vintage vinyl records: $5</h3></div>
+        <p>The Free and For Sale Facebook group was not specifically built for real estate, but as students’ housing plans fluctuate during remote learning, lease listings make up a substantial chunk of page traffic. Since so many people are consistently engaged with the group it took Medill second-year Hannah Feuer less than a day to secure a fall quarter sublet. She started messaging users with sublet listings, hit it off with a pair of roommates on her second try and now lives comfortably in a four-bedroom off-campus apartment. She says posts from the group are now integrated into her main Facebook page, leading her to check out current listings about three times a week.
+        </p>
+        <p>“I'm not really looking to buy anything on it anymore, but it's kind of fun just to look at stuff people are selling,” says Feuer. At its best, the group creates a free market that lets students support each other’s financial needs. Aliu has seen two kinds of sellers: those whose goal is to just get old things out of their house and those who are trying to turn a legitimate profit. The former usually offer better discounts the faster you can show up to cart away heavy objects, or they might offer priority to first-generation, low-income (FGLI) students. 
+        </p>
+        <div class="sidebar-image sidebar-right"><img src="https://northbynorthwestern.com/content/images/2020/12/harrypotter.png" alt=""><h3 class="sidebar-text">Harry Potter-themed STEM coding kit for kids: $49</h3></div>
+        <p>One recent post by Weinberg fourth-year Abby Bridgemohan offered a “Free twin mattress to anyone who really needs it (low income, student loans, pandemic struggles, moving away from home etc).” Bridgemohan also made sure to check her Facebook messages from potential buyers without asking them to comment on the original post first, as is common for the page. She explained that this allows students to reach out for help without having to publicly discuss their socioeconomic status. Among sellers grasping for a profit, however, Aliu found that the summer demand from students moving to Evanston created a more competitive market.
+        </p>
+        <p>“It got really frantic because everybody decided they didn't want to live on campus anymore,” Aliu says. “There were a lot more people in the buying pool.”
+        </p>
+        <div class="sidebar-image sidebar-left"><img src="https://northbynorthwestern.com/content/images/2020/12/washerdryer.png" id="washer" alt=""><h3 class="sidebar-text">Stacked washer and dryer, if you can carry it out: $325</h3></div>
+        <p>Most items are open to offers, so the more people interested, the higher bids climb. She suddenly had a hard time finding a desk and a couch and wound up purchasing them elsewhere.
+        </p>
+        <p>Feuer, Aliu and Simbolon all feel as though the group’s main draw is its by-students, for-students culture. To Aliu, this arrangement also creates safer interactions with student sellers.
+        </p>
+        <p>“When it’s student-run, I feel like you can hold people accountable more, and it’s less dangerous,” says Aliu. “We know that we're on the same campus. So if you do something really bad, you're going to gain a reputation on campus.” She and her roommates still check the page daily for cheap decor and houseplants.
+        </p>
+        <p>Simbolon added that even if she does have to get items shipped all the way out to her boyfriend’s Florida address to participate in the Free and For Sale group, she feels drawn to the social networking aspect of the group. The book she bought was $37 about the same price as a new copy, but Simbolon knew the previous owner, a fellow Family Ambassador for Wildcat Welcome. Even without saving money, there’s added value in putting your purchasing power back into a community of peers.
+        </p>
+        <p>“I feel like I put my faith in Northwestern students,” says Simbolon. “They are probably fine. They probably won't scam me.
+        </p>
+    </article>
+
+    <footer class="article-credits">
+        <h3 class="credits-heading">Credits</h3>
+        <h2 class="credits-subhed">Writing</h2>
+        <h3 class="credits-item">Ilana Arougheti</h3>
+        <h2 class="credits-subhed">Editing</h2>
+        <h3 class="credits-item">Sarah Meadow</h3>
+        <h2 class="credits-subhed">Print Design</h2>
+        <h3 class="credits-item">Juntang Qian</h3>
+        <h2 class="credits-subhed">Web Design & Development</h2>
+        <h3 class="credits-item">David Deloso</h3>
+        <h2 class="credits-link"><a href="https://northbynorthwestern.com/magazine-current/">Back to Magazine Homepage</a></h2>
+    </footer>
+
+</body>
+</html>

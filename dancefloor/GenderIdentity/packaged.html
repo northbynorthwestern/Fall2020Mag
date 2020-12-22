@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>/* DEFAULT FONTS - feel free to add any other variables you need here */
+
+        :root {
+          /* Default font for headlines, headings, bylines, etc. */
+          --hed-font-default: "Barlow", sans-serif;
+          /* Font used for headlines if print design uses serif font */
+          --hed-font-serif: "Faustina", serif;
+          /* Default font for body text */
+          --body-font: "PT Serif", serif;
+        }
+        body{
+          overflow-x: hidden;
+        }
+        
+        .mag-navbar {
+          position: fixed;
+          left: 0;
+          right: 0;
+          top: 0;
+          height: 7vh;
+          background-color: #342f2e;
+          padding: 1vh 0;
+          box-shadow: 1px 2px 1px;
+          z-index: 1;
+        }
+        .nbn-logo-nav {
+          margin-left: 1vw;
+          height: 100%;
+        }
+        .nbn-path {
+          fill: white;
+          transition: fill 1s ease;
+        }
+        .homepage-link:hover .nbn-path {
+          fill: #b6acd1;
+        }
+        
+        /* HED, DEK, BYLINE - feel free to play with this! */
+        
+        .article-top-content {
+          text-align: center;
+          background-color: #07aab9;
+          padding: 5px;
+        }
+        .article-hed {
+          /* replace "default" with "serif" if article uses a serif font in the hed */
+          font-family: var(--hed-font-default);
+          font-size: 3em;
+          color: white;
+        }
+        .article-dek {
+          font-family: var(--hed-font-default);
+          margin-top: 0;
+          font-size: 1.2em;
+          margin-bottom: 0;
+          font-weight: 500;
+          color: white;
+        }
+        .article-byline {
+          font-family: var(--hed-font-default);
+          font-weight: 400;
+          margin-top: 0.5em;
+          font-size: 1.5em;
+          color: white;
+        }
+        .byline-link {
+          color: white;
+          transition: color 1s ease;
+        }
+        .byline-link:hover {
+          color: #4e2a84;
+        }
+        .circle {
+          width: 70%;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          z-index: -1;
+          opacity: 0;
+        }
+        .circlediv {
+          margin-top: 7vh;
+        }
+        .greencircle {
+          width: 500px;
+          position: absolute;
+          left: -250px;
+          z-index: -1;
+          opacity: 0;
+        }
+        .browncircle {
+          width: 600px;
+          position: absolute;
+          right: -300px;
+          z-index: -1;
+          opacity: 0;
+        }
+        .pinkcircle {
+          width: 600px;
+          position: absolute;
+          left: -300px;
+          z-index: -1;
+          opacity: 0;
+        }
+        /* ARTICLE BODY - customize however you want! */
+        
+        .article-body {
+          font-family: var(--body-font);
+          width: 50vw;
+          margin: auto;
+          font-size: 1.2em;
+        }
+        .article-body p {
+          margin-bottom: 2em;
+        }
+        
+        /* CREDITS - shouldn't need to change anything! */
+        
+        .article-credits {
+          text-align: center;
+          font-family: var(--hed-font-default);
+        }
+        .credits-heading {
+          font-size: 2em;
+          margin-bottom: 0.5em;
+        }
+        .credits-subhed {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        .credits-item {
+          margin-top: 0.5em;
+          margin-bottom: 1em;
+          font-weight: 400;
+        }
+        .credits-link {
+          margin-top: 1.5em;
+        }
+        .credits-link a {
+          color: black;
+          transition: color 1s ease;
+        }
+        .credits-link a:hover {
+          color: #4e2a84;
+        }
+        
+        /* MOBILE STYLING - add any mobile specific CSS here but please leave navbar styling as is!*/
+        
+        @media screen and (max-width: 700px) {
+          .mag-navbar {
+            height: 5vh;
+          }
+          .article-hed {
+            font-size: 3em;
+          }
+          .article-dek {
+            font-size: 1.5em;
+          }
+          .article-byline {
+            font-size: 1em;
+          }
+          .article-body {
+            width: 90vw;
+          }
+          .browncircle{
+            display: none;
+          }
+        }
+        </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Faustina:ital,wght@0,600;0,700;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Physically safe, intellectually dangerous</title>
+  </head>
+  <body>
+    <!-- Please don't touch anything in this nav tag! -->
+    <nav class="mag-navbar">
+      <a
+        class="homepage-link"
+        href="https://northbynorthwestern.com/magazine-current/"
+      >
+        <svg
+          version="1.0"
+          xmlns="http://www.w3.org/2000/svg"
+          class="nbn-logo-nav"
+          viewBox="0 0 1024.000000 1024.000000"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <g
+            class="svg-path nbn-path"
+            transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)"
+            fill="currentColor"
+            stroke="none"
+          >
+            <path
+              d="M4940 9953 c-891 -34 -1755 -309 -2480 -788 -714 -472 -1315 -1155        -1690 -1920 -256 -524 -403 -1040 -472 -1665 -20 -181 -17 -778 5 -965 138        -1165 628 -2168 1439 -2950 979 -943 2278 -1447 3551 -1377 361 20 653 64        1008 153 1403 350 2469 1207 3139 2524 267 524 425 1046 497 1635 25 207 25        772 0 985 -156 1312 -712 2376 -1662 3179 -147 125 -295 240 -300 234 -2 -2        155 -307 350 -678 195 -371 355 -678 355 -682 0 -5 -128 -8 -285 -8 l-285 0 0        -2690 0 -2690 -472 2 -471 3 -835 1877 c-459 1033 -838 1875 -843 1872 -5 -3        -9 -795 -9 -1885 l0 -1879 -490 0 -490 0 0 2695 0 2695 676 0 676 0 25 -27        c14 -16 49 -84 80 -153 296 -676 1177 -2651 1184 -2656 5 -3 9 582 9 1415 l0        1421 -255 0 c-140 0 -255 3 -255 6 0 3 194 374 431 825 237 451 433 828 436        838 4 15 -14 29 -84 69 -610 343 -1327 544 -2084 582 -186 9 -229 10 -399 3z"
+            ></path>
+          </g>
+        </svg>
+      </a>
+    </nav>
+    <div class="circlediv">
+      <img src="https://northbynorthwestern.com/content/images/2020/12/purplecircle.png" class="circle" />
+    </div>
+    <header class="article-top-content">
+      <h1 class="article-hed">Physically safe, intellectually dangerous</h1>
+      <h2 class="article-dek">
+        Despite a stigma of coddling, the academic environment remains a haven
+        for gender-queer students and professors to safely explore identity and
+        empower insurgent thought.
+      </h2>
+      <h3 class="article-byline">
+        Written by
+        <a class="byline-link" href="#"><strong>Anna Margevich</strong></a>
+      </h3>
+    </header>
+    <article class="article-body">
+      <p>
+        Pallas Guiterrez is publicly outed every time they take a
+        Northwestern-sponsored COVID-19 test. When the staff member reaches the
+        “Sex at Birth” question, the Communication fourth-year feels horrible.
+      </p>
+      <p>
+        “It’s something I always have to psych myself up for when I go to get
+        tested: ‘They’re going to ask this, and it doesn’t mean anything, but
+        they’re going to ask and you have to be ready,’” Gutierrez says.
+      </p>
+      <p>
+        Gutierrez, who has been living as nonbinary throughout college, recalls
+        countless moments when safety and respect haven’t been a part of their
+        Northwestern experience. Professors have forgotten to use their
+        pronouns, or didn’t even bother asking in the first place.
+        Gender-neutral spaces on campus — like the first floor of Allison Hall
+        and the third floor of 560 Lincoln — were filled with cisgender students
+        eager for an upscale dorm. Even bathrooms where they could feel safe on
+        campus felt few and far between.
+      </p>
+    </article>
+    <img src="https://northbynorthwestern.com/content/images/2020/12/greencircle.png" class="greencircle" />
+    <article class="article-body">
+      <p>
+        So, even during a pandemic, students and professors within the
+        transgender, nonbinary and gender- queer communities are continuing on a
+        double-sided journey to find an impactful community and fight back
+        against the structures that continue to harm them.
+      </p>
+      <p>
+        Dr. Marquis Bey, an assistant professor of African American Studies and
+        English, knows that outside of academia, the classroom is seen as a
+        place of fragility. But Bey is disdainful of this notion and aims to
+        abolish the structures of institutional academics that harm the queer
+        and trans community. Granting students safety within the classroom, Bey
+        says, can be an act of strength that turns into something much greater.
+      </p>
+      <p>
+        “When you enter my classroom, you are physically safe in that space.
+        Because of that, then we have license to be intellectually dangerous, in
+        the sense that it will rattle and shake a lot of the normative and
+        hegemonic structures that are themselves violent structures,” Bey says.
+      </p>
+      <p>
+        One way Bey creates this type of classroom culture is by de-emphasizing
+        the academic routine of assigning work simply for the sake of grades and
+        completion. Instead, Bey focuses on what texts and media they can
+        introduce to students that have the power to change what they see as
+        possible for themselves and the world. Trap Door: Trans Cultural
+        Production and the Politics of Visibility is one text that Bey calls on
+        when thinking about what visibility actually means. Those moments of
+        in-class or on-campus solidarity can often be more impactful than many
+        realize. As a first-year, Gutierrez recalls attending get-togethers
+        thrown by queer upperclassmen. They’d never been surrounded by so much
+        queer joy.
+      </p>
+      <p>
+        “It was really great to be around other people who held similar
+        identities and know that the things that Northwestern does that aren’t
+        great do affect multiple people, and it’s not just me and my roommate
+        being crazy,” Gutierrez says.
+      </p>
+      <p>
+        Gutierrez recognizes that finding support like this can be challenging,
+        but they encourage other trans and queer students to search for others
+        in their community.
+      </p>
+      <p>
+        “You’ll stumble into a class, and there will be someone who has
+        different pronouns than you were expecting or than you’ve heard before,
+        and then suddenly you will have a huge community of trans friends, and
+        it will be wonderful,” Gutierrez says. “You just have to be open to
+        looking for it.”
+      </p>
+      <p>
+        Kelsey Phalen, who graduated this spring, found support in
+        Northwestern’s theatre community; a friend’s senior thesis was a trans
+        and nonbinary adaptation of The Little Mermaid, called The Little
+        Merperson. Being in that production showed Phalen the importance of
+        explicitly creating and inviting spaces for vulnerability.
+      </p>
+      <p>
+        “It’s not embarrassing if you have those moments and you invite other
+        people into it,” Phalen says. “The whole point is we’re here for each
+        other and here to care about each other, and we’ll help each other
+        through the fear and through the uncertainty.”
+      </p>
+      <p>
+        Even so, for fellow alumnus Zury Cutler, that hyper-visibility felt
+        daunting. Cutler says it took deep introspection for him to realize that
+        his gender identity was valid — partly because he did not feel similar
+        to other gender-queer students who were not questioning their gender
+        identity.
+      </p>
+    </article>
+    <img src="https://northbynorthwestern.com/content/images/2020/12/browncircle.png" class="browncircle" />
+    <article class="article-body">
+      <p>
+        “The amount of visibility at Northwestern made me [think], ‘These are
+        the people who are gender-queer on campus, and I’m definitiely not super
+        similar to them, so I’m probably just a man,’” Cutler says.
+      </p>
+      <p>
+        Cutler says that his experience of an accepting and visible Northwestern
+        community does not represent — and in fact is in contrast to — the
+        University’s treatment of trans students and professors. “Because the
+        Northwestern community is pretty open and accepting of trans folx — I
+        want to be clear: not the Northwestern administration, but the
+        Northwestern community — I think that that has allowed a freedom of
+        expression and experimentation that almost intimidated me,” Cutler says.
+      </p>
+      <p>
+        Bey echoes the gravity of seeing oneself in their professors and peers.
+        Though being introduced to new forms of expression and modes of thinking
+        can be overwhelming, Bey says that experience can also be life-changing.
+      </p>
+      <p>
+        “Simply knowing that something is possible by seeing someone else do
+        that, embody that, is deeply, deeply important,” Bey says. “I can never
+        under-emphasize something like that.”
+      </p>
+      <p>
+        But Bey isn’t just interested in fostering acceptance, openness or
+        inclusion — “all these imperfect words,” they say. Because simply being
+        “out” can be dangerous (in more ways than one), they point out the need
+        to systematically dismantle institutions and structures that promote
+        violence against queer people.
+      </p>
+      <p>
+        “Rather than simply inserting a trans or queer person into this
+        [institution], how can we cultivate radically different conditions that
+        allow for queer and trans modes of relations?” Bey says. “For me, the
+        purpose of my scholarship is not simply to acquire knowledge but to
+        attempt to make people more free. How can I introduce students to things
+        that will allow them to feel freer and to do freedom and liberation in
+        more impactful ways?”
+      </p>
+      <p>
+        Even with visibility, Cutler realized Northwestern’s community wasn’t
+        exempt from calls for change. When Cutler served on the board of
+        directors for MARS — which at the time stood for Men Against Rape and
+        Sexual Assault — he noticed how much of the organization was composed of
+        cisgender fraternity men. While Cutler himself was never a part of Greek
+        life, being a member of MARS often meant thinking deeply about Greek
+        culture, which he says posed a multitude of issues for queer students.
+      </p>
+      <p>
+        “Greek life is supported by generally white, upper-class, cis,
+        heterosexual, Christian people,” Cutler says. “It happens to be one of
+        the most egregious cases of massive, systemic disenfranchisement of
+        queer and trans folx on our campus.”
+      </p>
+      <p>
+        So, the organization changed its name to Masculinity, Allyship,
+        Reflection, and Solidarity. Cutler says the organization would have been
+        open to including including trans and queer people before, but the
+        re-wording made a clear statement that “This should not be a men’s
+        group; this should be a group for people with masculine experience.”
+      </p>
+      <p>
+        For Phalen, the only campus space where they didn’t come out as
+        nonbinary was in their Panhellenic Association (PHA) sorority. Although
+        the sorority members were accepting, they didn’t always know what to do
+        when someone’s gender identity challenged their structure of cisgender
+        sisterhood.
+      </p>
+      <p>
+        Phalen says that part of their decision to not disclose their gender
+        identity in this space came from witnessing how the sorority reacted
+        when a different member came out about their gender identity.
+      </p>
+      <p>
+        “They were all trying to be positive about it, but it just felt like it
+        became this whole thing. Even though they were accepting, I just didn’t
+        want to go through that,” Phalen says.
+      </p>
+      <p>
+        During PHA sorority recruitment their first year, Gutierrez saw many
+        exclusive policies and actions. Sororities purposely didn’t ask members
+        for their pronouns in order to get around national laws that demand that
+        members strictly identify as women.
+      </p>
+      <p>
+        “It’s crazy how much of our campus housing in the form of Greek life
+        houses is inherently inaccessible to trans people. Maybe we don’t need
+        those Greek houses, and we need more trans housing,” Gutierrez says.
+      </p>
+      <p>
+        Gutierrez realizes a community isn’t enough. As Illinois law still
+        enables discrimination against trans people (such as lacking bathroom
+        laws), a critical eye is turned toward the University.
+      </p>
+    </article>
+    <img src="https://northbynorthwestern.com/content/images/2020/12/pinkcircle.png" class="pinkcircle" />
+    <article class="article-body">
+      <p>
+        “If you genuinely believe it’s a problem, you will be advocating against
+        those laws. Northwestern has so much money, so much power and so many
+        high-powered alumni,” Gutierrez says. “There’s no reason that if they
+        don’t believe in something they can’t help it get changed. What are you
+        doing to advocate that that law gets changed so that your students can
+        live safely on this campus?”
+      </p>
+    </article>
+
+    <footer class="article-credits">
+      <h3 class="credits-heading">Credits</h3>
+      <h2 class="credits-subhed">Writing</h2>
+      <h3 class="credits-item">Anna Margevich</h3>
+      <h2 class="credits-subhed">Editing</h2>
+      <h3 class="credits-item">Emily Cerf</h3>
+      <h2 class="credits-subhed">Print Design</h2>
+      <h3 class="credits-item">Andrew Kwa</h3>
+      <h2 class="credits-subhed">Web Design & Development</h2>
+      <h3 class="credits-item">Amy Guo</h3>
+      <h2 class="credits-link">
+        <a href="https://northbynorthwestern.com/magazine-current/"
+          >Back to Magazine Homepage</a
+        >
+      </h2>
+    </footer>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+  <script>gsap.to(".circle", {
+    opacity: 1,
+    ease: "circ.in",
+    duration: 2,
+  });
+  
+  gsap.to(".greencircle", {
+    scrollTrigger: ".greencircle", // selector or element
+    opacity: 1,
+    ease: "circ.in",
+    duration: 2,
+  });
+  
+  gsap.to(".browncircle", {
+    scrollTrigger: ".browncircle", // selector or element
+    opacity: 1,
+    duration: 2,
+  });
+  
+  gsap.to(".pinkcircle", {
+    scrollTrigger: ".pinkcircle", // selector or element
+    opacity: 1,
+    duration: 2,
+  });
+  </script>
+</html>

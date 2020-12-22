@@ -9,9 +9,34 @@
     --hed-font-serif: 'Faustina', serif;
     /* Default font for body text */
     --body-font: 'PT Serif', serif;
+    --covid-purple: #7666ad;
+    --covid-yellow: #efe93a;
 }
-
+body{
+    background-color: #330000;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 .mag-navbar{
+    z-index: 100;
     position: fixed;
     left: 0;
     right: 0;
@@ -21,22 +46,33 @@
     padding: 1vh 0;
     box-shadow: 1px 2px 1px;
 }
-.nbn-logo-nav{
-    margin-left: 1vw;
-    height: 100%;
-   
+.unmasked-logo{
+    line-height: 1em;
+    margin: 0 0 0 .5em;
+    font-size: 3em;
+    /* text-shadow: 1px 1px 1px white; */
+    /* -webkit-text-stroke: 1px var(--covid-yellow); */
+    color: white;
+    font-family: var(--hed-font-default);
+    transition: color 1s ease;
 }
-.nbn-path{
-    fill: white;
-    transition: fill 1s ease;
-}
-.homepage-link:hover .nbn-path{
-    fill: #B6ACD1
+.unmasked-logo:hover{
+    color: var(--covid-purple);
+    /* text-shadow: 1px 1px 1px var(--covid-purple); */
 }
 
+.homepage-link{
+   
+    text-decoration: none;
+}
+.unmasked-logo:hover{
+    color: var(--covid-purple);
+    /* text-shadow: 1px 1px 1px var(--covid-purple); */
+}
 /* HED, DEK, BYLINE - feel free to play with this! */
 
 .article-top-content{
+    color: white;
     margin-top: 15vh;
     text-align: center;
 }
@@ -52,16 +88,16 @@
     margin-top: 0;
     font-size: 2em;
     margin-bottom: 0;
-    font-weight: 500;
+    font-weight: 300;
 }
 .article-byline{
     font-family: var(--hed-font-default);
-    font-weight: 400;
+    font-weight: 300;
     margin-top: .5em;
     font-size: 1.5em;
 }
 .byline-link{
-    color: black;
+    color: white;
     transition: color 1s ease;
 }
 .byline-link:hover{
@@ -73,6 +109,7 @@
 
 
 .article-body{
+    color: white;
     font-family: var(--body-font);
     width: 40vw;
     margin: auto;
@@ -81,11 +118,17 @@
 .article-body p{
     margin-bottom: 2em;
 }
-
+.text-link{
+    color: white;
+}
+.text-link:hover{
+    color: var(--covid-purple);
+}
 
 /* CREDITS - shouldn't need to change anything! */
 
 .article-credits{
+    color: white;
     text-align: center;
     font-family: var(--hed-font-default);
 }
@@ -106,7 +149,7 @@
     margin-top: 1.5em;
 }
 .credits-link a{
-    color: black;
+    color: white;
     transition: color 1s ease;
 }
 .credits-link a:hover{
@@ -117,6 +160,10 @@
 /* MOBILE STYLING - add any mobile specific CSS here but please leave navbar styling as is!*/
 
 @media screen and (max-width: 700px){
+    .unmasked-logo{
+        font-size: 2em;
+        text-align: center;
+    }
     .mag-navbar{
         height: 5vh;
     }

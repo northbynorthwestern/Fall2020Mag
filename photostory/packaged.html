@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>body {
+    margin: 0px;
+  }
+  
+  .parallax {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .header {
+    background-image: url(https://northbynorthwestern.com/content/images/2020/12/hed.png);
+    min-height: 100vh;
+    width: 100%;
+    background-size: contain;
+  }
+  
+  .part1 {
+    background-image: url(https://northbynorthwestern.com/content/images/2020/12/teddy_bear.JPG);
+    min-height: 100vh;
+  }
+  
+  .part2 {
+    background-image: url(https://northbynorthwestern.com/content/images/2020/12/three_animals_horizontal.jpg);
+    height: fit-content;
+    background-size: cover;
+  }
+  
+  .part3 {
+    background-image: url(https://northbynorthwestern.com/content/images/2020/12/shark_holding_hands.jpg);
+    height: fit-content;
+    background-size: cover;
+  }
+  
+  .part4 {
+    background-image: url(https://northbynorthwestern.com/content/images/2020/12/picnic-1.jpg);
+    height: fit-content;
+    background-size: cover;
+  }
+  
+  .part5 {
+    background-image: url(https://northbynorthwestern.com/content/images/2020/12/cow.jpg);
+    height: fit-content;
+    background-size: cover;
+  }
+  
+  .text {
+    position: relative;
+    padding: 10px;
+    width: 30%;
+    margin: auto;
+    margin-left: 4%;
+    font-size: 16px;
+    font-family: 'PT Serif', serif;
+    opacity: 0.75;
+  }
+  .text p{
+    background-color: white;
+    padding: 1em;
+  }
+  
+  .article-credits{
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+  }
+  .credits-heading{
+    font-size: 2em;
+    margin-bottom: .5em;
+  }
+  .credits-subhed{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .credits-item{
+    margin-top: .5em;
+    margin-bottom: 1em;
+    font-weight: 400;
+  }
+  .credits-link{
+    margin-top: 1.5em;
+  }
+  .credits-link a{
+    color: black;
+    transition: color 1s ease;
+  }
+  .credits-link a:hover{
+    color: #4E2A84;
+  }
+  
+  .article-byline{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    margin-left: 7%;
+    color:white;
+    z-index: 100;
+    position: relative;
+  }
+  .byline-link{
+    color: white;
+    transition: color 1s ease;
+  }
+  .byline-link:hover{
+    color: #4E2A84;
+  }
+  
+  .mag-navbar{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 7vh;
+    background-color: #342F2E;
+    padding: 1vh 0;
+    box-shadow: 1px 2px 1px;
+    z-index: 1;
+  }
+  .nbn-logo-nav{
+    margin-left: 1vw;
+    height: 100%;
+   
+  }
+  .nbn-path{
+    fill: white;
+    transition: fill 1s ease;
+  }
+  .homepage-link:hover .nbn-path{
+    fill: #B6ACD1
+  }
+  
+  @media screen and (max-width: 700px){
+    .mag-navbar{
+        height: 5vh;
+    }
+    .article-byline{
+        font-size: .70em;
+        margin-left: 11%;
+    }
+    .text {
+        width: 90vw;
+        font-size: 13px;
+    }
+  
+  }</style>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Faustina:ital,wght@0,600;0,700;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="mag-navbar">
+    <a class = "homepage-link" href="https://northbynorthwestern.com/magazine-current/">
+     <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="nbn-logo-nav" viewBox="0 0 1024.000000 1024.000000" preserveAspectRatio="xMidYMid meet"><g class="svg-path nbn-path" transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M4940 9953 c-891 -34 -1755 -309 -2480 -788 -714 -472 -1315 -1155        -1690 -1920 -256 -524 -403 -1040 -472 -1665 -20 -181 -17 -778 5 -965 138        -1165 628 -2168 1439 -2950 979 -943 2278 -1447 3551 -1377 361 20 653 64        1008 153 1403 350 2469 1207 3139 2524 267 524 425 1046 497 1635 25 207 25        772 0 985 -156 1312 -712 2376 -1662 3179 -147 125 -295 240 -300 234 -2 -2        155 -307 350 -678 195 -371 355 -678 355 -682 0 -5 -128 -8 -285 -8 l-285 0 0        -2690 0 -2690 -472 2 -471 3 -835 1877 c-459 1033 -838 1875 -843 1872 -5 -3        -9 -795 -9 -1885 l0 -1879 -490 0 -490 0 0 2695 0 2695 676 0 676 0 25 -27        c14 -16 49 -84 80 -153 296 -676 1177 -2651 1184 -2656 5 -3 9 582 9 1415 l0        1421 -255 0 c-140 0 -255 3 -255 6 0 3 194 374 431 825 237 451 433 828 436        838 4 15 -14 29 -84 69 -610 343 -1327 544 -2084 582 -186 9 -229 10 -399 3z"></path></g></svg>
+    </a>
+  </nav>
+
+<div class = "parallax header">
+  <h3 class="article-byline">
+    Written and photographed by 
+    <a class= "byline-link" href="https://www.northbynorthwestern.com/author/carly/">
+    <strong>Carly Menker</strong></a>
+  </h3>
+</div>
+
+<div class = "parallax part1">
+  <div class = "text">
+    <p>
+      Carl Morison, a Weinberg
+      third-year, didn’t bring his
+      teddy bear, Teddy, with him
+      to Northwestern when he lived
+      in a fraternity house. Despite the
+      fact that Teddy gave him immense
+      comfort when he was stressed out
+      or missing home, Teddy found his
+      place on a shelf or in the closet.
+    </p>
+   <p>
+    “I didn’t bring Teddy out much
+    because I didn’t want to have to
+    explain the story to many people,
+    and because it might have been
+    thought of as odd for a male-
+    identifying person to have a stuffed
+    animal on his bed,” Morison says.
+    As Morison got older, having
+    a stuffed animal came with a
+    negative stigma — so he began
+    to subconsciously look to other
+    methods of coping. He started
+    running or doing various
+    activities outside to help with
+    the general stress of college, as
+    well as stress-eating snacks and
+    watching lots of Netflix.
+  </p>
+    <p>
+      “For homesickness, instead of
+      using my Teddy to feel like home,
+      I would just call my parents or
+      family instead, as this also gave
+      a feeling of home. I feel like I
+      learned to use these things as
+      coping mechanisms to help me
+      relax, when I probably could have
+      gotten the same effect or better
+      from sleeping with my teddy bear,”
+      Morison says.
+    </p>
+   
+    <p>
+      Having a stuffed animal
+      can ameliorate the feeling of
+      loneliness or even simply just be
+      something to hug. According to
+      a 2018 study from OnePoll and
+      real estate company Life Storage,
+      43% of American adults engage
+      with stuffed animals. Despite this
+      commonality, a taboo still exists
+      — especially as we grow older. But
+      for Northwestern students, it can
+      provide a sense of comfort that’s
+      unlike anything else. <br><i>Photo submitted
+      by Carl Morison.</i> 
+    </p>
+
+  </div>
+
+</div>
+
+
+<div class = "parallax part2">
+  <div class = "text">
+    <p>    When she was born, Weinberg
+      third-year Caroline Forbess was
+      given two blanket bears and slept
+      with them every night. Even
+      though her parents thought they
+      were identical bears, she knew the
+      difference between them because
+      of their eyes, leading Forbess to
+      name one “Clean Bear” and the
+      other “Scratchy Bear.”</p>
+
+  <p> Then, when she was 10, her dad
+    gave her a basset hound stuffed
+    dog, which she named Amy: the
+    same name of her dad’s basset
+    hound when he was growing up.
+    Forbess calls her stuffed animals
+    her “lovies,” and they’ve come to
+    be some of her most important
+    possessions, essential to her
+    feeling safe.</p>
+   <p>
+    “When I was dropped off at
+    sleepaway camp for my first time,
+    I remember standing outside my
+    cabin watching my mom drive
+    away. I was crying so much, and I
+    was so homesick, but I had Beary
+    with me to hug and calm me,”
+    Forbess says.
+   </p>
+   <p>
+    Her lovies helped her cope with
+    the change and stress of being
+    away from home, something
+    that has continued throughout
+    her time at Northwestern. She
+    says they remind her of home
+    and family, and they’ve provided
+    tremendous support.
+   </p>
+   <p>
+    Forbess has a lot of test
+    anxiety, so the night before
+    exams, she usually has trouble
+    sleeping. Reaching for her lovies
+    provides her with the comfort
+    and peace of mind she needs to
+    calm her nerves. Her lovies have
+    helped her navigate the stress
+    of Northwestern, and without
+    their comfort, she’s not sure if
+    she would be able to handle the
+    quarter system as well as she does.
+   </p>
+   
+   <p>
+    “I have a special way I rub
+    them against my face, and it’s so
+    soothing. Even though lovies are
+    seen as a childhood thing, I believe
+    if having your lovies is what helps
+    you sleep at night, then you should
+    have them with you no matter
+    your age,” Forbess says.
+   </p>
+  
+  </div>
+</div>
+
+<div class = "parallax part3">
+  <div class = "text">
+    <p>
+      Sven, a plush shark, came into
+      Medill and Bienen third-year
+      Nadine Manske’s life when she
+      was shopping at Ikea the summer
+      before college. Manske knew she
+      wanted something comforting to
+      take with her, and when she saw
+      the bucket full of plush sharks,
+      she knew she was going to take
+      one home.
+    </p>
+   <p>
+    “I remember that it wasn’t my
+    intention to pick him up. I think I
+    was there to look at other furniture
+    for my dorm, or running errands
+    with my family, and I saw the bin
+    of sharks and I knew I had to take
+    one home with me. It wasn’t even
+    a question; I just knew I had to
+    have him,” Manske says.
+   </p>
+
+    <p>
+      Because she got him right
+      before going away to school, Sven
+      has symbolically been helping her
+      throughout the transition to being
+      away from home and everything
+      since then. Sven has been an
+      easy, low-maintenance source of
+      comfort for Manske — especially
+      with her mental health.
+    </p>
+
+    <p>
+      “There are some times when
+      your brain is too full of everything
+      and you just want to sit there with
+      your Ikea shark,” Manske says.
+      When she’s stressed, she hugs
+      Sven. To her, having a way to
+      ground yourself with a physical
+      source of constant support and
+      comfort is really important.
+    </p>
+
+  </div>
+</div>
+
+<div class = "parallax part4">
+  <div class = "text">
+    <p>
+      Stuffed animals have always
+      been a part of Medill third-year
+      Sophia Lo’s life; since she was a
+      little girl, she’s had a collection of
+      them that continues to grow. Lo
+      found Alfie, a life-size plush bear,
+      on Northwestern’s “Free & For Sale”
+      Facebook group. She then knew she
+      had to bring her giant plush hamster,
+      Sesame, who she won at Six Flags,
+      back with her to Northwestern so
+      Alfie the bear could have a friend.
+    </p>
+ 
+    <p>
+      Lo drove from New Jersey to
+      Evanston with two friends and an
+      extra seat in the car for Sesame,
+      but the car was packed so tightly
+      that Sesame stayed in Lo’s lap
+      the entire time. Lo created a
+      Twitter feed to document the
+      trip, where Sesame ate egg and
+      cheese bagels and took naps
+      with Lo in the car.
+    </p>
+
+    <p>
+      “It was a lot of fun coming up
+      with tweets and taking pictures
+      along the way. My favorite
+      picture is the one where Sesame
+      is pumping his gas for the first
+      time because he is from New
+      Jersey,” Lo says.
+    </p>
+
+    <p>
+      Growing up, stuffed animals
+      have always been comforting for
+      Lo, and at school she has a bunch,
+      including three Squishmallows.
+      They help her with stress, as they
+      can be something fun to touch
+      or play with. Many of her stuffed
+      animals were actually given to her
+      rather than purchased herself.
+      Even though Lo agrees they can
+      be for little kids, they’re always
+      going to be a part of her life.
+    </p>
+ 
+  </div>
+</div>
+
+<div class = "parallax part5">
+  <div class = "text">
+    <p>
+      Muchi the stuffed cow came
+      into Weinberg third-year Nathalie
+      Fuhrman’s life when she was 5
+      years old. Since then, Muchi has
+      slept with her every night.
+      “He went through all of high
+      school and college so far with
+      me,” Fuhrman says. “He’s now
+      molded so he fits perfectly in
+      the shape that I put my arms in
+      when I sleep.”
+    </p>
+
+    <p>
+      If sad or upset, Fuhrman
+      would hug Muchi, who has been
+      in her life for so long that his
+      comfort is natural to her. When
+      on a family vacation in Portugal,
+      she forgot Muchi on the hotel
+      bed in the rush to the airport.
+      Frantic, Fuhrman begged her
+      parents to get him back; the
+      hotel ended up shipping Muchi
+      back to the United States for
+      her, but she had to pay the
+      international shipping fee.
+    </p>
+
+    <p>
+      “I paid probably more than
+      he’s worth to get him shipped
+      back home. I don’t know how to
+      explain it, Muchi just feels like a
+      part of me; I couldn’t lose him,”
+      Fuhrman says.
+    </p>
+
+    <p>
+      When leaving for college,
+      Fuhrman was sure to pack Muchi
+      along with her. She reaches for
+      him whenever she is homesick
+      at Northwestern and especially
+      when the challenges of school
+      become more demanding. Muchi
+      has been something constant for
+      her throughout her whole life,
+      and without him, Fuhrman’s not
+      sure what she’d do.
+    </p>
+
+    <p>
+      “Leaving home to a place
+      where you don’t know anyone is
+      scary. That was a way for me to
+      have a comfort of home with me,”
+      Fuhrman says.
+    </p>
+
+  </div>
+</div>
+
+<footer class="article-credits">
+  <h3 class="credits-heading">Credits</h3>
+  <h2 class="credits-subhed">Writing and Photography</h2>
+  <h3 class="credits-item">Carly Menker</h3>
+  <h2 class="credits-subhed">Print Design</h2>
+  <h3 class="credits-item">Maren Kranking</h3>
+  <h2 class="credits-subhed">Web Design & Development</h2>
+  <h3 class="credits-item">Olivia Lloyd</h3>
+  <h2 class="credits-link"><a href="https://northbynorthwestern.com/magazine-current/">Back to Magazine Homepage</a></h2>
+</footer>
+
+</body>
+</html>

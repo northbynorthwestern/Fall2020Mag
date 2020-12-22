@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* DEFAULT FONTS - feel free to add any other variables you need here */
+        
+        :root{
+        
+            /* Default font for headlines, headings, bylines, etc. */
+            --hed-font-default: 'Barlow', sans-serif; 
+            /* Font used for headlines if print design uses serif font */
+            --hed-font-serif: 'Faustina', serif;
+            /* Default font for body text */
+            --body-font: 'PT Serif', serif;
+        }
+        
+        .mag-navbar{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 7vh;
+            background-color: #342F2E;
+            padding: 1vh 0;
+            box-shadow: 1px 2px 1px;
+            z-index: 100;
+        }
+        .nbn-logo-nav{
+            margin-left: 1vw;
+            height: 100%;
+           
+        }
+        .nbn-path{
+            fill: white;
+            transition: fill 1s ease;
+        }
+        .homepage-link:hover .nbn-path{
+            fill: #B6ACD1
+        }
+        
+        /* HED, DEK, BYLINE - feel free to play with this! */
+        
+        .article-top-content{
+            margin-top: 15vh;
+            text-align: center;
+        }
+        .article-hed{
+            /* replace "default" with "serif" if article uses a serif font in the hed */
+            font-family: var(--hed-font-serif);
+            font-size: 4em;
+            margin-bottom: .2em;   
+        }
+        .article-dek{
+            font-family: var(--hed-font-default);
+            margin-top: 1em;
+            font-size: 1.5em;
+            margin-bottom: 0;
+            font-weight: 500;
+            color: #6f9bb7;
+        }
+        .article-byline{
+            font-family: var(--hed-font-default);
+            font-weight: 400;
+            margin-top: .5em;
+            font-size: 1.2em;
+            margin-bottom: 3em;
+        }
+        .byline-link{
+            color: black;
+            transition: color 1s ease;
+        }
+        .byline-link:hover{
+            color: #4E2A84;
+        }
+        
+        
+        /* ARTICLE BODY - customize however you want! */
+        
+        .article-body{
+            font-family: var(--body-font);
+            width: 50%;
+            margin: auto;
+            font-size: 1.2em;
+        }
+        .article-body p{
+            margin-bottom: 2em;
+        }
+        
+        .img {
+            width: 50%;
+            height: 50%;
+            padding-right: 30px;
+            margin-left: -40px;
+            float: left;
+        }
+        
+        .img2 {
+            width: 100%;
+            height: 100%;
+            margin-top: 2vh;
+        }
+        
+        .p1 {
+            margin-top: -10vh;
+        }
+        
+        
+        /* CREDITS - shouldn't need to change anything! */
+        
+        .article-credits{
+            text-align: center;
+            font-family: var(--hed-font-default);
+        }
+        .credits-heading{
+            font-size: 2em;
+            margin-bottom: .5em;
+        }
+        .credits-subhed{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .credits-item{
+            margin-top: .5em;
+            margin-bottom: 1em;
+            font-weight: 400;
+        }
+        .credits-link{
+            margin-top: 1.5em;
+        }
+        .credits-link a{
+            color: black;
+            transition: color 1s ease;
+        }
+        .credits-link a:hover{
+            color: #4E2A84;
+        }
+        
+        
+        /* MOBILE STYLING - add any mobile specific CSS here but please leave navbar styling as is!*/
+        
+        @media screen and (max-width: 700px){
+            .mag-navbar{
+                height: 5vh;
+            }
+            .article-hed{
+                font-size: 3em;
+            }
+            .article-dek{
+                font-size: 1.5em;
+            }
+            .article-byline{
+                font-size: 1em;
+            }
+            .article-body{
+                width: 90vw;
+            }
+        
+            .img {
+                margin-left: 0;
+            }
+        
+        }</style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Faustina:ital,wght@0,600;0,700;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Talk Data to Me</title>
+</head>
+<body>
+
+    <!-- Please don't touch anything in this nav tag! -->
+    <nav class="mag-navbar">
+        <a class = "homepage-link" href="https://northbynorthwestern.com/magazine-current/">
+         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="nbn-logo-nav" viewBox="0 0 1024.000000 1024.000000" preserveAspectRatio="xMidYMid meet"><g class="svg-path nbn-path" transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M4940 9953 c-891 -34 -1755 -309 -2480 -788 -714 -472 -1315 -1155        -1690 -1920 -256 -524 -403 -1040 -472 -1665 -20 -181 -17 -778 5 -965 138        -1165 628 -2168 1439 -2950 979 -943 2278 -1447 3551 -1377 361 20 653 64        1008 153 1403 350 2469 1207 3139 2524 267 524 425 1046 497 1635 25 207 25        772 0 985 -156 1312 -712 2376 -1662 3179 -147 125 -295 240 -300 234 -2 -2        155 -307 350 -678 195 -371 355 -678 355 -682 0 -5 -128 -8 -285 -8 l-285 0 0        -2690 0 -2690 -472 2 -471 3 -835 1877 c-459 1033 -838 1875 -843 1872 -5 -3        -9 -795 -9 -1885 l0 -1879 -490 0 -490 0 0 2695 0 2695 676 0 676 0 25 -27        c14 -16 49 -84 80 -153 296 -676 1177 -2651 1184 -2656 5 -3 9 582 9 1415 l0        1421 -255 0 c-140 0 -255 3 -255 6 0 3 194 374 431 825 237 451 433 828 436        838 4 15 -14 29 -84 69 -610 343 -1327 544 -2084 582 -186 9 -229 10 -399 3z"></path></g></svg>
+        </a>
+    </nav>
+    <header class="article-top-content">
+        <h1 class="article-hed">Talk <span style = "color: #6f9bb7"> Data </span>to Me</h1>
+        <h2 class="article-dek">An inside look at the Northwestern Open Data Initiative’s path to accessible information.</h2>
+        <h3 class="article-byline">Written by <a class= "byline-link" href="https://www.northbynorthwestern.com/author/niki/" target = "_blank"><strong>Niki Amir</strong></a></h3>
+
+    </header>
+    <article class="article-body">
+        
+        <img class = "img" src = "https://northbynorthwestern.com/content/images/2020/12/illo.jpg" alt = "image of a person made out of puzzle pieces">
+        <p>Last winter, Rahul Shukla and seven of his peers came together to create Northwestern’s Open Data Initiative, affectionately known as NODI. While working on a class project to find data on Northwestern,the Weinberg fourth-year grew frustrated ashe combed through inaccessible PDFs in the campus data ecosystem. So, he took on the task of creating a centralized portal for all of Northwestern’s data.</p>
+        <p>By creating a portal that is both accessible and user-friendly, Shukla and his team say they hope to create more engagement with data across the Northwestern community.</p>
+        <p>Finding and sorting through data is time-consuming, Shukla says. Most university data at Northwestern is stored as PDFs rather than Excel sheets, making it harder to conduct analyses.</p>
+        <p>The portal aggregates data sets such as Northwestern’s operating budget for fiscal year 2018, total enrollment by ethnicity, gender and campus for fall 2019 and tuition and fees by program (from 1998 to 2020).</p>
+        <p>Currently, these data sets are available to certain offices within the University. Assistant Vice President for Information and Analytics within Northwestern’s Office of Administration and Planning Amit Prachand calls these the "data stewards." These include administrative offices like Human Resources, Student Affairs and the Office of the Registrar, but NODI would make these public data accessible to students as well.</p>
+        <p>This project was partially inspired by Shukla’s friendship with Nik Marda, a fourth-year at Stanford University. Marda is one of the co-founders of Stanford’s Open Data Project and supports creating a campus culture of data engagement.</p>
+        <p>Marda and his co-founder, Stanford fourth-year Arjun Ramani, realized the need for an open data portal after working for The Stanford Daily. Ramani, who has a keen interest in data journalism, echoed an idea from a Stanford professor that “the plural of anecdote is data.”</p>
+        <p>“The tool of the journalist is oftentimes the interview,” Ramani says. “It would obviously be enhanced a lot by having many, many different anecdotes all pulled together in the data set.”</p>
+        <p>Ramani realized there were two likely reasons why such a centralized data portal didn’t already exist: The University may not have invested enough in the idea, or it may have intentionally decided not to publicize some data. In either case, Ramanai and Marda set to work. By September 2019, their site was fully functional.</p>
+        <p>The Stanford duo’s open data project was directly inspired by their journalistic endeavors. According to Shukla, the Northwestern team had similar motivations, hoping to provide resources for on-campus publications’ use.</p>
+        <p>“In an age of misinformation, data is everything. You can ground arguments in data, and data effectively becomes the ground truth for a lot of essays or articles or policies,” Shukla says. “There's another point to consider, which is that data may not often tell the entirety of the story.”</p>
+        <p>Both groups are advocating for better open data policy on their campuses and nationally, and pursuing partnerships with students organizations and other stakeholders.</p>
+        <p>Data governance entails looking at the potential for harm, weighing risks versus benefits and verifying the reliability of data. One college-specific problem arises with the use of self-reported data, which is often collected from campus surveys. Since it is harder to verify the reliability of this data, they need to make additional risk assessments, according to Ramani.</p>
+        <p>“I do think it's important to have [usable] information ... but I also think it's critical that there are questions that precede the use of the data,” Prachand says. “What is it that the data might help answer? My hope is that this [project] may spark additional interest in asking the question and finding out what data can be available more publicly or in a way or format that is more digestible.”</p>
+        <p>Some frameworks for student privacy protection already exist. For example, Prachand’s office will not publish demographic data if fewer than five to seven students hold a particular identity and the specificity of the data could put them at risk of identification.</p>
+        <img class = "img2" src = "https://northbynorthwestern.com/content/images/2020/12/puzzle.png" alt = "pull quote">
+        <p class = "p1">For Marda, the mission of the project goes beyond the data of any one student, reflecting a larger need to safeguard and empower those who are more vulnerable.</p>
+        <p>“Good data governance isn't just about protecting the privacy of individuals, which is often how it's framed,” Marda says. “It’s not just about harm reduction but also about how we can make sure that open data serves the interests of communities that are often not served by existing systems and stuctures.</p>
+        <p>In that vein, the open data projects aim to engage student activists, allowing them to organize petitions or letters addressed to the universities around data sets available through the portal. They would also include a website listing data sets that have been requested by community members that the University has failed to provide.</p>
+        <p>“It’s also about making sure that the concerns of communities at the greatest risk of harm are considered throughout the entire data life cycle, from when data is collected to how it’s cleaned to where it’s published and then how it’s used afterwards,” says Marda.</p>
+        <p>Dealing with open data can raise ethical concerns, especially in a university context. Questions surrounding the integrity of the data, what data is available, who has access to it and how this can be controlled need to be addressed before any data can be published for public use.</p>
+        <p>In an effort to collaborate, some students on Northwestern and Stanford’s data teams are working on a handbook for other students to start their own campus data portals, planning to meet once a week in spring quarter to develop the guide. It will include a data governance section that details how to select data and the considerations that need to be taken. While much of the content is borrowed from existing data governance literature, according to Marda and Ramani, the principles had to be distilled to be useful for creating data portals at universities.</p>
+        <p>Having an institution-wide approach to cleaning up and defining data puts a standard structure in place to catch and rectify errors, Prachand says. He warns, “if we each have our own version, there’s no truth.”</p>
+
+    </article>
+
+    <footer class="article-credits">
+        <h3 class="credits-heading">Credits</h3>
+        <h2 class="credits-subhed">Writing</h2>
+        <h3 class="credits-item">Niki Amir</h3>
+        <h2 class="credits-subhed">Editing</h2>
+        <h3 class="credits-item">Rachel Schonberger</h3>
+        <h2 class="credits-subhed">Print Design</h2>
+        <h3 class="credits-item">Juntang Qian</h3>
+        <h2 class="credits-subhed">Web Design & Development</h2>
+        <h3 class="credits-item">Stephanie Zhu</h3>
+        <h2 class="credits-link"><a href="https://northbynorthwestern.com/magazine-current/">Back to Magazine Homepage</a></h2>
+    </footer>
+
+</body>
+</html>

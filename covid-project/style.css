@@ -12,6 +12,24 @@
     --covid-purple: #7666ad;
     --covid-yellow: #efe93a;
 }
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 body{
     background-color: #330000;
     overflow-x: hidden;
@@ -53,9 +71,9 @@ body{
     font-family: var(--hed-font-default);
     font-size: 8em;
     margin-bottom: 0;
-    text-shadow: 2px 2px 1px var(--covid-yellow);
+    text-shadow: 5px 5px 1px var(--covid-purple);
     /* -webkit-text-stroke: 1px var(--covid-yellow); */
-    color: var(--covid-purple);
+    color: white;
     /* transition: all 1s ease; */
     
 }

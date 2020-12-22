@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* DEFAULT FONTS - feel free to add any other variables you need here */
+        
+        :root{
+        
+            /* Default font for headlines, headings, bylines, etc. */
+            --hed-font-default: 'Barlow', sans-serif; 
+            /* Font used for headlines if print design uses serif font */
+            --hed-font-serif: 'Faustina', serif;
+            /* Default font for body text */
+            --body-font: 'PT Serif', serif;
+            --theme-orange: #EE7F57;
+        }
+        body{
+            overflow-x: hidden;
+        }
+        .mag-navbar{
+            z-index: 100;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 7vh;
+            background-color: #342F2E;
+            padding: 1vh 0;
+            box-shadow: 1px 2px 1px;
+        }
+        .plug-illo{
+            top: 10vh;
+            left: 0;
+            position: absolute;
+            width: 10vw;
+        }
+        .nbn-logo-nav{
+            margin-left: 1vw;
+            height: 100%;
+           
+        }
+        .nbn-path{
+            fill: white;
+            transition: fill 1s ease;
+        }
+        .homepage-link:hover .nbn-path{
+            fill: #B6ACD1
+        }
+        
+        /* HED, DEK, BYLINE - feel free to play with this! */
+        
+        .article-top-content{
+            position: relative;
+            z-index: 10;
+            margin-top: 15vh;
+            text-align: center;
+        }
+        .article-hed{
+            /* replace "default" with "serif" if article uses a serif font in the hed */
+            font-family: var(--hed-font-default);
+            font-size: 4em;
+            margin-bottom: 0;
+            color: var(--theme-orange);
+            font-weight: 500;
+            
+        }
+        .hed-span{
+            font-weight: 700;
+            font-style: italic;
+        }
+        .article-dek{
+            font-family: var(--hed-font-default);
+            margin-top: 0;
+            font-size: 2em;
+            margin-bottom: 0;
+            font-weight: 400;
+        }
+        .article-byline{
+            font-family: var(--hed-font-default);
+            font-weight: 400;
+            margin-top: .5em;
+            font-size: 1.5em;
+        }
+        .byline-link{
+            color: black;
+            transition: color 1s ease;
+        }
+        .byline-link:hover{
+            color: #4E2A84;
+        }
+        
+        
+        /* ARTICLE BODY - customize however you want! */
+        
+        
+        .article-body{
+            font-family: var(--body-font);
+            width: 40vw;
+            margin: auto;
+            font-size: 1.2em;
+        }
+        .article-body p{
+            position: relative;
+            z-index: 5;
+            margin-bottom: 2em;
+        }
+        
+        .laptop-illo{
+            position: absolute;
+            right: 0;
+            width: 20vw;
+            z-index: 3;
+        }
+        /* CREDITS - shouldn't need to change anything! */
+        
+        .article-credits{
+            text-align: center;
+            font-family: var(--hed-font-default);
+        }
+        .credits-heading{
+            font-size: 2em;
+            margin-bottom: .5em;
+        }
+        .credits-subhed{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .credits-item{
+            margin-top: .5em;
+            margin-bottom: 1em;
+            font-weight: 400;
+        }
+        .credits-link{
+            margin-top: 1.5em;
+        }
+        .credits-link a{
+            color: black;
+            transition: color 1s ease;
+        }
+        .credits-link a:hover{
+            color: #4E2A84;
+        }
+        
+        
+        /* MOBILE STYLING - add any mobile specific CSS here but please leave navbar styling as is!*/
+        
+        @media screen and (max-width: 700px){
+            .mag-navbar{
+                height: 5vh;
+            }
+            .article-hed{
+                font-size: 3em;
+            }
+            .article-dek{
+                font-size: 1.5em;
+            }
+            .article-byline{
+                font-size: 1em;
+            }
+            .article-body{
+                width: 90vw;
+            }
+            .laptop-illo{
+                width: 50vw;
+                opacity: .1;
+            }
+            .plug-illo{
+                width: 50vw;
+                opacity: .2;
+            }
+        }</style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Faustina:ital,wght@0,600;0,700;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Castaways on campus</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- Please don't touch anything in this nav tag! -->
+    <nav class="mag-navbar">
+        <a class = "homepage-link" href="https://northbynorthwestern.com/magazine-current/">
+         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="nbn-logo-nav" viewBox="0 0 1024.000000 1024.000000" preserveAspectRatio="xMidYMid meet"><g class="svg-path nbn-path" transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M4940 9953 c-891 -34 -1755 -309 -2480 -788 -714 -472 -1315 -1155        -1690 -1920 -256 -524 -403 -1040 -472 -1665 -20 -181 -17 -778 5 -965 138        -1165 628 -2168 1439 -2950 979 -943 2278 -1447 3551 -1377 361 20 653 64        1008 153 1403 350 2469 1207 3139 2524 267 524 425 1046 497 1635 25 207 25        772 0 985 -156 1312 -712 2376 -1662 3179 -147 125 -295 240 -300 234 -2 -2        155 -307 350 -678 195 -371 355 -678 355 -682 0 -5 -128 -8 -285 -8 l-285 0 0        -2690 0 -2690 -472 2 -471 3 -835 1877 c-459 1033 -838 1875 -843 1872 -5 -3        -9 -795 -9 -1885 l0 -1879 -490 0 -490 0 0 2695 0 2695 676 0 676 0 25 -27        c14 -16 49 -84 80 -153 296 -676 1177 -2651 1184 -2656 5 -3 9 582 9 1415 l0        1421 -255 0 c-140 0 -255 3 -255 6 0 3 194 374 431 825 237 451 433 828 436        838 4 15 -14 29 -84 69 -610 343 -1327 544 -2084 582 -186 9 -229 10 -399 3z"></path></g></svg>
+        </a>
+    </nav>
+    <img src="https://northbynorthwestern.com/content/images/2020/12/Plug.png" class="plug-illo" alt="Illustration of a laptop charger with a Survivor logo on it">
+    <header class="article-top-content">
+        <h1 class="article-hed"><span class="hed-span">Castaways</span> on campus</h1>
+        <h2 class="article-dek">18 contestants. One sole survivor.</h2>
+        <h3 class="article-byline">WRITTEN BY <a class= "byline-link" href="https://northbynorthwestern.com/author/rachel-schonberger/" target="_blank"><strong>RACHEL SCHONBERGER</strong></a></h3>
+
+    </header>
+    <article class="article-body">
+
+        <p>A chosen group of Northwestern contestants compete in a game of strategy, strength and wit until one sole survivor remains on Zoom. Although they weren’t cast away on a deserted island like contestants on the CBS reality show <em>Survivor</em>, these students resolved to outlast one another through social, mental and physical competitions. Now, <em>Survivor Northwestern</em> is filming its second season, with former and current castaways hoping it quickly becomes a campus mainstay.</p>
+        <p>Communication second-year Kylie Boyd unsuccessfully applied to the CBS show before joining <em>Survivor Northwestern</em> as a Season 1 castaway and current Season 2 co-host</p>
+        <p>“Playing on campus absolutely prepared me if I
+            ever end up on the real show,” Boyd says. “The level
+            of gameplay on our season, I will confidently say, was
+            higher than some of the seasons of actual <em>Survivor</em>.”</p>
+            <p>The production consists of students vlogging their
+                strategic conversations and competing in weekly
+                virtual challenges to form powerful alliances and win
+                safety from elimination. </p>
+        <img src="https://northbynorthwestern.com/content/images/2020/12/survivorlaptop.png" class="laptop-illo" alt="Illustration of a laptop screen with a Survivor contestant waving at a camera.">
+        <p>Last year, Class of 2020 alumnus Chase Reed was the
+            show's only producer, which delayed the first season
+            release to a potential fall 2021 premiere. To improve
+            the efficiency and quality of production, 11 students and
+            alumni formed an official production team for Season 2.</p>
+        <p>“When you're watching it on TV, there are so many
+            question marks because the editing team is crafting
+            a story where each of the cast fits a narrative,” says
+            Season 2 Executive Producer and Weinberg fourth-year
+            Carson Knoer. “I'm really excited to get the opportunity
+            with Season 2 to be on the other side and craft those
+            stories and craft those narratives for the whole new
+            batch of castaways.</p>
+        <p> The move to remote classes interrupted Knoer’s
+            experience on Season 1, which began in January. Still,
+            challenges and gameplay continued virtually. 
+            </p>
+            <p>challenges and gameplay continued virtually.
+                “<em>Survivor Northwestern</em> was a godsend,” says Knoer.
+                “It gave me the opportunity to reach out and connect
+                with people consistently online from home in a way
+                that my other student orgs did not.”</p>
+            <p> In March, fellow Season 1 castaway Matthew
+                Albert turned to his <em>Survivor</em> community when the
+                coronavirus hit his hometown of New Rochelle, New
+                York. After the SESP third-year’s father contracted the
+                virus, Albert was confined to his bedroom.</p>
+            <p>“All that I had to brighten up my days was <em>Survivor</em>,”
+                Albert says. “When I reflect on my season, and the people who I’ve worked with specifically, I think of
+                them as so much more than allies.”</p>
+            <p>Season 1 castaway and Season 2 casting director Sami
+                DeVries left her season with a ride-or-die friendship
+                with Boyd. The two second-year theatre majors bonded
+                over their similarities, aligning from the beginning.</p>
+            <p>“I love my friends outside of <em>Survivor</em>, but there's
+                something really special about the bonds that I have
+                with the people that I met on <em>Survivor</em> that I can't
+                really get other places,” DeVries says. </p>
+            <p>In casting the second season, DeVries aimed for
+                a group that represented the diverse interests and
+                identities of Northwestern students.</p>
+            <p>“We wanted lots of different people with lots of
+                different personalities that would mesh well together
+                but not mesh too well together,” says DeVries.
+                “Whenever we would read applications, we would
+                decide what archetype this person could fill.”</p>
+            <p>Since the show is not yet a registered student
+                organization, the team has been fundraising and
+                spending out-of-pocket. As Knoer and other production
+                team members watch Season 2 unfold, they already
+                plan to film Season 3 in the winter and continue
+                growing the organization.</p>
+            <p>“Being a part of the inaugural cast is something
+                that is really special to me because I do see this being
+                present for years to come,” Knoer says. “To be part of
+                that first group is really powerful.</p>
+    </article>
+
+    <footer class="article-credits">
+        <h3 class="credits-heading">Credits</h3>
+        <h2 class="credits-subhed">Writing</h2>
+        <h3 class="credits-item">Rachel Schonberger</h3>
+        <h2 class="credits-subhed">Editing</h2>
+        <h3 class="credits-item">Annie Cao</h3>
+        <h2 class="credits-subhed">Print Design</h2>
+        <h3 class="credits-item">Juntang Qian</h3>
+        <h2 class="credits-subhed">Web Design & Development</h2>
+        <h3 class="credits-item">David Deloso</h3>
+        <h2 class="credits-link"><a href="https://northbynorthwestern.com/magazine-current/">Back to Magazine Homepage</a></h2>
+    </footer>
+
+</body>
+<script>gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".plug-illo", 
+    {x: -100, duration: 1}, 1.5);
+    
+    gsap.from(".laptop-illo", 
+    {scrollTrigger:{
+        trigger: ".laptop-illo"
+    }, x: 600, duration: 2}, 1);
+    
+    </script>
+</html>
