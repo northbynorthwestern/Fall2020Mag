@@ -1,0 +1,265 @@
+
+/* DEFAULT FONTS - feel free to add any other variables you need here */
+
+:root{
+
+    /* Default font for headlines, headings, bylines, etc. */
+    --hed-font-default: 'Barlow', sans-serif; 
+    /* Font used for headlines if print design uses serif font */
+    --hed-font-serif: 'Faustina', serif;
+    /* Default font for body text */
+    --body-font: 'PT Serif', serif;
+}
+body{
+    overflow-x: hidden;
+    background-color: #f8fca9;
+}
+.mag-navbar{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 7vh;
+    background-color: #342F2E;
+    padding: 1vh 0;
+    box-shadow: 1px 2px 1px;
+    z-index: 100;
+}
+.nbn-logo-nav{
+    margin-left: 1vw;
+    height: 100%;
+   
+}
+.nbn-path{
+    fill: white;
+    transition: fill 1s ease;
+}
+.homepage-link:hover .nbn-path{
+    fill: #B6ACD1
+}
+
+/* HED, DEK, BYLINE - feel free to play with this! */
+
+.article-top-content{
+    margin-top: 15vh;
+    text-align: center;
+}
+.article-hed{
+    /* replace "default" with "serif" if article uses a serif font in the hed */
+    font-family: var(--hed-font-default);
+    font-size: 4em;
+    margin-bottom: 0;
+    
+}
+.article-dek{
+    font-family: var(--hed-font-default);
+    margin-top: 0;
+    font-size: 2em;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+.article-byline{
+    font-family: var(--hed-font-default);
+    font-weight: 400;
+    margin-top: .5em;
+    font-size: 1.5em;
+}
+.byline-link{
+    color: black;
+    transition: color 1s ease;
+}
+.byline-link:hover{
+    color: #4E2A84;
+}
+.names {
+    display: flex;
+    margin-bottom: 0px;
+    font-size: 2.5em;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+    height: 18vh;
+}
+
+.first_name {
+    position: relative;
+    right: 100vw;
+    width: 900px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+
+.last_name {
+    position: relative;
+    left: 100vw;
+    width: 900px;
+    padding-left: 0px;
+}
+
+.first_name p{
+        text-align: right;
+        padding: 5px;
+        color: orange;
+        background-color: #ffd6f0;
+        }
+      
+      @keyframes slidein1 {
+        from {
+          right: 100vw;
+          width: 100%;
+        }
+      
+        to {
+          right: 0;
+          width: 100%; 
+        }
+      }
+.animated-first{
+    animation-duration: 1s;
+    animation-name: slidein1;
+    animation-fill-mode: forwards;
+}
+.last_name p{
+    padding: 5px;
+    color: #ffd6f0;
+    background-color: orange;
+    }
+      
+    @keyframes slidein2 {
+        from {
+          left: 100vw;
+          width: 100%;
+        }
+      
+        to {
+          left: 0;
+          width: 100%;
+        }
+      }
+
+.animated-last{
+    animation-duration: 1s;
+    animation-name: slidein2;   
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+/* ARTICLE BODY - customize however you want! */
+
+.shira img {
+    width: 30%;
+    float: left;
+}
+
+.tadese img{
+    width: 30%;
+    float: right;
+}
+
+.lauren img {
+    width: 30%;
+    float: left;
+    padding-right: 25px;
+}
+
+.zaria img {
+    width: 30%;
+    float: right;
+}
+
+.article-body{
+    font-family: var(--body-font);
+    width: 85vw;
+    margin: auto;
+    font-size: 1.2em;
+}
+.article-body p{
+    margin-bottom: 2em;
+}
+
+.article-credits{
+    text-align: center;
+    font-family: var(--hed-font-default);
+}
+.credits-heading{
+    font-size: 2em;
+    margin-bottom: .5em;
+}
+.credits-subhed{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.credits-item{
+    margin-top: .5em;
+    margin-bottom: 1em;
+    font-weight: 400;
+}
+.credits-link{
+    margin-top: 1.5em;
+}
+.credits-link a{
+    color: black;
+    transition: color 1s ease;
+}
+.credits-link a:hover{
+    color: #4E2A84;
+}
+
+
+/* MOBILE STYLING - add any mobile specific CSS here but please leave navbar styling as is!*/
+
+@media screen and (max-width: 700px){
+    .mag-navbar{
+        height: 5vh;
+    }
+    .article-hed{
+        font-size: 3em;
+    }
+    .article-dek{
+        font-size: 1.5em;
+    }
+    .article-byline{
+        font-size: 1em;
+    }
+    .article-body{
+        width: 90vw;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    .shira img {
+        width: 100%;
+        padding-bottom: 15px;
+    }
+    .tadese img {
+        width: 100%;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+    #first-3, #last-3{
+        font-size: 40px;
+    }
+    .lauren img {
+        width: 100%;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+    .zaria img {
+        width: 100%;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+    html {
+        margin-left: 10%;
+        margin-right: 15%;
+    }
+    .article-top-content {
+        margin-left: 20%; 
+        justify-content: center;
+    }
+
+    .article-credits {
+        justify-content: center;
+        margin-left: 25%;
+    }
+
+}
