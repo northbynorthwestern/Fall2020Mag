@@ -45,9 +45,15 @@
     font-family: var(--hed-font-default);
     font-size: 4em;
     margin-bottom: 0;
+    color: #574788;
     
 }
+.hed-span{
+    font-weight: 300;
+    color: #ef7f58;
+}
 .article-dek{
+    
     font-family: var(--hed-font-default);
     margin-top: 0;
     font-size: 2em;
@@ -59,8 +65,10 @@
     font-weight: 400;
     margin-top: .5em;
     font-size: 1.5em;
+    font-weight: 300;
 }
 .byline-link{
+    font-weight: 500;
     color: black;
     transition: color 1s ease;
 }
@@ -81,10 +89,32 @@
 .article-body p{
     margin-bottom: 2em;
 }
-
-
+.article-body img{
+    width: 50%;
+    margin: 0 25%;
+}
+.pull-quote{
+    width: 100%;
+    margin: 1em 0;
+}
+.quote-text{
+    font-family: var(--hed-font-default);
+    font-size: 2em;
+    font-weight: 400;
+    color: #ef7f58;
+    border-bottom: 4px solid #7b4983;
+    
+}
+.pull-span{
+    color: #7b4983;
+    font-weight: 500;
+}
+.pull-attribution{
+    color: #7b4983;
+    font-family: var(--hed-font-default);
+    font-weight: 300;
 /* CREDITS - shouldn't need to change anything! */
-
+}
 .article-credits{
     text-align: center;
     font-family: var(--hed-font-default);
@@ -132,5 +162,11 @@
     .article-body{
         width: 90vw;
     }
-
+    .article-body p{
+        width: 100%;
+    }
+    .article-body img{
+        width: 100%;
+        margin: auto;
+    }
 }

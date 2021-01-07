@@ -1,4 +1,3 @@
-
 /* DEFAULT FONTS - feel free to add any other variables you need here */
 
 :root{
@@ -20,6 +19,7 @@
     background-color: #342F2E;
     padding: 1vh 0;
     box-shadow: 1px 2px 1px;
+    z-index: 100;
 }
 .nbn-logo-nav{
     margin-left: 1vw;
@@ -42,23 +42,33 @@
 }
 .article-hed{
     /* replace "default" with "serif" if article uses a serif font in the hed */
-    font-family: var(--hed-font-default);
+    font-family: Abril;
     font-size: 4em;
     margin-bottom: 0;
-    
+    position: absolute;
+  top: 35%;
+  left: 50%;
+  width:50%;
+  font-family:Abril;
+  transform: translate(-50%, -50%);
 }
 .article-dek{
     font-family: var(--hed-font-default);
-    margin-top: 0;
     font-size: 2em;
-    margin-bottom: 0;
+    margin-bottom:0;
+  width:45%;
+  margin-top: 480px;
     font-weight: 500;
+  margin-right: 260px;
+  margin-left:28%;
+  float: center;
 }
 .article-byline{
     font-family: var(--hed-font-default);
     font-weight: 400;
     margin-top: .5em;
-    font-size: 1.5em;
+  font-size: 1.5em;
+    text-align:center;
 }
 .byline-link{
     color: black;
@@ -71,6 +81,13 @@
 
 /* ARTICLE BODY - customize however you want! */
 
+body{
+  background: url("https://northbynorthwestern.com/content/images/2020/12/chairillo.png")no-repeat; 
+  background-size: 980px 1450px;
+  background-position:top center;
+  background-opacity: 0.2;
+  white-space: no-wrap;
+    }
 
 .article-body{
     font-family: var(--body-font);
@@ -81,7 +98,18 @@
 .article-body p{
     margin-bottom: 2em;
 }
-
+.blockquote2 {
+      text-align: center;
+      float: right;
+      width: 50%;
+      margin-right: -60%;
+      font-family:Abril;
+      font-size: 0.8em;
+      padding-left: 10px; 
+      padding-right: 10px;
+      border-style: solid;
+      background-color:#c4bcdd
+    }
 
 /* CREDITS - shouldn't need to change anything! */
 
@@ -117,6 +145,9 @@
 /* MOBILE STYLING - add any mobile specific CSS here but please leave navbar styling as is!*/
 
 @media screen and (max-width: 700px){
+    body{
+        background-size: contain;
+    }
     .mag-navbar{
         height: 5vh;
     }
@@ -132,5 +163,9 @@
     .article-body{
         width: 90vw;
     }
-
+    .blockquote2{
+        float: unset;
+        width: 80%;
+        margin: auto;
+    }
 }

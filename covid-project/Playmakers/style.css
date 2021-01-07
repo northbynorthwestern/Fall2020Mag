@@ -85,8 +85,9 @@ body{
 }
 .article-dek{
     font-family: var(--hed-font-default);
-    margin-top: 0;
-    font-size: 2em;
+    margin: 0 auto;
+    font-size: 1.5em;
+    width: 50%;
     margin-bottom: 0;
     font-weight: 300;
 }
@@ -172,6 +173,7 @@ body{
     }
     .article-dek{
         font-size: 1.5em;
+        width: 100%;
     }
     .article-byline{
         font-size: 1em;
